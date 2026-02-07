@@ -1,4 +1,4 @@
-import TagButton from "../ui/TagButton";
+import TagButton from "../Global/Button/TagButton";
 
 function Hero() {
   return (

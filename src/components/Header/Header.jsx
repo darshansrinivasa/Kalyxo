@@ -1,8 +1,8 @@
-import Logo from "./Header/Logo";
-import NavList from "./Header/NavList";
-import BookFreeCallButton from "./BookCallButton";
-import ThemeToggle from "./Header/ThemeToggleButton";
-import { useTheme } from "../context/ThemeContext";
+import Logo from "../Global/UI/Logo";
+import NavList from "./Nav/NavList";
+import BookFreeCallButton from "../Global/Button/BookCallButton";
+import ThemeToggle from "./ThemeToggleButton";
+import { useTheme } from "../../context/ThemeContext";
 
 function Header() {
   const { theme, setTheme } = useTheme();

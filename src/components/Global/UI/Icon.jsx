@@ -1,8 +1,8 @@
-import shopify from "../assets/icons/Shopify-specialist.png";
-import services from "../assets/icons/Services.png";
-import portfolio from "../assets/icons/Portfolio.png";
-import mail from "../assets/icons/Mail.png";
-import about from "../assets/icons/About.png";
+import shopify from "../../../assets/icons/Shopify-specialist.png";
+import services from "../../../assets/icons/Services.png";
+import portfolio from "../../../assets/icons/Portfolio.png";
+import mail from "../../../assets/icons/Mail.png";
+import about from "../../../assets/icons/About.png";
 
 /**
  * Central icon registry

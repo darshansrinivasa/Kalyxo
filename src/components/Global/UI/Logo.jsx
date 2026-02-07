@@ -1,5 +1,5 @@
-import logoLight from "../../assets/images/logo-light.png";
-import logoDark from "../../assets/images/logo-dark.png";
+import logoLight from "../../../assets/images/logo-light.png";
+import logoDark from "../../../assets/images/logo-dark.png";
 
 function Logo() {
   return (

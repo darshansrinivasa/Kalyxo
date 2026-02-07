@@ -1,4 +1,4 @@
-import Icon from "../ui/Icon";
+import Icon from "../UI/Icon";
 
 function TagButton({ text, icon }) {
   return (
