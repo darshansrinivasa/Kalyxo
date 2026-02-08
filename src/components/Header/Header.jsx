@@ -14,6 +14,7 @@ function Header() {
   return (
     <header 
       className="
+        sticky top-0 z-50 
         bg-slate-900 dark:bg-gray-100
         border-b border-gray-200 dark:border-slate-800
         w-full

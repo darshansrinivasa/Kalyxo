@@ -1,7 +1,7 @@
 function Services() {
   return (
     <>
-      <div className="min-h-[50vh] flex items-center justify-center"> Services page </div>
+      <div className="flex items-center justify-center"> Services page </div>
     </>
   );
 }
