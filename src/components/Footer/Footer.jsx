@@ -1,9 +1,98 @@
+import Logo from "../Global/UI/Logo";
+import SubHeading from "../Global/Text/SubHeading"
+import SocialList from "../Global/Social/SocialList";
+
+import NavHeading from "../Footer/Nav/NavHeading";
+import NavList from "../Footer/Nav/NavList";
+
+import MailIcon from "../Global/Icons/Mail";
+
 function Footer() {
-    return (
-      <section className="">
-        "Footer"
-      </section>
-    );
-  }
-  
-  export default Footer;
+  const logoSubheadingText = "Building high-converting Shopify stores that drive real results for businesses worldwide.";
+
+  const rightsText = "@ 2026 Kalyxo. All rights reserved";
+
+  const socials = {
+    instagram: "https://instagram.com/",
+    twitter: "https://twitter.com/",
+    linkedin: "https://linkedin.com/company/",
+    facebook: "https://facebook.com/",
+  };
+
+  const quickLinks = [
+    { label: "Home", to: "/" },
+    { label: "Services", to: "/services" },
+    { label: "Portfolio", to: "/portfolio" },
+    { label: "About Us", to: "/about" },
+    { label: "Contact", to: "/contact" },
+  ];
+
+  const servicesLink = [
+    { label: "Store Setup", to: "/" },
+    { label: "Custom Theme Development", to: "/services" },
+    { label: "Store Redesign", to: "/portfolio" },
+    { label: "Speed Optimization", to: "/about" },
+    { label: "App Integration", to: "/contact" },
+    { label: "Maintenance & Support", to: "/contact" },
+  ]
+
+  const getInTouchLink = [
+    { label: "contact@kalixo.in", to: "contact@kalixo.in", icon: MailIcon },
+  ]
+
+  return (
+    <section className="
+      bg-slate-900 dark:bg-gray-100
+      text-slate-400 dark:text-slate-800
+    ">
+      <div className="
+        max-w-320
+        px-6 py-16
+        mx-auto
+      ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div>
+            <Logo />
+            <SubHeading className="mt-8 text-slate-400 dark:text-slate-600">
+              {logoSubheadingText}
+            </SubHeading>
+
+            {/* Social */}
+            <SocialList
+              className="footer-social-icons mt-8"
+              socials={socials}
+            />
+          </div>
+
+          <div>
+            <NavHeading className={'mb-6 text-slate-100 dark:text-slate-700'}>Quick Links</NavHeading>
+            <NavList items={quickLinks} />
+          </div>
+
+          <div>
+            <NavHeading className={'mb-6 text-slate-100 dark:text-slate-700'}>Services</NavHeading>
+            <NavList items={servicesLink} />
+          </div>
+
+          <div>
+            <NavHeading className={'mb-6 text-slate-100 dark:text-slate-700'}>Get In Touch</NavHeading>
+            <NavList items={getInTouchLink} />
+          </div>
+        </div>
+      </div>
+        <div className="border-t border-gray-700">
+          <div className="
+            max-w-320
+            px-6 py-6
+            mx-auto
+          ">
+            <SubHeading className="text-center">
+              {rightsText}
+            </SubHeading>
+          </div>
+        </div>
+    </section>
+  );
+}
+
+export default Footer;

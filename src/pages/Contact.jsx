@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <>
-      Contact page
+      <div className="min-h-[50vh] flex items-center justify-center"> Contact page </div>
     </>
   );
 }

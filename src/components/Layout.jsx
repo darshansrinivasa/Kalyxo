@@ -8,8 +8,8 @@ function Layout() {
       className="min-h-screen
         font-sans
         bg-gray-50
-        text-slate-900
-        dark:bg-slate-900
+        text-slate-800
+        dark:bg-slate-800
         dark:text-slate-100
         transition-colors duration-300"
       >

@@ -1,7 +1,7 @@
 function Portfolio() {
   return (
     <>
-      Porfolio page
+      <div className="min-h-[50vh] flex items-center justify-center"> Portfolio page </div>
     </>
   );
 } 

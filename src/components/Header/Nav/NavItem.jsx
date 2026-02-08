@@ -13,7 +13,7 @@ function NavItem({ label, to }) {
           ${
             isActive
               ? "text-purple-600"
-              : "text-gray-700 dark:text-slate-200 hover:text-purple-600"
+              : "text-slate-100 dark:text-slate-700 hover:text-purple-600"
           }
         `
         }
