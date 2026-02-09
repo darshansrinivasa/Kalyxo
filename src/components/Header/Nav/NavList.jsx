@@ -1,14 +1,19 @@
 import NavItem from "./NavItem";
 
-function NavList() {
+function NavList({className = "", NAV_LINKS, ulClassName = "", liClassName = "" }) {
   return (
-    <ul className="flex items-center gap-8">
-      <NavItem label="Home" to="/" />
-      <NavItem label="Services" to="/services" />
-      <NavItem label="Porfolio" to="/portfolio" />
-      <NavItem label="About" to="/about" />
-      <NavItem label="Contact" to="/contact" />
-    </ul>
+    <nav className={className}>
+      <ul className={ulClassName}>
+        {NAV_LINKS.map((link) => (
+          <NavItem 
+            key={link.name} 
+            label={link.name} 
+            to={link.href}
+            liClassName={liClassName}
+          />
+        ))}
+      </ul>
+    </nav>
   );
 }
 

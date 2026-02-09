@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-function NavItem({ label, to }) {
+function NavItem({ label, to, liClassName = "" }) {
   return (
-    <li>
+    <li className={liClassName}>
       <NavLink
         to={to}
         className={({ isActive }) =>
@@ -13,7 +13,7 @@ function NavItem({ label, to }) {
           ${
             isActive
               ? "text-purple-600"
-              : "text-slate-100 dark:text-slate-700 hover:text-purple-600"
+              : "text-slate-700 hover:text-purple-600"
           }
         `
         }

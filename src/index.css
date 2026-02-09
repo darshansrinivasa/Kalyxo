@@ -25,6 +25,10 @@ li {
 }
 
 
+/* Mobile menu */
+.mobile-menu {
+  /* height: calc(100vh - 66px); */
+}
 
 /* Footer */
 .footer-social-icons img {

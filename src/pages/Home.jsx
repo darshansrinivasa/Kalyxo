@@ -1,10 +1,9 @@
-import Hero from "@/components/Sections/Hero";
+import Hero from "@/components/Sections/Hero/Hero.jsx";
 
 function Home() {
   return (
     <>
-      {/* <Hero /> */}
-      <div className="flex items-center justify-center"> Home page </div>
+      <Hero />
     </>
   );
 }

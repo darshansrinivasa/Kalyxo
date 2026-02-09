@@ -11,6 +11,10 @@ function NavList({ items = [], className = "" }) {
                 label={item.label}
                 to={item.to}
                 icon={item.icon}
+                className="
+                  text-slate-400
+                  hover:text-slate-100
+                "
             />
         ))}
         </ul>

@@ -1,4 +1,4 @@
-function ThemeToggle({ theme, onToggle }) {
+function ThemeToggle({ theme, onToggle, className }) {
   const isDark = theme === "dark";
 
   return (
@@ -7,9 +7,10 @@ function ThemeToggle({ theme, onToggle }) {
       onClick={onToggle}
       aria-label="Toggle theme"
       className={`
-        relative inline-flex h-8 w-16 items-center rounded-full
+        relative h-8 w-16 items-center rounded-full
         transition-colors duration-300
         ${isDark ? "bg-slate-800" : "bg-gray-200"}
+        ${className}
       `}
     >
       {/* Thumb */}

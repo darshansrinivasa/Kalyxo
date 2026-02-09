@@ -1,6 +1,6 @@
-import Icon from "../UI/Icon";
+import Icon from "../../Sections/Hero/Icon";
 
-function TagButton({ text, icon }) {
+function TagButton({ text, iconName }) {
   return (
     <div
       className="
@@ -18,7 +18,7 @@ function TagButton({ text, icon }) {
         shadow-sm
       "
     >
-      {icon}
+      <Icon iconName={iconName} size='18' alt={iconName}/>
       <span className="
         text-sm
         font-medium

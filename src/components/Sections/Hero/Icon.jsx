@@ -3,6 +3,8 @@ import services from "@/assets/icons/Services.png";
 import portfolio from "@/assets/icons/Portfolio.png";
 import mail from "@/assets/icons/Mail.png";
 import about from "@/assets/icons/About.png";
+import bookCalenderPurple from "@/assets/icons/BookAppointmentPurple.png";
+import bookCalenderWhite from "@/assets/icons/BookAppointmentWhite.png";
 
 /**
  * Central icon registry
@@ -14,20 +16,23 @@ const ICON_MAP = {
   portfolio,
   about,
   mail,
+  bookCalenderWhite,
+  bookCalenderPurple,
+
 };
 
-function Icon({ name, alt = "", size = 18 }) {
-  const iconSrc = ICON_MAP[name];
+function Icon({ iconName, alt = "", size = 18 }) {
+  const iconSrc = ICON_MAP[iconName];
 
   if (!iconSrc) {
-    console.warn(`Icon "${name}" not found in ICON_MAP`);
+    console.warn(`Icon "${iconName}" not found in ICON_MAP`);
     return null;
   }
 
   return (
     <img
       src={iconSrc}
-      alt={alt || name}
+      alt={alt || iconName}
       width={size}
       height={size}
     />

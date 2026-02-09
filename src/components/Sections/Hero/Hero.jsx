@@ -1,8 +1,8 @@
-import TagButton from "../Global/Button/TagButton";
+import TagButton from "../../Global/Button/TagButton";
 
 function Hero() {
   return (
-    <section>
+    <section className="min-h-[100vh]">
       <TagButton text="Shopify Specialist" iconName="shopify" />
 
       <h1>We build high-converting Shopify stores</h1>

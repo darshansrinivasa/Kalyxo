@@ -5,7 +5,7 @@ import SocialList from "../Global/Social/SocialList";
 import NavHeading from "../Footer/Nav/NavHeading";
 import NavList from "../Footer/Nav/NavList";
 
-import MailIcon from "../Global/Icons/Mail";
+import Icon from "@/components/Sections/Hero/Icon";
 
 function Footer() {
   const logoSubheadingText = "Building high-converting Shopify stores that drive real results for businesses worldwide.";
@@ -37,13 +37,17 @@ function Footer() {
   ]
 
   const getInTouchLink = [
-    { label: "contact@kalixo.in", to: "contact@kalixo.in", icon: MailIcon },
-  ]
+    {
+      label: "contact@kalyxo.in",
+      to: "mailto:contact@kalyxo.in",
+      icon: <Icon iconName="mail" size={18} />,
+    },
+  ];
 
   return (
-    <section className="
-      bg-slate-900 dark:bg-gray-100
-      text-slate-400 dark:text-slate-800
+    <footer className="
+      bg-slate-900
+      text-slate-400
     ">
       <div className="
         max-w-320
@@ -52,8 +56,8 @@ function Footer() {
       ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <Logo />
-            <SubHeading className="mt-8 text-slate-400 dark:text-slate-600">
+            <Logo is_footer = "true" />
+            <SubHeading className="mt-8 text-slate-400">
               {logoSubheadingText}
             </SubHeading>
 
@@ -65,17 +69,17 @@ function Footer() {
           </div>
 
           <div>
-            <NavHeading className={'mb-6 text-slate-100 dark:text-slate-700'}>Quick Links</NavHeading>
+            <NavHeading className={'mb-6 text-slate-100'}>Quick Links</NavHeading>
             <NavList items={quickLinks} />
           </div>
 
           <div>
-            <NavHeading className={'mb-6 text-slate-100 dark:text-slate-700'}>Services</NavHeading>
+            <NavHeading className={'mb-6 text-slate-100'}>Services</NavHeading>
             <NavList items={servicesLink} />
           </div>
 
           <div>
-            <NavHeading className={'mb-6 text-slate-100 dark:text-slate-700'}>Get In Touch</NavHeading>
+            <NavHeading className={'mb-6 text-slate-100'}>Get In Touch</NavHeading>
             <NavList items={getInTouchLink} />
           </div>
         </div>
@@ -91,7 +95,7 @@ function Footer() {
             </SubHeading>
           </div>
         </div>
-    </section>
+    </footer>
   );
 }
 
