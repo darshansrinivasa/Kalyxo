@@ -7,7 +7,7 @@ function NavItem({ label, to, liClassName = "" }) {
         to={to}
         className={({ isActive }) =>
           `
-          text-sm
+          text-base
           font-medium
           transition
           ${

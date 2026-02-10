@@ -49,11 +49,7 @@ function Footer() {
       bg-slate-900
       text-slate-400
     ">
-      <div className="
-        max-w-320
-        px-6 py-16
-        mx-auto
-      ">
+      <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Logo is_footer = "true" />
@@ -85,11 +81,7 @@ function Footer() {
         </div>
       </div>
         <div className="border-t border-gray-700">
-          <div className="
-            max-w-320
-            px-6 py-6
-            mx-auto
-          ">
+          <div className="container py-6">
             <SubHeading className="text-center">
               {rightsText}
             </SubHeading>

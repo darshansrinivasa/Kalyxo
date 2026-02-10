@@ -7,7 +7,7 @@ function SocialIcon({label, href, icon: Icon, className = "" }) {
         to={href}
         className={`
           inline-flex items-center justify-center gap-0 h-10 w-10
-          bg-gray-700 dark:bg-gray-400 hover:bg-purple-600 
+          bg-gray-700 hover:bg-purple-600 
           transition-colors duration-300
           rounded-lg
           ${className}

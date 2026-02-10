@@ -22,9 +22,9 @@ function ThemeToggle({ theme, onToggle, className }) {
         `}
       >
         {isDark ? (
-          <span className="text-sm">🌙</span>
+          <span className="text-base">🌙</span>
         ) : (
-          <span className="text-sm">☀️</span>
+          <span className="text-base">☀️</span>
         )}
       </span>
     </button>

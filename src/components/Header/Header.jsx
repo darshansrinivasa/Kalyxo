@@ -2,7 +2,7 @@
 
 import Logo from "../Global/UI/Logo";
 import NavList from "./Nav/NavList";
-import BookFreeCallButton from "../Global/Button/BookCallButton";
+import Button from "../Global/Button/Button";
 import ThemeToggle from "./ThemeToggleButton";
 import { useTheme } from "@/context/ThemeContext";
 import { useEffect, useState } from "react";
@@ -38,7 +38,7 @@ export default function Header() {
       ${isScrolled ? "shadow-md dark:shadow-black/30" : "shadow-none"}
       `}
     >
-      <div className="flex items-center justify-between px-6 py-4 max-w-320 mx-auto">
+      <div className="flex items-center justify-between py-4 container">
         <Logo />
         <NavList className="hidden md:block" NAV_LINKS={NAV_LINKS} ulClassName="flex gap-8 items-center" />
         <div className="hidden md:flex items-center gap-4">
@@ -47,16 +47,8 @@ export default function Header() {
             onToggle={handleToggleTheme}
             className="inline-flex"
           />
-          <BookFreeCallButton  
-            className="
-              flex gap-2 items-center justify-center
-              px-6 py-3
-              rounded-lg
-              bg-purple-600
-              text-white text-sm font-medium
-              hover:bg-purple-700
-              transition
-            "
+          <Button  
+            className="button primary-button purple"
             iconName="bookCalenderWhite"
           />
         </div>

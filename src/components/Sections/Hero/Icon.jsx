@@ -5,6 +5,8 @@ import mail from "@/assets/icons/Mail.png";
 import about from "@/assets/icons/About.png";
 import bookCalenderPurple from "@/assets/icons/BookAppointmentPurple.png";
 import bookCalenderWhite from "@/assets/icons/BookAppointmentWhite.png";
+import arrowRightWhite from "@/assets/icons/arrowRightWhite.png";
+import arrowRightPurple from "@/assets/icons/arrowRightPurple.png";
 
 /**
  * Central icon registry
@@ -18,7 +20,8 @@ const ICON_MAP = {
   mail,
   bookCalenderWhite,
   bookCalenderPurple,
-
+  arrowRightWhite,
+  arrowRightPurple
 };
 
 function Icon({ iconName, alt = "", size = 18 }) {

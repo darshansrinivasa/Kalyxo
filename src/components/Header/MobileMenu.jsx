@@ -1,5 +1,5 @@
 import NavList from "./Nav/NavList";
-import BookFreeCallButton from "../Global/Button/BookCallButton";
+import Button from "../Global/Button/Button";
 
 export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
   if (!isOpen) return null;
@@ -22,14 +22,14 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
         />
 
         {/* CTA */}
-        <BookFreeCallButton 
+        <Button 
           className="
             w-full
             flex gap-2 items-center justify-center
             px-6 py-3
             rounded-lg
             bg-purple-600
-            text-white text-sm font-medium
+            text-white text-base font-medium
             hover:bg-purple-700
             transition
           " 

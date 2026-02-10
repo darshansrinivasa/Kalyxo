@@ -1,21 +1,35 @@
 import TagButton from "../../Global/Button/TagButton";
+import Heading from "../../Global/Text/Heading";
+import SubHeading from "../../Global/Text/SubHeading";
+import Button from "../../Global/Button/Button";
+import BannerImage from "../../Global/UI/BannerImage"
 
-function Hero() {
+function Hero({
+  className = "",
+  contentClassName = "",
+  tagProps,
+  headingProps,
+  subheadingProps,
+  primaryBtnProps,
+  secondaryBtnProps,
+  imageProps
+}) {
   return (
-    <section className="min-h-[100vh]">
-      <TagButton text="Shopify Specialist" iconName="shopify" />
+    <section className={className}>
+      <div className={contentClassName}>
+        {tagProps && <TagButton {...tagProps} />}
 
-      <h1>We build high-converting Shopify stores</h1>
+        {headingProps && <Heading {...headingProps} />}
 
-      <p>
-        We help brands launch, scale, and optimize Shopify experiences that
-        convert.
-      </p>
+        {subheadingProps && <SubHeading {...subheadingProps} />}
 
-      <div>
-        <button>Book free call</button>
-        <button>View work</button>
+        <div className="flex flex-col md:flex-row gap-4">
+          {primaryBtnProps && <Button {...primaryBtnProps} />}
+          {secondaryBtnProps && <Button {...secondaryBtnProps} />}
+        </div>
       </div>
+
+      {imageProps && <BannerImage {...imageProps} /> }
     </section>
   );
 }
