@@ -8,6 +8,14 @@
 }
 
 :root {
+  --text-xs--line-height: 1.4;
+  --text-sm--line-height: 1.4;
+  --text-base--line-height: 1.5;
+  --text-lg--line-height: 1.5;
+  --text-xl--line-height: 1.4;
+  --text-2xl--line-height: 1.4;
+  --text-3xl--line-height: 1.2;
+  --text-4xl--line-height: 1.2;
   --text-5xl--line-height: 1.2;
   --text-6xl--line-height: 1.2;
   --text-7xl--line-height: 1.2;
@@ -111,6 +119,14 @@
     }
   }
   
+  /* Feature Card */
+  .feature-card.highlighted:hover {
+    @apply shadow-2xl -translate-y-2 cursor-pointer
+  }
+
+  .feature-card.highlighted:hover .icon-img {
+    scale: 1.1;
+  }
 }
 
 
@@ -135,3 +151,4 @@ li {
 .footer-social-icons img {
   filter: brightness(2)
 }
+

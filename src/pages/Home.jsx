@@ -1,7 +1,8 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
 import heroBannerImage from "@/assets/images/Home-hero-banner.png"
 import RichText from "../components/Sections/Richtext/Richtext";
-import WhyChooseUs from "@/components/Sections/WhyChooseUs/WhyChooseUs";
+import Featured from "@/components/Sections/Featured/Featured";
+import { WHY_CHOOSE_US } from "@/constants/WhyChooseUs";
 
 function Home() {
   return (
@@ -51,7 +52,6 @@ function Home() {
         }}
       />
 
-
       <RichText
         outerClassName="background-theme-1"
         className="container py-6 md:py-16"
@@ -63,12 +63,28 @@ function Home() {
         }}
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "text-center text-4xl md:text-5xl font-bold",
           children: "Built for Performance & Growth",
         }}
       />
 
-      <WhyChooseUs />
+      <Featured
+        items={WHY_CHOOSE_US}
+        outerClassName="mb-24"
+        className="container"
+        gridClassName="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        cardProps={{
+          wrapperClassName:
+            "rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 transition-shadow highlighted",
+          iconWrapperClassName:
+            "icon-img mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-purple-600 text-white",
+          titleClassName:
+            "mb-3 text-xl font-semibold text-slate-900 dark:text-slate-100",
+          descriptionClassName:
+            "text-base leading-6 text-slate-600 dark:text-slate-400",
+          accentClassName: "bg-purple-400",
+        }}
+      />
 
       <RichText
         outerClassName="background-theme-1"

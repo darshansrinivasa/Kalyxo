@@ -7,6 +7,11 @@ import bookCalenderPurple from "@/assets/icons/BookAppointmentPurple.png";
 import bookCalenderWhite from "@/assets/icons/BookAppointmentWhite.png";
 import arrowRightWhite from "@/assets/icons/arrowRightWhite.png";
 import arrowRightPurple from "@/assets/icons/arrowRightPurple.png";
+import shopifyBold from "@/assets/icons/shopifyBold.png";
+import speed from "@/assets/icons/speed.png";
+import growth from "@/assets/icons/growth.png";
+import scale from "@/assets/icons/scale.png";
+
 
 /**
  * Central icon registry
@@ -21,7 +26,11 @@ const ICON_MAP = {
   bookCalenderWhite,
   bookCalenderPurple,
   arrowRightWhite,
-  arrowRightPurple
+  arrowRightPurple,
+  shopifyBold,
+  speed,
+  growth,
+  scale
 };
 
 function Icon({ iconName, alt = "", size = 18 }) {

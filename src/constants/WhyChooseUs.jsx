@@ -1,7 +1,7 @@
   
 export const WHY_CHOOSE_US = [
     {
-      icon: "shopify",
+      icon: "shopifyBold",
       title: "Shopify Specialists",
       description:
         "Deep expertise in Shopify platform with Experienced developer who know every feature inside out.",
