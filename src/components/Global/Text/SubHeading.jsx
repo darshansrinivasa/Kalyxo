@@ -1,6 +1,6 @@
 function SubHeading({ children, className = "" }) {
   return (
-    <p className={`${className}`}>
+    <p className={className}>
       {children}
     </p>
   );

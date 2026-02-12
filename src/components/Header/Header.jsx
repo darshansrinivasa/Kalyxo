@@ -32,7 +32,7 @@ export default function Header() {
     <header 
       className={`
         sticky top-0 z-50
-        bg-slate-50
+        bg-white
         w-full
         transition-shadow duration-300
       ${isScrolled ? "shadow-md dark:shadow-black/30" : "shadow-none"}

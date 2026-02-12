@@ -13,7 +13,7 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
         bg-slate-50
         absolute left-0 right-0
       ">
-      <div className="p-6 space-y-6">
+      <div className="p-10 space-y-6">
         {/* Mobile Nav */}
         <NavList
           NAV_LINKS={NAV_LINKS}

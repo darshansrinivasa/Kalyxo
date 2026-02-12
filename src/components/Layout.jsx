@@ -7,7 +7,7 @@ function Layout() {
     <div 
       className="min-h-screen
         font-sans
-        bg-gray-50
+        bg-white
         text-slate-800
         dark:bg-slate-800
         dark:text-slate-100

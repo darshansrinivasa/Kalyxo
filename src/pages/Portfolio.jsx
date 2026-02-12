@@ -33,7 +33,7 @@ function Portfolio() {
 
       <RichText
         outerClassName="background-theme-2"
-        className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="container py-6 md:py-18 flex flex-col md:flex-row gap-12 items-center"
         contentClassName="flex flex-col gap-8 w-full"
         buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
         headingProps={{

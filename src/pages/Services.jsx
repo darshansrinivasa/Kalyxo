@@ -1,5 +1,7 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
 import RichText from "../components/Sections/Richtext/Richtext";
+import Featured from "@/components/Sections/Featured/Featured";
+import { SteamlinedProcess } from "@/constants/SteamlinedProcess";
 
 function Services() {
   return (
@@ -33,8 +35,8 @@ function Services() {
       />
 
       <RichText
-        outerClassName="background-theme-1"
-        className="container py-6 md:py-16"
+        outerClassName="background-theme-3"
+        className="container pt-6 pb-8 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
           tag: "h2",
@@ -48,9 +50,26 @@ function Services() {
         }}
       />
 
+      <Featured
+        items={SteamlinedProcess}
+        outerClassName="pb-14 md:pb-24 background-theme-3"
+        className="container"
+        gridClassName="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+        cardProps={{
+          wrapperClassName:
+            "rounded-2xl border border-slate-200 dark:border-slate-800 p-8 bg-white dark:bg-slate-900 shadow-lg",
+          numberClassName:
+            "mb-4 font-bold text-5xl md:text-6xl text-purple-200 dark:text-purple-600",
+          titleClassName:
+            "mb-3 text-2xl font-semibold text-slate-900 dark:text-slate-100",
+          descriptionClassName:
+            "text-base leading-6 text-slate-600 dark:text-slate-400",
+        }}
+      />
+
       <RichText
         outerClassName="background-theme-2"
-        className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="container py-6 md:py-18 flex flex-col md:flex-row gap-12 items-center"
         contentClassName="flex flex-col gap-8 w-full"
         buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
         headingProps={{
