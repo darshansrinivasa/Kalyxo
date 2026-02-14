@@ -1,7 +1,7 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
 import RichText from "../components/Sections/Richtext/Richtext";
 
-function Portfolio() {
+function PortfolioPage() {
   return (
     <>
       <Hero
@@ -62,4 +62,4 @@ function Portfolio() {
   );
 } 
   
-export default Portfolio;
+export default PortfolioPage;

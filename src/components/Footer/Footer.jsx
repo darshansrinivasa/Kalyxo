@@ -28,12 +28,12 @@ function Footer() {
   ];
 
   const servicesLink = [
-    { label: "Store Setup", to: "/" },
-    { label: "Custom Theme Development", to: "/services" },
-    { label: "Store Redesign", to: "/portfolio" },
-    { label: "Speed Optimization", to: "/about" },
-    { label: "App Integration", to: "/contact" },
-    { label: "Maintenance & Support", to: "/contact" },
+    { label: "Store Setup", to: "/services#store-setup" },
+    { label: "Custom Theme Development", to: "/services#custom-theme" },
+    { label: "Store Redesign", to: "/services#store-redesign" },
+    { label: "Speed Optimization", to: "/services#speed-optimization" },
+    { label: "App Integration", to: "/services#app-integration" },
+    { label: "Maintenance & Support", to: "/services#maintanance-support" },
   ]
 
   const getInTouchLink = [

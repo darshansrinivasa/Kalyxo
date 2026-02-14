@@ -4,11 +4,11 @@ import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
 import { VALUES } from "@/constants/VALUES";
 
-function About() {
+function AboutPage() {
   return (
     <>
       <Hero
-        className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="container py-18 md:pb-14 md:pt-24 flex flex-col md:flex-row gap-12 items-center"
         contentClassName="flex flex-col ietsm-center justify-center gap-8 w-full"
         tagProps={{
           text: "About Kalyxo",
@@ -32,12 +32,12 @@ function About() {
         subheadingProps={{
           tag: "p",
           className: "text-center text-xl max-w-200 mx-auto",
-          children: "Founded in 2025, Calixo has grown from a small team of passionate developers into a leading Shopify agency trusted by brands worldwide.",
+          children: "Founded in 2025, Kalyxo has grown from a small team of passionate developers into a leading Shopify agency trusted by brands worldwide.",
         }}
       />
 
       <Hero
-        className="container py-18 md:py-24 flex flex-col md:flex-row gap-16 items-center"
+        className="container py-18 md:pb-24 md:pt-6 flex flex-col md:flex-row gap-16 items-center"
         contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
         headingProps={{
           tag: "h1",
@@ -53,7 +53,7 @@ function About() {
           className: "text-left text-lg",
           children: (
             <>
-              <span className="block mb-4">Calixo was born from a simple observation: too many e-commerce businesses were struggling with poorly designed, slow-loading Shopify stores that failed to convert visitors into customers.</span>
+              <span className="block mb-4">Kalyxo was born from a simple observation: too many e-commerce businesses were struggling with poorly designed, slow-loading Shopify stores that failed to convert visitors into customers.</span>
               <span className="block mb-4">We set out to change that by combining technical excellence with conversion-focused design principles. Today, we've helped over 150 businesses transform their online presence and achieve remarkable growth.</span>
               <span>Our approach is different. We don't just build stores – we build revenue-generating machines optimized for performance, user experience, and conversions. Every project is treated as a partnership, and your success is our success.</span>
             </>
@@ -70,7 +70,7 @@ function About() {
 
       <RichText
         outerClassName="background-theme-3"
-        className="container pt-6 pb-8 md:py-16"
+        className="container pt-6 pb-8 md:pt-24 md:pb-16"
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
           tag: "h2",
@@ -132,7 +132,4 @@ function About() {
   );
 }
 
-export default About;
-
-
-  
+export default AboutPage;

@@ -1,9 +1,15 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
 import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
+import Services from "@/components/Sections/Services/Services";
+
 import { SteamlinedProcess } from "@/constants/SteamlinedProcess";
 
-function Services() {
+import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
+import CustomThemeImage from "@/assets/images/Custom-theme-development.jpg"
+import StoreRedesignImage from "@/assets/images/Store-redesign.jpg"
+
+function ServicesPage() {
   return (
     <>
       <Hero
@@ -34,8 +40,360 @@ function Services() {
         }}
       />
 
-      <RichText
+      <Services
+        sectionId="store-setup"
         outerClassName="background-theme-3"
+        className="container py-8 md:pt-24 md:pb-12 flex flex-col md:flex-row gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
+  
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Shopify Store Setup",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Launch your dream store with a complete setup that includes theme customization, product uploads, payment gateway integration, and essential app installations.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
+          liItems:[
+            {
+              title: "Complete store configuration",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Theme customization",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Payment & shipping setup",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Product catalog organization",
+              iconName: "tick",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Get Started",
+          className: "button primary-button purple icon-right text-base",
+          iconName: "arrowRightWhite",
+          iconSize: 16,
+          href: "/contact"
+        }}
+        imageProps={{
+          imageSrc: storeSetupImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        sectionId="custom-theme"
+        outerClassName="background-theme-3"
+        className="container py-8 md:py-12 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
+        
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Custom Theme Development",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "tick",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Get Started",
+          className: "button primary-button purple icon-right text-base",
+          iconName: "arrowRightWhite",
+          iconSize: 16,
+          href: "/contact"
+        }}
+        imageProps={{
+          imageSrc: CustomThemeImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        sectionId="store-redesign"
+        outerClassName="background-theme-3"
+        className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
+        
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Store Redesign",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "tick",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Get Started",
+          className: "button primary-button purple icon-right text-base",
+          iconName: "arrowRightWhite",
+          iconSize: 16,
+          href: "/contact"
+        }}
+        imageProps={{
+          imageSrc: StoreRedesignImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        sectionId="speed-optimization"
+        outerClassName="background-theme-3"
+        className="container py-8 md:py-12 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
+        
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Custom Theme Development",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "tick",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Get Started",
+          className: "button primary-button purple icon-right text-base",
+          iconName: "arrowRightWhite",
+          iconSize: 16,
+          href: "/contact"
+        }}
+        imageProps={{
+          imageSrc: CustomThemeImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        sectionId="app-integration"
+        outerClassName="background-theme-3"
+        className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
+        tagProps={{
+          text:"Service 03",
+          textClassName: "text-sm font-bold text-purple-600 uppercase" 
+        }}
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Store Redesign",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "tick",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Learn More",
+          className: "button icon-right text-base text-purple-600 p-0",
+          iconName: "arrowRightPurple",
+          iconSize: 16,
+          href: "/services"
+        }}
+        imageProps={{
+          imageSrc: StoreRedesignImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        sectionId="maintanance-support"
+        outerClassName="background-theme-3"
+        className="container py-8 md:pt-12 md:pb-24 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
+        
+        
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Custom Theme Development",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "tick",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "tick",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Get Started",
+          className: "button primary-button purple icon-right text-base",
+          iconName: "arrowRightWhite",
+          iconSize: 16,
+          href: "/contact"
+        }}
+        imageProps={{
+          imageSrc: CustomThemeImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <RichText
+        outerClassName=""
         className="container pt-6 pb-8 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
@@ -52,7 +410,7 @@ function Services() {
 
       <Featured
         items={SteamlinedProcess}
-        outerClassName="pb-14 md:pb-24 background-theme-3"
+        outerClassName="pb-14 md:pb-24"
         className="container"
         gridClassName="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
         cardProps={{
@@ -98,4 +456,4 @@ function Services() {
   );
 }
   
-export default Services;
+export default ServicesPage;

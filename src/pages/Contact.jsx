@@ -1,6 +1,6 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
 
-function Contact() {
+function ContactPage() {
   return (
     <>
       <Hero
@@ -34,4 +34,4 @@ function Contact() {
   );
 }
   
-export default Contact;
+export default ContactPage;

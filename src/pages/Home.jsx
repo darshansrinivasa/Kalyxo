@@ -10,7 +10,7 @@ import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
 import CustomThemeImage from "@/assets/images/Custom-theme-development.jpg"
 import StoreRedesignImage from "@/assets/images/Store-redesign.jpg"
 
-function Home() {
+function HomePage() {
   return (
     <>
       <Hero
@@ -116,6 +116,7 @@ function Home() {
         outerClassName="background-theme-3"
         className="container py-8 md:pt-4 md:pb-20 flex flex-col md:flex-row gap-12 items-stretch"
         contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
           text:"Service 01",
           textClassName: "text-sm font-bold text-purple-600 uppercase" 
@@ -132,26 +133,26 @@ function Home() {
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
-          liClassName:"flex flex-row gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
               title: "Complete store configuration",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Theme customization",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Payment & shipping setup",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Product catalog organization",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             }
           ]
@@ -175,6 +176,7 @@ function Home() {
         outerClassName="background-theme-3"
         className="container py-8 md:pt-4 md:pb-20 flex flex-col md:flex-row-reverse gap-12 items-stretch"
         contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
           text:"Service 02",
           textClassName: "text-sm font-bold text-purple-600 uppercase" 
@@ -187,30 +189,30 @@ function Home() {
         subheadingProps={{
           tag: "p",
           className: "text-center md:text-left text-lg",
-          children: "Stand out from the competition with a fully custom Shopify theme designed specifically for your brand and optimized for conversions.",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
-          liClassName:"flex flex-row gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
               title: "Unique brand-focused design",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Mobile-first responsive layout",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Custom functionality",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "SEO optimization built-in",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             }
           ]
@@ -234,6 +236,7 @@ function Home() {
         outerClassName="background-theme-3"
         className="container py-6 md:pt-4 md:pb-8 flex flex-col md:flex-row gap-12 items-stretch"
         contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
           text:"Service 03",
           textClassName: "text-sm font-bold text-purple-600 uppercase" 
@@ -246,30 +249,30 @@ function Home() {
         subheadingProps={{
           tag: "p",
           className: "text-center md:text-left text-lg",
-          children: "Stand out from the competition with a fully custom Shopify theme designed specifically for your brand and optimized for conversions.",
+          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
-          liClassName:"flex flex-row gap-3",
+          liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
               title: "Unique brand-focused design",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Mobile-first responsive layout",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "Custom functionality",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             },
             {
               title: "SEO optimization built-in",
-              iconName: "shopify",
+              iconName: "tick",
               iconSize: "20"
             }
           ]
@@ -365,4 +368,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

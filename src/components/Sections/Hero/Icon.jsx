@@ -11,6 +11,7 @@ import shopifyBold from "@/assets/icons/shopifyBold.png";
 import speed from "@/assets/icons/speed.png";
 import growth from "@/assets/icons/growth.png";
 import scale from "@/assets/icons/scale.png";
+import tick from "@/assets/icons/tick.png";
 
 
 /**
@@ -30,7 +31,8 @@ const ICON_MAP = {
   shopifyBold,
   speed,
   growth,
-  scale
+  scale,
+  tick
 };
 
 function Icon({ iconName, alt = "", size = 18 }) {

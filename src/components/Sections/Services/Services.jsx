@@ -6,6 +6,7 @@ import BannerImage from "../../Global/UI/BannerImage"
 import ServiceFeature from "./ServiceFeatures";
 
 function Services({
+  sectionId = "",
   outerClassName = "",
   className = "",
   contentClassName = "",
@@ -20,7 +21,7 @@ function Services({
 }) {
 
   return (
-    <section className={outerClassName}>
+    <section className={outerClassName} id={sectionId}>
       <div className={className}>
         <div className={contentClassName}>
           {tagProps && <TagButton {...tagProps} />}
