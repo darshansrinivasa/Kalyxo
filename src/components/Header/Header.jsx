@@ -1,5 +1,3 @@
-
-
 import Logo from "../Global/UI/Logo";
 import NavList from "./Nav/NavList";
 import Button from "../Global/Button/Button";

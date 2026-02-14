@@ -4,6 +4,7 @@ function Button({
   className = "",
   content = "Book free call",
   iconName,
+  iconSize = "20",
   onClick,
   href,
   type = "button",
@@ -20,7 +21,7 @@ function Button({
       {iconName && (
         <Icon
           iconName={iconName}
-          size={20}
+          size={iconSize}
           alt={iconName}
         />
       )}

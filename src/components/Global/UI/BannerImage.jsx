@@ -13,7 +13,7 @@ function BannerImage({
           <img
             src={imageSrc}
             alt={alt}
-            className={`max-w-full h-auto ${imageClassName}`}
+            className={`max-w-full ${imageClassName}`}
             loading="lazy"
           />
         </div>

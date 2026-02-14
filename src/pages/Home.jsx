@@ -1,14 +1,20 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
-import heroBannerImage from "@/assets/images/Home-hero-banner.png"
 import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
+import Services from "@/components/Sections/Services/Services";
+
 import { WHY_CHOOSE_US } from "@/constants/WhyChooseUs";
+
+import heroBannerImage from "@/assets/images/Home-hero-banner.png"
+import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
+import CustomThemeImage from "@/assets/images/Custom-theme-development.jpg"
+import StoreRedesignImage from "@/assets/images/Store-redesign.jpg"
 
 function Home() {
   return (
     <>
       <Hero
-        className="container pt-6 pb-8 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="container py-8 md:py-24 flex flex-col md:flex-row gap-12 items-center"
         contentClassName="flex flex-col gap-8 w-full md:w-[50%]"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
@@ -48,7 +54,6 @@ function Home() {
           imageSrc: heroBannerImage,
           wrapperClassName: "md:w-[50%] hidden md:block",
           mediaClassName: "rounded-2xl overflow-hidden shadow-2xl",
-          imageClassName: "blur-[1px]"
         }}
       />
 
@@ -87,7 +92,7 @@ function Home() {
       />
 
       <RichText
-        outerClassName="background-theme-1"
+        outerClassName="background-theme-3"
         className="container pt-6 pb-8 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         tagProps={{
@@ -107,6 +112,196 @@ function Home() {
         }}
       />
 
+      <Services
+        outerClassName="background-theme-3"
+        className="container py-8 md:pt-4 md:pb-20 flex flex-col md:flex-row gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        tagProps={{
+          text:"Service 01",
+          textClassName: "text-sm font-bold text-purple-600 uppercase" 
+        }}
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Shopify Store Setup",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Launch your dream store with a complete setup that includes theme customization, product uploads, payment gateway integration, and essential app installations.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3",
+          liItems:[
+            {
+              title: "Complete store configuration",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Theme customization",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Payment & shipping setup",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Product catalog organization",
+              iconName: "shopify",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Learn More",
+          className: "button icon-right text-base text-purple-600 p-0",
+          iconName: "arrowRightPurple",
+          iconSize: 16,
+          href: "/services"
+        }}
+        imageProps={{
+          imageSrc: storeSetupImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        outerClassName="background-theme-3"
+        className="container py-8 md:pt-4 md:pb-20 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        tagProps={{
+          text:"Service 02",
+          textClassName: "text-sm font-bold text-purple-600 uppercase" 
+        }}
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Custom Theme Development",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom Shopify theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "shopify",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Learn More",
+          className: "button icon-right text-base text-purple-600 p-0",
+          iconName: "arrowRightPurple",
+          iconSize: 16,
+          href: "/services"
+        }}
+        imageProps={{
+          imageSrc: CustomThemeImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <Services
+        outerClassName="background-theme-3"
+        className="container py-6 md:pt-4 md:pb-8 flex flex-col md:flex-row gap-12 items-stretch"
+        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        tagProps={{
+          text:"Service 03",
+          textClassName: "text-sm font-bold text-purple-600 uppercase" 
+        }}
+        headingProps={{
+          tag: "h1",
+          className: "text-center md:text-left text-4xl font-bold",
+          children: "Store Redesign",
+        }}
+        subheadingProps={{
+          tag: "p",
+          className: "text-center md:text-left text-lg",
+          children: "Stand out from the competition with a fully custom Shopify theme designed specifically for your brand and optimized for conversions.",
+        }}
+        featureListProps={{
+          ulClassName:"flex flex-col gap-3",
+          liClassName:"flex flex-row gap-3",
+          liItems:[
+            {
+              title: "Unique brand-focused design",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Mobile-first responsive layout",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "Custom functionality",
+              iconName: "shopify",
+              iconSize: "20"
+            },
+            {
+              title: "SEO optimization built-in",
+              iconName: "shopify",
+              iconSize: "20"
+            }
+          ]
+        }}
+        primaryBtnProps={{
+          content: "Learn More",
+          className: "button icon-right text-base text-purple-600 p-0",
+          iconName: "arrowRightPurple",
+          iconSize: 16,
+          href: "/services"
+        }}
+        imageProps={{
+          imageSrc: StoreRedesignImage,
+          wrapperClassName: "md:w-[50%]",
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+        }}
+      />
+
+      <RichText
+        outerClassName="background-theme-3"
+        className="container pt-6 pb-8 md:pt-8 md:pb-24"
+        contentClassName="flex flex-col gap-4 w-full"
+        buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
+        primaryBtnProps={{
+          className: "button primary-button purple icon-right px-8 py-4",
+          content: "View All Services",
+          iconName: "arrowRightWhite",
+          iconSize: 18,
+          href: "/services"
+        }}
+      />
 
       <RichText
         outerClassName="background-theme-1"
@@ -119,7 +314,7 @@ function Home() {
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl",
+          className: "text-center text-xl max-w-150 mx-auto",
           children: "Explore our portfolio of successful Shopify stores we've built for clients worldwide",
         }}
       />
