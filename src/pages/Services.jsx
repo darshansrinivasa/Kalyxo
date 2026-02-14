@@ -278,10 +278,7 @@ function ServicesPage() {
         className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
         contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
-        tagProps={{
-          text:"Service 03",
-          textClassName: "text-sm font-bold text-purple-600 uppercase" 
-        }}
+        
         headingProps={{
           tag: "h1",
           className: "text-center md:text-left text-4xl font-bold",
@@ -319,11 +316,11 @@ function ServicesPage() {
           ]
         }}
         primaryBtnProps={{
-          content: "Learn More",
-          className: "button icon-right text-base text-purple-600 p-0",
-          iconName: "arrowRightPurple",
+          content: "Get Started",
+          className: "button primary-button purple icon-right text-base",
+          iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/services"
+          href: "/contact"
         }}
         imageProps={{
           imageSrc: StoreRedesignImage,
