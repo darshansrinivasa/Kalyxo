@@ -44,7 +44,7 @@ function ServicesPage() {
         sectionId="store-setup"
         outerClassName="background-theme-3"
         className="container py-8 md:pt-24 md:pb-12 flex flex-col md:flex-row gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
   
         headingProps={{
@@ -102,7 +102,7 @@ function ServicesPage() {
         sectionId="custom-theme"
         outerClassName="background-theme-3"
         className="container py-8 md:py-12 flex flex-col md:flex-row-reverse gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
         headingProps={{
@@ -160,7 +160,7 @@ function ServicesPage() {
         sectionId="store-redesign"
         outerClassName="background-theme-3"
         className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
         headingProps={{
@@ -218,40 +218,40 @@ function ServicesPage() {
         sectionId="speed-optimization"
         outerClassName="background-theme-3"
         className="container py-8 md:py-12 flex flex-col md:flex-row-reverse gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
         headingProps={{
           tag: "h1",
           className: "text-center md:text-left text-4xl font-bold",
-          children: "Custom Theme Development",
+          children: "Speed Optimization",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center md:text-left text-lg",
-          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+          children: "Dramatically improve your store loading times with technical optimizations that enhance user experience and SEO rankings.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
           liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
-              title: "Unique brand-focused design",
+              title: "Performance audit",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Mobile-first responsive layout",
+              title: "Image Optimization",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Custom functionality",
+              title: "Theme Code Cleanup & Minification",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "SEO optimization built-in",
+              title: "App Cleanup and Optimization",
               iconName: "tick",
               iconSize: "20"
             }
@@ -276,40 +276,40 @@ function ServicesPage() {
         sectionId="app-integration"
         outerClassName="background-theme-3"
         className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
         headingProps={{
           tag: "h1",
           className: "text-center md:text-left text-4xl font-bold",
-          children: "Store Redesign",
+          children: "App Integration",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center md:text-left text-lg",
-          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+          children: "Seamlessly integrate third-party apps and custom functionality to extend your store capabilities and automate workflows.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
           liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
-              title: "Unique brand-focused design",
+              title: "App Research & Selection",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Mobile-first responsive layout",
+              title: "Custom API Integration",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Custom functionality",
+              title: "Testing & Troubleshooting",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "SEO optimization built-in",
+              title: "Documentation & Training",
               iconName: "tick",
               iconSize: "20"
             }
@@ -334,41 +334,41 @@ function ServicesPage() {
         sectionId="maintanance-support"
         outerClassName="background-theme-3"
         className="container py-8 md:pt-12 md:pb-24 flex flex-col md:flex-row-reverse gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
         
         headingProps={{
           tag: "h1",
           className: "text-center md:text-left text-4xl font-bold",
-          children: "Custom Theme Development",
+          children: "Maintainance & Support",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center md:text-left text-lg",
-          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+          children: "Ongoing technical support, updates, and maintenance to keep your store running smoothly and securely at all times.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
           liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
-              title: "Unique brand-focused design",
+              title: "Regular Updates & Bakups",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Mobile-first responsive layout",
+              title: "Bugfixes & troubleshooting",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Custom functionality",
+              title: "Performance monitoring",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "SEO optimization built-in",
+              title: "Support Access",
               iconName: "tick",
               iconSize: "20"
             }

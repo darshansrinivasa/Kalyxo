@@ -38,7 +38,7 @@ function AboutPage() {
 
       <Hero
         className="container py-18 md:pb-24 md:pt-6 flex flex-col md:flex-row gap-16 items-center"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         headingProps={{
           tag: "h1",
           className: "text-left text-4xl md:text-5xl font-bold gradient-heading capitalize",

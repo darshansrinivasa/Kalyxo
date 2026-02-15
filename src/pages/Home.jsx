@@ -115,7 +115,7 @@ function HomePage() {
       <Services
         outerClassName="background-theme-3"
         className="container py-8 md:pt-4 md:pb-20 flex flex-col md:flex-row gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
           text:"Service 01",
@@ -175,7 +175,7 @@ function HomePage() {
       <Services
         outerClassName="background-theme-3"
         className="container py-8 md:pt-4 md:pb-20 flex flex-col md:flex-row-reverse gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
           text:"Service 02",
@@ -235,7 +235,7 @@ function HomePage() {
       <Services
         outerClassName="background-theme-3"
         className="container py-6 md:pt-4 md:pb-8 flex flex-col md:flex-row gap-12 items-stretch"
-        contentClassName="flex flex-col gap-6 w-full md:w-[50%]"
+        contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
           text:"Service 03",

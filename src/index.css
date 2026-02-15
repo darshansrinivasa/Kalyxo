@@ -54,6 +54,10 @@
     background-image: linear-gradient(to bottom, rgb(250 245 255 / .5), #fff);
   }
 
+  .Banner-media-container {
+    @apply flex flex-col gap-6 justify-center w-full md:w-[50%]
+  }
+
   /* Buttons */
   .button {
     @apply flex gap-2 items-center justify-center px-6 py-3 transition rounded-lg cursor-pointer;
