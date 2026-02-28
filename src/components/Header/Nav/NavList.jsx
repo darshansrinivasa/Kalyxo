@@ -1,15 +1,22 @@
 import NavItem from "./NavItem";
 
-function NavList({className = "", NAV_LINKS, ulClassName = "", liClassName = "" }) {
+function NavList({
+  className = "",
+  NAV_LINKS = [],
+  ulClassName = "",
+  liClassName = "",
+  onItemClick,
+}) {
   return (
     <nav className={className}>
       <ul className={ulClassName}>
         {NAV_LINKS.map((link) => (
-          <NavItem 
-            key={link.name} 
-            label={link.name} 
+          <NavItem
+            key={link.name}
+            label={link.name}
             to={link.href}
             liClassName={liClassName}
+            onClick={onItemClick}
           />
         ))}
       </ul>

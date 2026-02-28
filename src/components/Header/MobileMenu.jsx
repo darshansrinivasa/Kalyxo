@@ -19,6 +19,7 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
           NAV_LINKS={NAV_LINKS}
           ulClassName="flex-col gap-6"
           liClassName="mb-8"
+          onItemClick={onClose}
         />
 
         {/* CTA */}

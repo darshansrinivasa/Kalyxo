@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 
-function NavItem({ label, to, liClassName = "" }) {
+function NavItem({ label, to, liClassName = "", onClick }) {
   return (
     <li className={liClassName}>
       <NavLink
         to={to}
+        onClick={onClick}
         className={({ isActive }) =>
           `
           text-base

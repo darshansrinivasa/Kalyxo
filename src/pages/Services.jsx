@@ -43,7 +43,7 @@ function ServicesPage() {
       <Services
         sectionId="store-setup"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-8 md:pt-24 md:pb-12 flex flex-col md:flex-row gap-12 items-stretch"
+        className="container py-8 md:pt-24 md:pb-12 flex flex-col-reverse md:flex-row gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
   
@@ -101,7 +101,7 @@ function ServicesPage() {
       <Services
         sectionId="custom-theme"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-8 md:py-12 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        className="container py-8 md:py-12 flex flex-col-reverse md:flex-row-reverse gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
@@ -159,7 +159,7 @@ function ServicesPage() {
       <Services
         sectionId="store-redesign"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
+        className="container py-6 md:py-12 flex flex-col-reverse md:flex-row gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
@@ -217,7 +217,7 @@ function ServicesPage() {
       <Services
         sectionId="speed-optimization"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-8 md:py-12 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        className="container py-8 md:py-12 flex flex-col-reverse md:flex-row-reverse gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
@@ -275,7 +275,7 @@ function ServicesPage() {
       <Services
         sectionId="app-integration"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-6 md:py-12 flex flex-col md:flex-row gap-12 items-stretch"
+        className="container py-6 md:py-12 flex flex-col-reverse md:flex-row gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
@@ -333,7 +333,7 @@ function ServicesPage() {
       <Services
         sectionId="maintanance-support"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-8 md:pt-12 md:pb-24 flex flex-col md:flex-row-reverse gap-12 items-stretch"
+        className="container py-8 md:pt-12 md:pb-24 flex flex-col-reverse md:flex-row-reverse gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
