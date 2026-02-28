@@ -5,33 +5,36 @@ function ScrollToHash() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) return;
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
 
-    const id = location.hash.replace("#", "");
+      const scrollToElement = () => {
+        const element = document.getElementById(id);
 
-    const scrollToElement = () => {
-      const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
 
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+          window.history.replaceState(
+            null,
+            "",
+            location.pathname
+          );
+        } else {
+          requestAnimationFrame(scrollToElement);
+        }
+      };
 
-        window.history.replaceState(
-          null,
-          "",
-          location.pathname
-        );
-      } else {
-        // 🔥 Retry until element is mounted
-        requestAnimationFrame(scrollToElement);
-      }
-    };
-
-    scrollToElement();
-
-  }, [location.hash]);
+      scrollToElement();
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [location.pathname, location.hash]);
 
   return null;
 }

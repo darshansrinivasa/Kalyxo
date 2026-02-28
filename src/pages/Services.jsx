@@ -333,7 +333,7 @@ function ServicesPage() {
       <Services
         sectionId="maintanance-support"
         outerClassName="background-theme-3 section-anchor"
-        className="container py-8 md:pt-12 md:pb-24 flex flex-col-reverse md:flex-row-reverse gap-12 items-stretch"
+        className="container py-8 md:pt-12 md:pb-24 flex flex-col md:flex-row-reverse gap-12 items-stretch"
         contentClassName="Banner-media-container"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         
@@ -446,7 +446,7 @@ function ServicesPage() {
         secondaryBtnProps={{
           content: "View Our Work",
           className: "button secondary-button white px-8 py-4",
-          href: "/servportfolioices"
+          href: "/portfolio"
         }}
       />
     </>

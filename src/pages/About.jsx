@@ -125,7 +125,7 @@ function AboutPage() {
         secondaryBtnProps={{
           content: "View Our Work",
           className: "button secondary-button white px-8 py-4",
-          href: "/servportfolioices"
+          href: "/portfolio"
         }}
       />
     </>
