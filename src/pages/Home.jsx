@@ -360,7 +360,7 @@ function HomePage() {
       />
 
       <RichText
-        outerClassName="background-theme-1"
+        outerClassName="background-theme-3"
         className="container pt-6 pb-8 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         tagProps={{
@@ -377,7 +377,7 @@ function HomePage() {
 
       <ProcessSection
         items={PROCESS_STEPS}
-        outerClassName="background-theme-1 py-8 md:pt-4 md:pb-20"
+        outerClassName="background-theme-3 py-8 md:pt-4 md:pb-20"
         containerClassName="container relative"
         lineClassName="hidden md:block absolute top-14 left-15 right-15 h-[2px] bg-purple-300"
         gridClassName="grid gap-12 md:grid-cols-4"
