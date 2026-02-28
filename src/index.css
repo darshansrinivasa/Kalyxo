@@ -137,6 +137,12 @@
   }
 }
 
+@layer utilities {
+  .section-anchor {
+    scroll-margin-top: 5rem;
+  }
+}
+
 
 /* Smooth theme transitions */
 * {

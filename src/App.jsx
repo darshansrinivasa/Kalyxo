@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "@/components/Layout";
+import ScrollToHash from "@/components/ScrollToHash";
 import HomePage from "@/pages/Home";
 import AboutPage from "@/pages/About";
 import ServicesPage from "@/pages/Services";
@@ -10,6 +11,7 @@ import ContactPage from "@/pages/Contact";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />

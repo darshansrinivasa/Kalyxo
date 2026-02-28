@@ -3,9 +3,11 @@ import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
 import Services from "@/components/Sections/Services/Services";
 import PortfolioGridSection from "@/components/Sections/Portfolio/PortfolioGridSection";
+import ProcessSection from "@/components/Sections/Process/ProcessSection";
 
 import { WHY_CHOOSE_US } from "@/constants/WhyChooseUs";
 import { PORTFOLIO_ITEMS } from "@/constants/Portfolio";
+import { PROCESS_STEPS } from "@/constants/Process";
 
 import heroBannerImage from "@/assets/images/Home-hero-banner.png"
 import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
@@ -125,12 +127,12 @@ function HomePage() {
         }}
         headingProps={{
           tag: "h1",
-          className: "text-center md:text-left text-4xl font-bold",
+          className: "text-4xl font-bold",
           children: "Shopify Store Setup",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center md:text-left text-lg",
+          className: "text-lg",
           children: "Launch your dream store with a complete setup that includes theme customization, product uploads, payment gateway integration, and essential app installations.",
         }}
         featureListProps={{
@@ -185,12 +187,12 @@ function HomePage() {
         }}
         headingProps={{
           tag: "h1",
-          className: "text-center md:text-left text-4xl font-bold",
+          className: "text-4xl font-bold",
           children: "Custom Theme Development",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center md:text-left text-lg",
+          className: "text-lg",
           children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
         }}
         featureListProps={{
@@ -245,12 +247,12 @@ function HomePage() {
         }}
         headingProps={{
           tag: "h1",
-          className: "text-center md:text-left text-4xl font-bold",
+          className: "text-4xl font-bold",
           children: "Store Redesign",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center md:text-left text-lg",
+          className: "text-lg",
           children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
         }}
         featureListProps={{
@@ -336,13 +338,13 @@ function HomePage() {
           imageClassName: "h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105",
           contentClassName: "p-6 flex flex-col gap-3",
           titleClassName: "text-xl font-semibold",
-          overlayContentClassName: "absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end items-start p-6",
+          overlayContentClassName: "flex absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-col justify-end p-6",
           bottomContentClassName: "p-6 flex justify-between gap-2 bg-white",
           categoryClassName: "px-3 py-1 bg-purple-100 text-purple-600 text-xs font-medium rounded-full",
           clientClassName: "text-sm text-gray-600",
           primaryBtnProps: {
             content: "View Project",
-            className: "button icon-right text-base text-white p-0",
+            className: "button icon-right text-base text-white p-0 justify-end",
             iconName: "arrowRightWhite",
             iconSize: 16,
           }
@@ -370,6 +372,24 @@ function HomePage() {
           tag: "h2",
           className: "text-center text-4xl md:text-5xl font-bold capitalize",
           children: "Our Process",
+        }}
+      />
+
+      <ProcessSection
+        items={PROCESS_STEPS}
+        outerClassName="background-theme-1 py-8 md:pt-4 md:pb-20"
+        containerClassName="container relative"
+        lineClassName="hidden md:block absolute top-14 left-15 right-15 h-[2px] bg-purple-300"
+        gridClassName="grid gap-12 md:grid-cols-4"
+        itemProps={{
+          circleClassName:
+            "relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg",
+          titleClassName:
+            "text-xl font-semibold mb-3",
+          descriptionClassName:
+            "text-slate-600 dark:text-slate-400 text-base leading-6",
+          iconClassName:
+            "mt-8 text-purple-300",
         }}
       />
 
