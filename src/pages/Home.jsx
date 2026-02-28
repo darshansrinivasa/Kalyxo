@@ -166,7 +166,7 @@ function HomePage() {
           className: "button icon-right text-base text-purple-600 p-0",
           iconName: "arrowRightPurple",
           iconSize: 16,
-          href: "/services"
+          href: "/services#store-setup"
         }}
         imageProps={{
           imageSrc: storeSetupImage,
@@ -226,7 +226,7 @@ function HomePage() {
           className: "button icon-right text-base text-purple-600 p-0",
           iconName: "arrowRightPurple",
           iconSize: 16,
-          href: "/services"
+          href: "/services#custom-development"
         }}
         imageProps={{
           imageSrc: CustomThemeImage,
@@ -286,7 +286,7 @@ function HomePage() {
           className: "button icon-right text-base text-purple-600 p-0",
           iconName: "arrowRightPurple",
           iconSize: 16,
-          href: "/services"
+          href: "/services#store-redesign"
         }}
         imageProps={{
           imageSrc: StoreRedesignImage,

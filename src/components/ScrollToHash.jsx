@@ -5,27 +5,33 @@ function ScrollToHash() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(
-        location.hash.replace("#", "")
-      );
+    if (!location.hash) return;
+
+    const id = location.hash.replace("#", "");
+
+    const scrollToElement = () => {
+      const element = document.getElementById(id);
 
       if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 100);
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        window.history.replaceState(
+          null,
+          "",
+          location.pathname
+        );
+      } else {
+        // 🔥 Retry until element is mounted
+        requestAnimationFrame(scrollToElement);
       }
-    } else {
-      // 👇 This fixes your banner cut-off issue
-      window.scrollTo({
-        top: 0,
-        behavior: "instant", // use "auto" if instant not supported
-      });
-    }
-  }, [location]);
+    };
+
+    scrollToElement();
+
+  }, [location.hash]);
 
   return null;
 }
