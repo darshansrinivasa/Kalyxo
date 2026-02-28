@@ -30,6 +30,8 @@ function ContactPage() {
           children: "Ready to transform your e-commerce business? Book a free consultation and let's discuss how we can help you achieve your goals.",
         }}
       />
+
+        {/* <ContactForm /> */}
     </>
   );
 }

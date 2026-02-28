@@ -93,8 +93,8 @@ function ServicesPage() {
         imageProps={{
           imageSrc: storeSetupImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
 
@@ -151,8 +151,8 @@ function ServicesPage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
 
@@ -209,8 +209,8 @@ function ServicesPage() {
         imageProps={{
           imageSrc: StoreRedesignImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
 
@@ -267,8 +267,8 @@ function ServicesPage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
 
@@ -325,8 +325,8 @@ function ServicesPage() {
         imageProps={{
           imageSrc: StoreRedesignImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
 
@@ -384,8 +384,8 @@ function ServicesPage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
 

@@ -2,8 +2,10 @@ import Hero from "@/components/Sections/Hero/Hero.jsx";
 import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
 import Services from "@/components/Sections/Services/Services";
+import PortfolioGridSection from "@/components/Sections/Portfolio/PortfolioGridSection";
 
 import { WHY_CHOOSE_US } from "@/constants/WhyChooseUs";
+import { PORTFOLIO_ITEMS } from "@/constants/Portfolio";
 
 import heroBannerImage from "@/assets/images/Home-hero-banner.png"
 import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
@@ -308,7 +310,7 @@ function HomePage() {
 
       <RichText
         outerClassName="background-theme-1"
-        className="container pt-6 pb-8 md:py-16"
+        className="container pt-6 pb-8 md:pt-16 md:py-9"
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
           tag: "h2",
@@ -319,6 +321,39 @@ function HomePage() {
           tag: "p",
           className: "text-center text-xl max-w-150 mx-auto",
           children: "Explore our portfolio of successful Shopify stores we've built for clients worldwide",
+        }}
+      />
+
+      <PortfolioGridSection
+        items={PORTFOLIO_ITEMS}
+        limit={6}
+        outerClassName=""
+        containerClassName="container py-8 md:pt-4 md:pb-20"
+        gridClassName="grid gap-8 md:grid-cols-3"
+        cardProps={{
+          wrapperClassName:
+            "group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl" ,
+          imageClassName: "h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105",
+          contentClassName: "p-6 flex flex-col gap-3",
+          titleClassName: "text-xl font-semibold",
+          overlayContentClassName: "absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end items-start p-6",
+          bottomContentClassName: "p-6 flex justify-between gap-2 bg-white",
+          categoryClassName: "px-3 py-1 bg-purple-100 text-purple-600 text-xs font-medium rounded-full",
+          clientClassName: "text-sm text-gray-600",
+          primaryBtnProps: {
+            content: "View Project",
+            className: "button icon-right text-base text-white p-0",
+            iconName: "arrowRightWhite",
+            iconSize: 16,
+          }
+        }}
+        viewAllContainerClassName="mt-12 flex justify-center"
+        viewAllBtnProps={{
+          content: "View All Projects",
+          className: "button icon-right secondary-button px-8 py-4",
+          iconName: "arrowRightPurple",
+          iconSize: 16,
+          href: "/portfolio"
         }}
       />
 
