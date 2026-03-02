@@ -38,7 +38,7 @@ function PortfolioCaseStudy({
             {title}
           </h2>
 
-          <p className="text-slate-600 mt-4 text-lg">
+          <p className="text-slate-600 dark:text-slate-200 mt-4 text-lg">
             {description}
           </p>
 
@@ -54,7 +54,7 @@ function PortfolioCaseStudy({
           </div>
 
           <div className="mt-8">
-            <p className="text-sm text-slate-500">Client</p>
+            <p className="text-sm text-slate-500 dark:text-slate-200">Client</p>
             <p className="text-xl font-semibold">{client}</p>
           </div>
 

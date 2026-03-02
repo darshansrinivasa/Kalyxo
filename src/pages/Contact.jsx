@@ -1,4 +1,5 @@
 import Hero from "@/components/Sections/Hero/Hero.jsx";
+import ContactFormSection from "@/components/Sections/Contact/ContactFormSection";
 
 function ContactPage() {
   return (
@@ -31,7 +32,12 @@ function ContactPage() {
         }}
       />
 
-        {/* <ContactForm /> */}
+        <ContactFormSection 
+          outerClassName="pb-24 pt-4"
+          containerClassName="container"
+          leftClassName="w-full md:w-1/2"
+          rightClassName="w-full md:w-1/2"
+        />
     </>
   );
 }

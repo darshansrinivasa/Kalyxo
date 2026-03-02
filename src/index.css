@@ -162,7 +162,8 @@ li {
 }
 
 /* Footer */
-.footer-social-icons img {
+.footer-social-icons img,
+.social-icons img {
   filter: brightness(2)
 }
 
