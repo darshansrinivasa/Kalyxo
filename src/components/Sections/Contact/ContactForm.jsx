@@ -76,9 +76,42 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+  
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          website: "", // honeypot field
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          budget: "",
+          timeline: "",
+          message: "",
+        });
+      } else {
+        alert(data.error || "Something went wrong.");
+      }
+  
+    } catch (error) {
+      alert("Server error. Try again later.");
+    }
   };
 
   return (
@@ -189,9 +222,17 @@ function ContactForm() {
         />
       </div>
 
+      <div style={{ display: "none" }}>
+        <input
+          type="text"
+          name="website"
+          onChange={handleChange}
+        />
+      </div>
       <Button
         content="Send Message"
         className="button primary-button purple w-full py-4"
+        type="submit"
       />
     </form>
   );
