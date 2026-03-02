@@ -38,8 +38,8 @@ function Footer() {
 
   const getInTouchLink = [
     {
-      label: "contact@kalyxo.in",
-      to: "mailto:contact@kalyxo.in",
+      label: "Contact Us",
+      to: "/contact",
       icon: <Icon iconName="mail" size={18} />,
     },
   ];

@@ -7,9 +7,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "2",
@@ -18,9 +27,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "3",
@@ -29,9 +47,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "4",
@@ -40,9 +67,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "5",
@@ -51,9 +87,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "6",
@@ -62,9 +107,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "7",
@@ -73,9 +127,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "8",
@@ -84,9 +147,18 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
     {
       id: "9",
@@ -95,8 +167,17 @@ export const PORTFOLIO_ITEMS = [
       title: "D2C Skincare Brand",
       description:
         "Custom theme development with performance optimization and conversion improvements.",
-      service_tags:["Store redesign, Theme Development, Optimisation"],
+      service_tags: [
+        "Store redesign",
+        "Theme Development",
+        "Optimisation"
+      ],
       client: "D2C",
-      href: "/portfolio",
+      // metrics: {
+      //   conversion: "+32%",
+      //   revenue: "+48%",
+      //   loadTime: "1.2s load time"
+      // },
+      href: "/portfolio/",
     },
   ];
