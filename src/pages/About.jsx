@@ -2,7 +2,7 @@ import Hero from "@/components/Sections/Hero/Hero.jsx";
 import heroBannerImage from "@/assets/images/Our-story.jpg"
 import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
-import { VALUES } from "@/constants/VALUES";
+import { VALUES } from "@/constants/Values";
 
 function AboutPage() {
   return (
