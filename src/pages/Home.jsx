@@ -47,7 +47,7 @@ function HomePage() {
           content: "Book a Free consultation",
           className: "button primary-button purple icon-right px-8 py-4",
           iconName: "arrowRightWhite",
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         secondaryBtnProps={{
           content: "View Our Work",
@@ -414,7 +414,7 @@ function HomePage() {
           href: "/contact"
         }}
         secondaryBtnProps={{
-          content: "View Pricing",
+          content: "View Services",
           className: "button secondary-button white px-8 py-4",
           href: "/services"
         }}

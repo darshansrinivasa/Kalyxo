@@ -88,7 +88,7 @@ function ServicesPage() {
           className: "button primary-button purple icon-right text-base",
           iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         imageProps={{
           imageSrc: storeSetupImage,
@@ -146,7 +146,7 @@ function ServicesPage() {
           className: "button primary-button purple icon-right text-base",
           iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         imageProps={{
           imageSrc: CustomThemeImage,
@@ -204,7 +204,7 @@ function ServicesPage() {
           className: "button primary-button purple icon-right text-base",
           iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         imageProps={{
           imageSrc: StoreRedesignImage,
@@ -262,7 +262,7 @@ function ServicesPage() {
           className: "button primary-button purple icon-right text-base",
           iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         imageProps={{
           imageSrc: CustomThemeImage,
@@ -320,7 +320,7 @@ function ServicesPage() {
           className: "button primary-button purple icon-right text-base",
           iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         imageProps={{
           imageSrc: StoreRedesignImage,
@@ -379,7 +379,7 @@ function ServicesPage() {
           className: "button primary-button purple icon-right text-base",
           iconName: "arrowRightWhite",
           iconSize: 16,
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         imageProps={{
           imageSrc: CustomThemeImage,
@@ -441,7 +441,7 @@ function ServicesPage() {
           content: "Book Free Consultation",
           className: "button primary-button icon-right px-8 py-4",
           iconName: "arrowRightPurple",
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         secondaryBtnProps={{
           content: "View Our Work",

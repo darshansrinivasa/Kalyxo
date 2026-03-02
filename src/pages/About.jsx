@@ -120,7 +120,7 @@ function AboutPage() {
           content: "Book Free Consultation",
           className: "button primary-button icon-right px-8 py-4",
           iconName: "arrowRightPurple",
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         secondaryBtnProps={{
           content: "View Our Work",

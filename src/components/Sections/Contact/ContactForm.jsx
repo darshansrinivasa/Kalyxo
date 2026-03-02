@@ -8,6 +8,7 @@ function InputField({
   value,
   onChange,
   placeholder,
+  required = false,
 }) {
   return (
     <div>
@@ -21,6 +22,7 @@ function InputField({
         onChange={onChange}
         placeholder={placeholder}
         className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        required={required}
       />
     </div>
   );
@@ -92,6 +94,7 @@ function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           placeholder="John Doe"
+          required={true}
         />
         <InputField
           label="Email Address *"
@@ -100,24 +103,27 @@ function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="john@example.com"
+          required={true}
         />
       </div>
 
       {/* Phone + Company */}
       <div className="grid md:grid-cols-2 gap-6">
         <InputField
-          label="Phone Number"
+          label="Phone Number *"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
           placeholder="+1 (234) 567-890"
+          required={true}
         />
         <InputField
-          label="Company Name"
+          label="Company Name *"
           name="company"
           value={formData.company}
           onChange={handleChange}
           placeholder="Your Company"
+          required={true}
         />
       </div>
 
@@ -136,6 +142,7 @@ function ContactForm() {
             "App Integration",
             "Maintenance & Support",
           ]}
+          required={true}
         />
 
         {/* <SelectField
@@ -178,6 +185,7 @@ function ContactForm() {
           onChange={handleChange}
           className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="Tell us about your project..."
+          required={true}
         />
       </div>
 
