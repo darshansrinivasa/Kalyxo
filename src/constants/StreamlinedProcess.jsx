@@ -1,5 +1,5 @@
   
-export const SteamlinedProcess = [
+export const StreamlinedProcess = [
     {
       number: "01",
       title: "Consultation",

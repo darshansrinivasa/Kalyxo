@@ -3,7 +3,7 @@ import RichText from "../components/Sections/Richtext/Richtext";
 import Featured from "@/components/Sections/Featured/Featured";
 import Services from "@/components/Sections/Services/Services";
 
-import { SteamlinedProcess } from "@/constants/SteamlinedProcess";
+import { StreamlinedProcess } from "@/constants/StreamlinedProcess";
 
 import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
 import CustomThemeImage from "@/assets/images/Custom-theme-development.jpg"
@@ -406,7 +406,7 @@ function ServicesPage() {
       />
 
       <Featured
-        items={SteamlinedProcess}
+        items={StreamlinedProcess}
         outerClassName="pb-14 md:pb-24"
         className="container"
         gridClassName="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
