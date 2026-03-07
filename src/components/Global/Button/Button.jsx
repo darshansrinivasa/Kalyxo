@@ -1,4 +1,5 @@
 import Icon from "@/components/Sections/Hero/Icon";
+import { Link } from "react-router-dom";
 
 function Button({
   className = "",
@@ -9,14 +10,14 @@ function Button({
   href,
   type = "button",
 }) {
-  const Component = href ? "a" : "button";
+  const Component = href ? Link : "button";
+  const linkProps = href ? { to: href } : { type };
+  const commonProps = { className, onClick };
 
   return (
     <Component
-      className={className}
-      onClick={onClick}
-      href={href}
-      type={!href ? type : undefined}
+      {...commonProps}
+      {...linkProps}
     >
       {iconName && (
         <Icon

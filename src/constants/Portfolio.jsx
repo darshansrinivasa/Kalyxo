@@ -18,7 +18,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "2",
@@ -38,7 +38,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "3",
@@ -58,7 +58,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "4",
@@ -78,7 +78,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "5",
@@ -98,7 +98,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "6",
@@ -118,7 +118,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "7",
@@ -138,7 +138,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "8",
@@ -158,7 +158,7 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
     {
       id: "9",
@@ -178,6 +178,6 @@ export const PORTFOLIO_ITEMS = [
       //   revenue: "+48%",
       //   loadTime: "1.2s load time"
       // },
-      href: "/portfolio/",
+      href: "/portfolio",
     },
   ];
