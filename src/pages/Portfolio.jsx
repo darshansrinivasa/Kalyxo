@@ -9,7 +9,7 @@ function PortfolioPage() {
     <>
       <Hero
         className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
-        contentClassName="flex flex-col ietsm-center justify-center gap-8 w-full max-w-225 mx-auto"
+        contentClassName="flex flex-col items-center justify-center gap-8 w-full max-w-225 mx-auto"
         tagProps={{
           text: "Our Portfolio",
           iconName: "portfolio",

@@ -9,7 +9,7 @@ function AboutPage() {
     <>
       <Hero
         className="container py-18 md:pb-14 md:pt-24 flex flex-col md:flex-row gap-12 items-center"
-        contentClassName="flex flex-col ietsm-center justify-center gap-8 w-full"
+        contentClassName="flex flex-col items-center justify-center gap-8 w-full"
         tagProps={{
           text: "About Kalyxo",
           iconName: "about",

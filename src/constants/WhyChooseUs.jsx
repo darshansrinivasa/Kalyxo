@@ -4,24 +4,24 @@ export const WHY_CHOOSE_US = [
       icon: "shopifyBold",
       title: "Shopify Specialists",
       description:
-        "Deep expertise in Shopify platform with Experienced developer who know every feature inside out.",
+        "I work exclusively in Shopify. No context-switching, no generalist gaps — just deep platform knowledge on every project.",
     },
     {
       icon: "speed",
-      title: "Fast Turnaround",
+      title: "Performance First",
       description:
-        "Launch your store in 2–3 weeks without compromising on quality or functionality.",
+        "Speed isn't added at the end. Every build targets fast load times and clean Core Web Vitals from day one.",
     },
     {
       icon: "growth",
       title: "Conversion-Focused",
       description:
-        "Every design decision is backed by data and optimized for maximum conversions and sales.",
+        "Every layout and UX decision is made with one question in mind — does this help the customer get to checkout?",
     },
     {
       icon: "scale",
-      title: "Affordable & Scalable",
+      title: "Launch is Just the Start",
       description:
-        "Flexible pricing plans that grow with your business, from startup to enterprise level.",
+        "Got a bug after launch? Need a quick change? I stay involved as long as you need — no hunting for a new developer every time.",
     },
 ];

@@ -11,7 +11,7 @@ import { PROCESS_STEPS } from "@/constants/Process";
 
 import heroBannerImage from "@/assets/images/Home-hero-banner.png"
 import storeSetupImage from "@/assets/images/Shopify-Store-Setup.png"
-import CustomThemeImage from "@/assets/images/Custom-theme-development.jpg"
+import CustomThemeImage from "@/assets/images/Custom-theme-development.png"
 import StoreRedesignImage from "@/assets/images/Store-redesign.jpg"
 
 function HomePage() {
@@ -19,10 +19,10 @@ function HomePage() {
     <>
       <Hero
         className="container py-8 md:py-24 flex flex-col md:flex-row gap-12 items-center"
-        contentClassName="flex flex-col gap-8 w-full md:w-[50%]"
+        contentClassName="flex flex-col items-center justify-center gap-8 w-full"
         buttonContainerClassName="flex flex-col md:flex-row gap-4"
         tagProps={{
-          text: "Shopify Specialists",
+          text: "Shopify Specialist",
           iconName: "shopify",
           size: 18,
           className: "button mx-auto md:mx-0",
@@ -30,35 +30,35 @@ function HomePage() {
         }}
         headingProps={{
           tag: "h1",
-          className: "text-center md:text-left text-5xl md:text-7xl font-bold gradient-heading capitalize",
+          className: "text-center text-5xl md:text-7xl font-bold gradient-heading capitalize",
           children: (
             <>
               {" "}
-              <span>We build high-converting Shopify stores</span>
+              <span>Your Store Gets Traffic. It Should Be Getting Sales.</span>
             </>
           ),
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center md:text-left  text-xl",
-          children: "Transform your e-commerce vision into reality with custom Shopify solutions that drive sales, enhance user experience, and scale with your business.",
+          children: `I build and optimize Shopify stores for D2C and B2B brands — focused on speed, conversion, and clean code that actually scales.`,
         }}
         primaryBtnProps={{
-          content: "Book a Free consultation",
+          content: "Let's Work Together",
           className: "button primary-button purple icon-right px-8 py-4",
-          iconName: "arrowRightWhite",
           href: "/contact#contact-section"
         }}
         secondaryBtnProps={{
-          content: "View Our Work",
-          className: "button secondary-button purple px-8 py-4",
+          content: "See My Work",
+          className: "button secondary-button purple px-8 py-4 icon-right",
+          iconName: "arrowRightPurple",
           href: "/portfolio"
         }}
-        imageProps={{
-          imageSrc: heroBannerImage,
-          wrapperClassName: "md:w-[50%] hidden md:block",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl",
-        }}
+        // imageProps={{
+        //   imageSrc: heroBannerImage,
+        //   wrapperClassName: "md:w-[50%] hidden md:block",
+        //   mediaClassName: "rounded-2xl overflow-hidden shadow-2xl",
+        // }}
       />
 
       <RichText
@@ -66,7 +66,7 @@ function HomePage() {
         className="container py-6 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         tagProps={{
-          text: "Why Choose Kalyxo",
+          text: "Why Work With Me?",
           className: "mx-auto md:mx-0 text-center ",
           textClassName: "text-sm max-w-220 mx-auto text-purple-600 uppercase"
         }}
@@ -100,19 +100,19 @@ function HomePage() {
         className="container pt-6 pb-8 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         tagProps={{
-          text: "Our Services",
+          text: "what I do",
           className: "mx-auto md:mx-0 text-center ",
           textClassName: "text-sm max-w-220 mx-auto text-purple-600 uppercase"
         }}
         headingProps={{
           tag: "h2",
           className: "text-center text-4xl md:text-5xl font-bold capitalize",
-          children: "Complete Shopify Solutions",
+          children: "Services Built Around Your Store.",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center text-xl",
-          children: "From setup to optimization, we handle every aspect of your Shopify store",
+          children: "Custom builds, revamps, and optimization — depending on where your store is and what it needs.",
         }}
       />
 
@@ -133,29 +133,29 @@ function HomePage() {
         subheadingProps={{
           tag: "p",
           className: "text-lg",
-          children: "Launch your dream store with a complete setup that includes theme customization, product uploads, payment gateway integration, and essential app installations.",
+          children: "Starting from scratch or rebuilding a bad foundation. I set up stores that are technically clean, fast, and ready to sell from day one.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
           liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
-              title: "Complete store configuration",
+              title: "Theme setup and configuration",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Theme customization",
+              title: "Product catalog and collection structure",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Payment & shipping setup",
+              title: "Payment, shipping, and tax setup",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Product catalog organization",
+              title: "App integration and analytics setup",
               iconName: "tick",
               iconSize: "20"
             }
@@ -193,29 +193,29 @@ function HomePage() {
         subheadingProps={{
           tag: "p",
           className: "text-lg",
-          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+          children: "When stock themes hit their limit. I build custom Shopify 2.0 themes in Liquid — built around your brand, not adapted to it.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
           liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
-              title: "Unique brand-focused design",
+              title: "Built from scratch in Liquid",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Mobile-first responsive layout",
+              title: "Shopify 2.0 — sections, blocks, metafields",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Custom functionality",
+              title: "Mobile-first, performance optimized",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "SEO optimization built-in",
+              title: "Editable in Theme Editor without touching code",
               iconName: "tick",
               iconSize: "20"
             }
@@ -232,7 +232,7 @@ function HomePage() {
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
           mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          imageClassName: "object-cover h-full object-center min-h-[300px] md:min-h-auto"
         }}
       />
 
@@ -248,34 +248,34 @@ function HomePage() {
         headingProps={{
           tag: "h1",
           className: "text-4xl font-bold",
-          children: "Store Redesign",
+          children: "Store Redesign & CRO",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-lg",
-          children: "Stand out from the competition with a fully custom tick theme designed specifically for your brand and optimized for conversions.",
+          children: "Your store has traffic. It should be converting more of it. I find what's losing you sales and fix it — without rebuilding what's already working.",
         }}
         featureListProps={{
           ulClassName:"flex flex-col gap-3",
           liClassName:"flex flex-row gap-3 items-center",
           liItems:[
             {
-              title: "Unique brand-focused design",
+              title: "UX and conversion audit first",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Mobile-first responsive layout",
+              title: "Homepage, PDP, and collection page rebuild",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "Custom functionality",
+              title: "Speed and Core Web Vitals fixes",
               iconName: "tick",
               iconSize: "20"
             },
             {
-              title: "SEO optimization built-in",
+              title: "Mobile UX — where most drop-off happens",
               iconName: "tick",
               iconSize: "20"
             }
@@ -292,7 +292,7 @@ function HomePage() {
           imageSrc: StoreRedesignImage,
           wrapperClassName: "md:w-[50%]",
           mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
-          imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
+          imageClassName: "object-cover h-full object-center min-h-[300px] md:min-h-auto"
         }}
       />
 
@@ -401,17 +401,18 @@ function HomePage() {
         headingProps={{
           tag: "h2",
           className: "text-center text-4xl md:text-5xl font-bold capitalize",
-          children: "Ready to Scale Your Shopify Store?",
+          children: "Got a Shopify store that needs work?",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center text-xl max-w-220 mx-auto",
-          children: "Transform your e-commerce vision into reality with custom Shopify solutions that drive sales, enhance user experience, and scale with your business.",
+          children: "From a quick fix to a full build — tell me where you are and I'll tell you exactly how I can help.",
         }}
         primaryBtnProps={{
+          content: "Book a Free Call",
           className: "button primary-button icon-right px-8 py-4",
           iconName: "arrowRightPurple",
-          href: "/contact"
+          href: "/contact#contact-section"
         }}
         secondaryBtnProps={{
           content: "View Services",

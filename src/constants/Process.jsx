@@ -1,26 +1,26 @@
 export const PROCESS_STEPS = [
     {
       step: "01",
-      title: "Discover",
+      title: "Understand",
       description:
-        "We dive deep into your business goals, target audience, and brand identity to create a strategic foundation.",
+        "I look at your store, ask the right questions, and figure out exactly what needs to change and why.",
     },
     {
       step: "02",
-      title: "Design",
+      title: "Plan",
       description:
-        "Our designers craft beautiful, conversion-optimized mockups that bring your vision to life with pixel-perfect precision.",
+        "Clear scope, fixed price, defined timeline. You know what you're getting before any work starts.",
     },
     {
       step: "03",
-      title: "Build",
+      title: "Execute",
       description:
-        "Expert developers transform designs into a fully functional Shopify store with clean code and seamless integrations.",
+        "I build in a staging environment and share progress at every milestone. No radio silence, no surprises.",
     },
     {
       step: "04",
-      title: "Launch",
+      title: "Support",
       description:
-        "We thoroughly test, optimize, and launch your store, then provide ongoing support to ensure continued success.",
+        "Thorough QA across devices before anything goes live. Then we launch — and I'm still around after.",
     },
   ];
