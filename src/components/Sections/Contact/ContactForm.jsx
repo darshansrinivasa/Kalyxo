@@ -1,5 +1,74 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Button from "@/components/Global/Button/Button";
+
+function ContactFeedbackPopup({ open, variant, message, onClose }) {
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") onCloseRef.current();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
+  if (!open) return null;
+
+  const isSuccess = variant === "success";
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      role="presentation"
+    >
+      <button
+        type="button"
+        aria-label="Close"
+        className="absolute inset-0 bg-slate-900/50 dark:bg-black/60"
+        onClick={onClose}
+      />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-feedback-title"
+        className={`relative w-full max-w-md rounded-2xl border bg-white p-6 shadow-xl dark:bg-slate-800 md:p-8 ${
+          isSuccess
+            ? "border-emerald-200 dark:border-emerald-900/40"
+            : "border-rose-200 dark:border-rose-900/40"
+        }`}
+      >
+        <h2
+          id="contact-feedback-title"
+          className={`text-lg font-semibold md:text-xl ${
+            isSuccess
+              ? "text-emerald-700 dark:text-emerald-400"
+              : "text-rose-700 dark:text-rose-400"
+          }`}
+        >
+          {isSuccess ? "Message sent" : "Could not send"}
+        </h2>
+        <p className="mt-3 text-slate-600 dark:text-slate-300">{message}</p>
+        <div className="mt-6">
+          <Button
+            type="button"
+            content="OK"
+            onClick={onClose}
+            className="button primary-button purple w-full py-3"
+          />
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
 
 function InputField({
   label,
@@ -69,6 +138,8 @@ function ContactForm() {
     message: "",
   });
 
+  const [feedback, setFeedback] = useState(null);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -94,7 +165,10 @@ function ContactForm() {
       const data = await response.json();
   
       if (response.ok) {
-        alert("Message sent successfully!");
+        setFeedback({
+          variant: "success",
+          message: "Thanks for reaching out. We'll get back to you shortly.",
+        });
         setFormData({
           name: "",
           email: "",
@@ -106,15 +180,27 @@ function ContactForm() {
           message: "",
         });
       } else {
-        alert(data.error || "Something went wrong.");
+        setFeedback({
+          variant: "error",
+          message: data.error || "Something went wrong. Please try again.",
+        });
       }
-  
     } catch (error) {
-      alert("Server error. Try again later.");
+      setFeedback({
+        variant: "error",
+        message: "Server error. Try again later.",
+      });
     }
   };
 
   return (
+    <>
+    <ContactFeedbackPopup
+      open={Boolean(feedback)}
+      variant={feedback?.variant}
+      message={feedback?.message ?? ""}
+      onClose={() => setFeedback(null)}
+    />
     <form
       onSubmit={handleSubmit}
       className="bg-slate-100 dark:bg-slate-900 p-6 md:p-10 rounded-2xl space-y-6"
@@ -235,6 +321,7 @@ function ContactForm() {
         type="submit"
       />
     </form>
+    </>
   );
 }
 
