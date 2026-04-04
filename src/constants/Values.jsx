@@ -2,38 +2,20 @@
 export const VALUES = [
     {
       icon: "shopifyBold",
-      title: "Results-Driven",
+      title: "Performance Over Aesthetics",
       description:
-        "We measure success by your success. Every decision is made with your business goals and ROI in mind.",
+        "A store that looks great but loads slowly is a store that loses money. Speed and conversion come first — design follows.",
     },
     {
       icon: "speed",
-      title: "Innovation First",
+      title: "Honest Scoping",
       description:
-        "We stay ahead of e-commerce trends and continuously explore new technologies to give you a competitive edge.",
+        "I won't recommend a full rebuild if targeted fixes will do the job. You get a clear scope, a fixed price, and no surprise invoices",
     },
     {
       icon: "growth",
-      title: "Client Partnership",
+      title: "Still Around After Launch",
       description:
         "We believe in building long-term relationships, not just completing projects. Your growth is our mission.",
-    },
-    {
-      icon: "scale",
-      title: "Quality Obsessed",
-      description:
-        "We never compromise on quality. Every line of code and design element meets our rigorous standards.",
-    },
-    {
-      icon: "growth",
-      title: "Fast Delivery",
-      description:
-        "We respect your time and deadlines. Our streamlined process ensures quick turnaround without sacrificing quality.",
-    },
-    {
-      icon: "scale",
-      title: "Exceptional Support",
-      description:
-        "Our commitment doesn't end at launch. We provide ongoing support to ensure your continued success.",
-    },
+    }
 ];
