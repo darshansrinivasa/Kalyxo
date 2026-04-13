@@ -8,14 +8,14 @@ function PortfolioPage() {
   return (
     <>
       <Hero
-        className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="hero-split"
         contentClassName="flex flex-col items-center justify-center gap-8 w-full max-w-225 mx-auto"
         tagProps={{
           text: "Our Portfolio",
           iconName: "portfolio",
           size: 18,
           className: "button mx-auto",
-          textClassName: "text-sm font-medium text-gray-700 dark:text-slate-200 leading-[28px]"
+          textClassName: "tag-text-muted"
         }}
         headingProps={{
           tag: "h1",
@@ -42,7 +42,7 @@ function PortfolioPage() {
         gridClassName="grid gap-10 md:grid-cols-2 lg:grid-cols-3"
         cardProps={{
           wrapperClassName:
-            "group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl transition",
+            "group portfolio-card transition",
           imageClassName:
             "h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105",
           overlayContentClassName:
@@ -58,17 +58,17 @@ function PortfolioPage() {
 
       <RichText
         outerClassName="background-theme-2"
-        className="container py-6 md:py-18 flex flex-col md:flex-row gap-12 items-center"
+        className="cta-split"
         contentClassName="flex flex-col gap-8 w-full"
         buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "Ready to Join Our Success Stores?",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-220 mx-auto",
+          className: "section-subheading-center max-w-220 mx-auto",
           children: "Let's create a high-converting Shopify store that drives real results for your business",
         }}
         primaryBtnProps={{

@@ -5,14 +5,14 @@ function ContactPage() {
   return (
     <>
       <Hero
-        className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="hero-split"
         contentClassName="flex flex-col items-center justify-center gap-8 w-full"
         tagProps={{
           text: "Get In Touch",
           iconName: "mail",
           size: 18,
           className: "button mx-auto",
-          textClassName: "text-sm font-medium text-gray-700 dark:text-slate-200 leading-[28px]"
+          textClassName: "tag-text-muted"
         }}
         headingProps={{
           tag: "h1",

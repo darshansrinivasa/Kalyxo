@@ -15,7 +15,7 @@ function AboutPage() {
           iconName: "about",
           size: 18,
           className: "button mx-auto",
-          textClassName: "text-sm font-medium text-gray-700 dark:text-slate-200 leading-[28px]"
+          textClassName: "tag-text-muted"
         }}
         headingProps={{
           tag: "h1",
@@ -63,7 +63,7 @@ function AboutPage() {
         imageProps={{
           imageSrc: heroBannerImage,
           wrapperClassName: "w-full md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl",
+          mediaClassName: "media-frame-2xl",
           imageClassName: ""
         }}
       />
@@ -74,12 +74,12 @@ function AboutPage() {
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "How I Work",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-180 mx-auto",
+          className: "section-subheading-center max-w-180 mx-auto",
           children: "A few things that stay consistent across every project.",
         }}
       />
@@ -108,12 +108,12 @@ function AboutPage() {
         buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "Got a store that needs work? Let's talk.",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-220 mx-auto",
+          className: "section-subheading-center max-w-220 mx-auto",
           children: "I take on a small number of projects at a time. If you're planning something in the next few months, worth reaching out now.",
         }}
         primaryBtnProps={{

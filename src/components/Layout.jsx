@@ -5,13 +5,7 @@ import Footer from "./Footer/Footer";
 function Layout() {
   return (
     <div 
-      className="min-h-screen
-        font-sans
-        bg-white
-        text-slate-800
-        dark:bg-slate-800
-        dark:text-slate-100
-        transition-colors duration-300"
+      className="app-shell"
       >
       <Header />
       <main>

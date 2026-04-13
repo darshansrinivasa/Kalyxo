@@ -81,16 +81,14 @@ function InputField({
 }) {
   return (
     <div>
-      <label className="block mb-2 font-medium">
-        {label}
-      </label>
+      <label className="form-label">{label}</label>
       <input
         type={type}
         name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        className="form-control"
         required={required}
       />
     </div>
@@ -108,15 +106,13 @@ function SelectField({
 }) {
   return (
     <div>
-      <label className="block mb-2 font-medium">
-        {label}
-      </label>
+      <label className="form-label">{label}</label>
       <select
         name={name}
         value={value}
         onChange={onChange}
         required={required}
-        className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        className="form-control"
       >
         <option value="" disabled={required}>
           {placeholder}
@@ -256,15 +252,13 @@ function ContactForm() {
       />
 
       <div>
-        <label className="block mb-2 font-medium">
-          Tell me about your project *
-        </label>
+        <label className="form-label">Tell me about your project *</label>
         <textarea
           name="message"
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="form-control"
           placeholder={
             "What's not working,\nwhat do you want to build,\nor what do you need help with?"
           }

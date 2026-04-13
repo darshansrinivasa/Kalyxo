@@ -13,14 +13,14 @@ function ServicesPage() {
   return (
     <>
       <Hero
-        className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
+        className="hero-split"
         contentClassName="flex flex-col items-center justify-center gap-8 w-full max-w-225 mx-auto"
         tagProps={{
           text: "Services",
           iconName: "services",
           size: 18,
           className: "button mx-auto",
-          textClassName: "text-sm font-medium text-gray-700 dark:text-slate-200 leading-[28px]"
+          textClassName: "tag-text-muted"
         }}
         headingProps={{
           tag: "h1",
@@ -93,7 +93,7 @@ function ServicesPage() {
         imageProps={{
           imageSrc: storeSetupImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
           imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
@@ -151,7 +151,7 @@ function ServicesPage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
           imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
@@ -209,7 +209,7 @@ function ServicesPage() {
         imageProps={{
           imageSrc: StoreRedesignImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
           imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
@@ -267,7 +267,7 @@ function ServicesPage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
           imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
@@ -325,7 +325,7 @@ function ServicesPage() {
         imageProps={{
           imageSrc: StoreRedesignImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
           imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
@@ -384,7 +384,7 @@ function ServicesPage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-[450px] md:max-h-[450px]",
           imageClassName: "object-cover h-full w-full object-center min-h-[300px] md:min-h-[450px] md:max-h-[450px]"
         }}
       />
@@ -395,12 +395,12 @@ function ServicesPage() {
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "What to Expect When We Work Together",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-180 mx-auto",
+          className: "section-subheading-center max-w-180 mx-auto",
           children: "Clear steps, honest communication, and no guessing on your end.",
         }}
       />
@@ -424,17 +424,17 @@ function ServicesPage() {
 
       <RichText
         outerClassName="background-theme-2"
-        className="container py-6 md:py-18 flex flex-col md:flex-row gap-12 items-center"
+        className="cta-split"
         contentClassName="flex flex-col gap-8 w-full"
         buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "Have a project in mind? Let's talk.",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-220 mx-auto",
+          className: "section-subheading-center max-w-220 mx-auto",
           children: "Let's discuss your project and create a custom solution that fits your needs and budgetNo lengthy briefs. Just tell me about your store and we'll go from there.",
         }}
         primaryBtnProps={{

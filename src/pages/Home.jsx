@@ -26,7 +26,7 @@ function HomePage() {
           iconName: "shopify",
           size: 18,
           className: "button mx-auto md:mx-0",
-          textClassName: "text-sm font-medium text-gray-700 dark:text-slate-200 leading-[28px]"
+          textClassName: "tag-text-muted"
         }}
         headingProps={{
           tag: "h1",
@@ -106,12 +106,12 @@ function HomePage() {
         }}
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "Services Built Around Your Store.",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl",
+          className: "section-subheading-center",
           children: "Custom builds, revamps, and optimization — depending on where your store is and what it needs.",
         }}
       />
@@ -171,7 +171,7 @@ function HomePage() {
         imageProps={{
           imageSrc: storeSetupImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-auto",
           imageClassName: "object-cover h-full object-left min-h-[300px] md:min-h-auto"
         }}
       />
@@ -231,7 +231,7 @@ function HomePage() {
         imageProps={{
           imageSrc: CustomThemeImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-auto",
           imageClassName: "object-cover h-full object-center min-h-[300px] md:min-h-auto"
         }}
       />
@@ -291,7 +291,7 @@ function HomePage() {
         imageProps={{
           imageSrc: StoreRedesignImage,
           wrapperClassName: "md:w-[50%]",
-          mediaClassName: "rounded-2xl overflow-hidden shadow-2xl h-full min-h-[300px] md:min-h-auto",
+          mediaClassName: "media-frame-2xl h-full min-h-[300px] md:min-h-auto",
           imageClassName: "object-cover h-full object-center min-h-[300px] md:min-h-auto"
         }}
       />
@@ -316,12 +316,12 @@ function HomePage() {
         contentClassName="flex flex-col gap-4 w-full"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "Featured Work",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-150 mx-auto",
+          className: "section-subheading-center max-w-150 mx-auto",
           children: "Explore our portfolio of successful Shopify stores we've built for clients worldwide",
         }}
       />
@@ -334,7 +334,7 @@ function HomePage() {
         gridClassName="grid gap-8 md:grid-cols-3"
         cardProps={{
           wrapperClassName:
-            "group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl" ,
+            "group portfolio-card" ,
           imageClassName: "h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105",
           contentClassName: "p-6 flex flex-col gap-3",
           titleClassName: "text-xl font-semibold",
@@ -370,7 +370,7 @@ function HomePage() {
         }}
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "A Simple Process. No Surprises",
         }}
       />
@@ -395,17 +395,17 @@ function HomePage() {
 
       <RichText
         outerClassName="background-theme-2"
-        className="container py-6 md:py-18 flex flex-col md:flex-row gap-12 items-center"
+        className="cta-split"
         contentClassName="flex flex-col gap-8 w-full"
         buttonContainerClassName="flex flex-col md:flex-row gap-4 md:mx-auto"
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold capitalize",
+          className: "section-heading-center-cap",
           children: "Got a Shopify store that needs work?",
         }}
         subheadingProps={{
           tag: "p",
-          className: "text-center text-xl max-w-220 mx-auto",
+          className: "section-subheading-center max-w-220 mx-auto",
           children: "From a quick fix to a full build — tell me where you are and I'll tell you exactly how I can help.",
         }}
         primaryBtnProps={{
