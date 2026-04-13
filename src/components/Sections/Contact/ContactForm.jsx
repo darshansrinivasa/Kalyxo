@@ -103,6 +103,8 @@ function SelectField({
   value,
   onChange,
   options,
+  placeholder = "Select…",
+  required = false,
 }) {
   return (
     <div>
@@ -113,9 +115,12 @@ function SelectField({
         name={name}
         value={value}
         onChange={onChange}
+        required={required}
         className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
       >
-        <option value="">Select</option>
+        <option value="" disabled={required}>
+          {placeholder}
+        </option>
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}
@@ -126,16 +131,26 @@ function SelectField({
   );
 }
 
+const SERVICE_OPTIONS = [
+  "Store Setup",
+  "Custom Theme Development",
+  "Store Redesign",
+  "Performance Optimization",
+  "Shopify 2.0 Migration",
+  "Checkout UX",
+  "App Integration",
+  "Maintenance & Support",
+  "Not Sure Yet",
+];
+
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    company: "",
+    storeUrl: "",
     service: "",
-    budget: "",
-    timeline: "",
     message: "",
+    website: "",
   });
 
   const [feedback, setFeedback] = useState(null);
@@ -156,10 +171,7 @@ function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          ...formData,
-          website: "", // honeypot field
-        }),
+        body: JSON.stringify(formData),
       });
   
       const data = await response.json();
@@ -172,12 +184,10 @@ function ContactForm() {
         setFormData({
           name: "",
           email: "",
-          phone: "",
-          company: "",
+          storeUrl: "",
           service: "",
-          budget: "",
-          timeline: "",
           message: "",
+          website: "",
         });
       } else {
         setFeedback({
@@ -205,10 +215,9 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="bg-slate-100 dark:bg-slate-900 p-6 md:p-10 rounded-2xl space-y-6"
     >
-      {/* Name + Email */}
       <div className="grid md:grid-cols-2 gap-6">
         <InputField
-          label="Full Name *"
+          label="Your Name *"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -216,7 +225,7 @@ function ContactForm() {
           required={true}
         />
         <InputField
-          label="Email Address *"
+          label="Your Email *"
           name="email"
           type="email"
           value={formData.email}
@@ -226,97 +235,55 @@ function ContactForm() {
         />
       </div>
 
-      {/* Phone + Company */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <InputField
-          label="Phone Number *"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="+1 (234) 567-890"
-          required={true}
-        />
-        <InputField
-          label="Company Name *"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-          placeholder="Your Company"
-          required={true}
-        />
-      </div>
-
-      {/* Selects */}
-      {/* <div className="grid md:grid-cols-2 gap-6"> */}
-        <SelectField
-          label="Service Interested In *"
-          name="service"
-          value={formData.service}
-          onChange={handleChange}
-          options={[
-            "Shopify Store Setup",
-            "Custom Development",
-            "Store Redesign",
-            "Speed Optimization",
-            "App Integration",
-            "Maintenance & Support",
-          ]}
-          required={true}
-        />
-
-        {/* <SelectField
-          label="Budget Range"
-          name="budget"
-          value={formData.budget}
-          onChange={handleChange}
-          options={[
-            "$1k - $5k",
-            "$5k - $10k",
-            "$10k - $25k",
-            "$25k+",
-          ]}
-        /> */}
-      {/* </div> */}
-
-      {/* Timeline */}
-      {/* <SelectField
-        label="Project Timeline"
-        name="timeline"
-        value={formData.timeline}
+      <InputField
+        label="Store URL *"
+        name="storeUrl"
+        type="text"
+        value={formData.storeUrl}
         onChange={handleChange}
-        options={[
-          "1-2 weeks",
-          "2-4 weeks",
-          "1-2 months",
-          "Flexible",
-        ]}
-      /> */}
+        placeholder="https://yourstore.com or yourstore.myshopify.com"
+        required={true}
+      />
 
-      {/* Message */}
+      <SelectField
+        label="Service Interested In *"
+        name="service"
+        value={formData.service}
+        onChange={handleChange}
+        options={SERVICE_OPTIONS}
+        placeholder="Select a service"
+        required={true}
+      />
+
       <div>
         <label className="block mb-2 font-medium">
-          Project Details *
+          Tell me about your project *
         </label>
         <textarea
           name="message"
-          rows="5"
+          rows={6}
           value={formData.message}
           onChange={handleChange}
           className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          placeholder="Tell us about your project..."
+          placeholder={
+            "What's not working,\nwhat do you want to build,\nor what do you need help with?"
+          }
           required={true}
         />
       </div>
 
-      <div style={{ display: "none" }}>
+      <div className="hidden" aria-hidden="true">
         <input
           type="text"
           name="website"
+          value={formData.website}
           onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
         />
       </div>
       <Button
-        content="Send Message"
+        content="Submit"
         className="button primary-button purple w-full py-4"
         type="submit"
       />

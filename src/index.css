@@ -161,6 +161,19 @@ li {
   list-style-type: none;
 }
 
+/* Default list look inside contact section (global reset removes bullets elsewhere) */
+#contact-section ul.contact-form-description-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 2rem;
+  margin: 0.6em 0;
+}
+
+#contact-section ul.contact-form-description-list > li {
+  list-style-type: disc;
+  display: list-item;
+}
+
 /* Footer */
 .footer-social-icons img,
 .social-icons img {

@@ -7,11 +7,8 @@ export async function handleContactRequest(body) {
   const {
     name,
     email,
-    phone,
-    company,
+    storeUrl,
     service,
-    budget,
-    timeline,
     message,
     website,
   } = body || {};
@@ -20,7 +17,7 @@ export async function handleContactRequest(body) {
     return { status: 400, json: { error: "Spam detected" } };
   }
 
-  if (!name || !email || !message) {
+  if (!name || !email || !storeUrl || !service || !message) {
     return {
       status: 400,
       json: { error: "Missing required fields" },
@@ -38,12 +35,9 @@ export async function handleContactRequest(body) {
         <h2>New Contact Inquiry</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-        <p><strong>Company:</strong> ${company || "N/A"}</p>
-        <p><strong>Service:</strong> ${service || "N/A"}</p>
-        <p><strong>Budget:</strong> ${budget || "N/A"}</p>
-        <p><strong>Timeline:</strong> ${timeline || "N/A"}</p>
-        <p><strong>Message:</strong></p>
+        <p><strong>Store URL:</strong> ${storeUrl}</p>
+        <p><strong>Service interested in:</strong> ${service}</p>
+        <p><strong>Project:</strong></p>
         <p>${message}</p>
       `,
     });

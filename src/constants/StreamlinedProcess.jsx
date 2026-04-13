@@ -2,26 +2,26 @@
 export const StreamlinedProcess = [
     {
       number: "01",
-      title: "Consultation",
+      title: "Discovery",
       description:
-        "We start with a detailed discussion to understand your goals, requirements, and vision for your store.",
+        "I ask the right questions to understand what's needed — not just what's asked for.",
     },
     {
       number: "02",
-      title: "Planning",
+      title: "Scope & Plan",
       description:
-        "Our team creates a comprehensive project plan with timelines, milestones, and deliverables.",
+        "Clear deliverables, fixed price, defined timeline. Everything agreed before any work begins.",
     },
     {
      number: "03",
-      title: "Execution",
+      title: "Build",
       description:
-        "We bring your project to life with regular updates and opportunities for feedback throughout.",
+        "I build in staging and share progress at every milestone. You can review and give feedback before anything goes live.",
     },
     {
       number: "04",
-      title: "Support",
+      title: "Launch & Support",
       description:
-        "After launch, we provide training, documentation, and ongoing support to ensure your success.",
+        "Thorough QA before go-live. After launch I'm still available — for fixes, updates, or whatever comes next.",
     },
 ];

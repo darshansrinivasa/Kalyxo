@@ -16,7 +16,7 @@ function ServicesPage() {
         className="container py-6 md:py-24 flex flex-col md:flex-row gap-12 items-center"
         contentClassName="flex flex-col items-center justify-center gap-8 w-full max-w-225 mx-auto"
         tagProps={{
-          text: "Our Services",
+          text: "Services",
           iconName: "services",
           size: 18,
           className: "button mx-auto",
@@ -36,7 +36,7 @@ function ServicesPage() {
         subheadingProps={{
           tag: "p",
           className: "text-center text-xl",
-          children: "From initial setup to ongoing optimization, we provide end-to-end Shopify services that help your e-commerce business thrive and scale.",
+          children: "From a fresh build to fixing what's underperforming — everything is scoped around your specific situation.",
         }}
       />
 
@@ -396,12 +396,12 @@ function ServicesPage() {
         headingProps={{
           tag: "h2",
           className: "text-center text-4xl md:text-5xl font-bold capitalize",
-          children: "How We Deliver Excellence",
+          children: "What to Expect When We Work Together",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center text-xl max-w-180 mx-auto",
-          children: "Our streamlined process ensures quality results and transparent communication every step of the ways",
+          children: "Clear steps, honest communication, and no guessing on your end.",
         }}
       />
 
@@ -430,21 +430,21 @@ function ServicesPage() {
         headingProps={{
           tag: "h2",
           className: "text-center text-4xl md:text-5xl font-bold capitalize",
-          children: "Ready to Get Started?",
+          children: "Have a project in mind? Let's talk.",
         }}
         subheadingProps={{
           tag: "p",
           className: "text-center text-xl max-w-220 mx-auto",
-          children: "Let's discuss your project and create a custom solution that fits your needs and budget",
+          children: "Let's discuss your project and create a custom solution that fits your needs and budgetNo lengthy briefs. Just tell me about your store and we'll go from there.",
         }}
         primaryBtnProps={{
-          content: "Book Free Consultation",
+          content: "Book a Free Call",
           className: "button primary-button icon-right px-8 py-4",
           iconName: "arrowRightPurple",
           href: "/contact#contact-section"
         }}
         secondaryBtnProps={{
-          content: "View Our Work",
+          content: "View My Work",
           className: "button secondary-button white px-8 py-4",
           href: "/portfolio"
         }}

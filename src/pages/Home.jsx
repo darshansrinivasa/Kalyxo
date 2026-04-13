@@ -364,14 +364,14 @@ function HomePage() {
         className="container pt-6 pb-8 md:py-16"
         contentClassName="flex flex-col gap-4 w-full"
         tagProps={{
-          text: "How We Work",
+          text: "How I Work",
           className: "mx-auto md:mx-0 text-center ",
           textClassName: "text-sm max-w-220 mx-auto text-purple-600 uppercase"
         }}
         headingProps={{
           tag: "h2",
           className: "text-center text-4xl md:text-5xl font-bold capitalize",
-          children: "Our Process",
+          children: "A Simple Process. No Surprises",
         }}
       />
 
