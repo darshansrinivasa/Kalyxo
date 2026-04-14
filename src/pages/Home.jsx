@@ -27,7 +27,7 @@ function HomePage() {
           headingProps={{
             tag: "h1",
             className:
-              "hero-heading-glow relative text-center text-4xl md:text-5xl font-bold gradient-heading",
+              "relative text-center text-4xl md:text-5xl font-bold gradient-heading",
             children: (
               <>
                 Your Store Looks Good.
