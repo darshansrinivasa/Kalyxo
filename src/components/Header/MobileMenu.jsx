@@ -9,8 +9,8 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
       className="
         mobile-menu
         md:hidden 
-        border-t border-slate-100 
-        bg-slate-50
+        border-t border-border 
+        bg-muted
         absolute left-0 right-0
       ">
       <div className="p-10 space-y-6">
@@ -25,16 +25,17 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
         {/* CTA */}
         <Button 
           className="
+            button primary-button purple
             w-full
-            flex gap-2 items-center justify-center
             px-6 py-3
             rounded-lg
-            bg-purple-600
-            text-white text-base font-medium
-            hover:bg-purple-700
+            text-base font-medium
             transition
           " 
           iconName="bookCalenderWhite"
+          content="Work With Me"
+          href="/#contact"
+          onClick={onClose}
         />
       </div>
     </div>

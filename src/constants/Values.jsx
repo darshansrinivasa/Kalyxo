@@ -16,6 +16,6 @@ export const VALUES = [
       icon: "growth",
       title: "Still Around After Launch",
       description:
-        "We believe in building long-term relationships, not just completing projects. Your growth is our mission.",
+        "I stick around after launch for fixes, tweaks, and ongoing improvements. If you need support, you won’t be left hanging.",
     }
 ];

@@ -12,8 +12,8 @@ function NavList({ items = [], className = "" }) {
                 to={item.to}
                 icon={item.icon}
                 className="
-                  text-slate-400
-                  hover:text-slate-100
+                  text-footer-fg
+                  hover:text-white
                 "
             />
         ))}

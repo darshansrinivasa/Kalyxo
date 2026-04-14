@@ -1,12 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "@/components/Layout";
 import ScrollToHash from "@/components/ScrollToHash";
 import HomePage from "@/pages/Home";
-import AboutPage from "@/pages/About";
-import ServicesPage from "@/pages/Services";
-import PortfolioPage from "@/pages/Portfolio";
-import ContactPage from "@/pages/Contact";
 
 function App() {
   return (
@@ -15,10 +11,10 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<Navigate to="/" replace />} />
+          <Route path="/services" element={<Navigate to="/" replace />} />
+          <Route path="/portfolio" element={<Navigate to="/" replace />} />
+          <Route path="/contact" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -32,14 +32,14 @@ function ContactFeedbackPopup({ open, variant, message, onClose }) {
       <button
         type="button"
         aria-label="Close"
-        className="absolute inset-0 bg-slate-900/50 dark:bg-black/60"
+        className="absolute inset-0 bg-fg/40 dark:bg-black/55"
         onClick={onClose}
       />
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-feedback-title"
-        className={`relative w-full max-w-md rounded-2xl border bg-white p-6 shadow-xl dark:bg-slate-800 md:p-8 ${
+        className={`depth-surface relative w-full max-w-md rounded-2xl border border-border p-6 shadow-card dark:shadow-card-dark md:p-8 ${
           isSuccess
             ? "border-emerald-200 dark:border-emerald-900/40"
             : "border-rose-200 dark:border-rose-900/40"
@@ -55,7 +55,7 @@ function ContactFeedbackPopup({ open, variant, message, onClose }) {
         >
           {isSuccess ? "Message sent" : "Could not send"}
         </h2>
-        <p className="mt-3 text-slate-600 dark:text-slate-300">{message}</p>
+        <p className="mt-3 text-fg-secondary">{message}</p>
         <div className="mt-6">
           <Button
             type="button"
@@ -117,8 +117,8 @@ function SelectField({
         <option value="" disabled={required}>
           {placeholder}
         </option>
-        {options.map((option, index) => (
-          <option key={index} value={option}>
+        {options.map((option) => (
+          <option key={option} value={option}>
             {option}
           </option>
         ))}
@@ -127,24 +127,11 @@ function SelectField({
   );
 }
 
-const SERVICE_OPTIONS = [
-  "Store Setup",
-  "Custom Theme Development",
-  "Store Redesign",
-  "Performance Optimization",
-  "Shopify 2.0 Migration",
-  "Checkout UX",
-  "App Integration",
-  "Maintenance & Support",
-  "Not Sure Yet",
-];
-
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     storeUrl: "",
-    service: "",
     message: "",
     website: "",
   });
@@ -175,13 +162,12 @@ function ContactForm() {
       if (response.ok) {
         setFeedback({
           variant: "success",
-          message: "Thanks for reaching out. We'll get back to you shortly.",
+          message: "Thanks for reaching out. I’ll get back to you shortly.",
         });
         setFormData({
           name: "",
           email: "",
           storeUrl: "",
-          service: "",
           message: "",
           website: "",
         });
@@ -209,11 +195,11 @@ function ContactForm() {
     />
     <form
       onSubmit={handleSubmit}
-      className="bg-slate-100 dark:bg-slate-900 p-6 md:p-10 rounded-2xl space-y-6"
+      className="bg-muted border border-border p-6 md:p-10 rounded-2xl space-y-6 shadow-sm"
     >
       <div className="grid md:grid-cols-2 gap-6">
         <InputField
-          label="Your Name *"
+          label="Your Name"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -221,7 +207,7 @@ function ContactForm() {
           required={true}
         />
         <InputField
-          label="Your Email *"
+          label="Your Email"
           name="email"
           type="email"
           value={formData.email}
@@ -232,27 +218,17 @@ function ContactForm() {
       </div>
 
       <InputField
-        label="Store URL *"
+        label="Store URL (optional)"
         name="storeUrl"
         type="text"
         value={formData.storeUrl}
         onChange={handleChange}
-        placeholder="https://yourstore.com or yourstore.myshopify.com"
-        required={true}
-      />
-
-      <SelectField
-        label="Service Interested In *"
-        name="service"
-        value={formData.service}
-        onChange={handleChange}
-        options={SERVICE_OPTIONS}
-        placeholder="Select a service"
-        required={true}
+        placeholder="yourstore.com — if you have one"
+        required={false}
       />
 
       <div>
-        <label className="form-label">Tell me about your project *</label>
+        <label className="form-label">Message</label>
         <textarea
           name="message"
           rows={6}
@@ -260,7 +236,7 @@ function ContactForm() {
           onChange={handleChange}
           className="form-control"
           placeholder={
-            "What's not working,\nwhat do you want to build,\nor what do you need help with?"
+            "Tell me where you're at — a quick brief, a problem you're facing, or just what you're trying to build."
           }
           required={true}
         />
@@ -277,7 +253,7 @@ function ContactForm() {
         />
       </div>
       <Button
-        content="Submit"
+        content="Send It Over"
         className="button primary-button purple w-full py-4"
         type="submit"
       />

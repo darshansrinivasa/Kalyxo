@@ -1,24 +1,32 @@
 @layer components {
   /* App shell */
   .app-shell {
-    @apply min-h-screen font-sans bg-white text-slate-800 dark:bg-slate-800 dark:text-slate-100 transition-colors duration-300;
+    @apply min-h-screen font-sans bg-background text-fg transition-colors duration-300;
   }
 
-  /* Typography */
+  /* Typography — hierarchy: page H1 (hero) > section H2 > lead > card / modal titles > body */
   .section-heading-center {
-    @apply text-center text-4xl md:text-5xl font-bold;
+    @apply text-center text-3xl md:text-4xl font-bold text-fg;
   }
 
   .section-heading-center-cap {
-    @apply text-center text-4xl md:text-5xl font-bold capitalize;
+    @apply text-center text-3xl md:text-4xl font-bold capitalize text-fg;
   }
 
   .section-subheading-center {
-    @apply text-center text-xl;
+    @apply text-center text-lg md:text-xl font-normal text-fg-secondary leading-relaxed;
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-medium text-primary-500 uppercase tracking-wide;
+  }
+
+  .section-group-label {
+    @apply text-xs font-medium text-primary-500 uppercase tracking-wide;
   }
 
   .tag-text-muted {
-    @apply text-sm font-medium text-gray-700 dark:text-slate-200 leading-[28px];
+    @apply text-sm font-medium text-fg-muted leading-[28px];
   }
 
   /* Layout patterns */
@@ -32,33 +40,32 @@
 
   /* Surfaces / cards */
   .card-surface {
-    @apply rounded-2xl bg-white dark:bg-slate-900;
+    @apply rounded-2xl bg-surface;
   }
 
   .card-border {
-    @apply border border-slate-200 dark:border-slate-800;
+    @apply border border-border;
   }
 
   .card-shadow-lg {
-    @apply shadow-lg;
+    @apply shadow-card dark:shadow-card-dark;
   }
 
   .portfolio-card {
-    @apply rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-xl;
+    @apply rounded-2xl overflow-hidden border border-border bg-surface shadow-card transition-all duration-200 ease-out dark:shadow-card-dark hover:-translate-y-1 hover:border-primary-300/25 hover:shadow-md dark:hover:border-primary-600/25;
   }
 
   /* Media */
   .media-frame-2xl {
-    @apply rounded-2xl overflow-hidden shadow-2xl;
+    @apply rounded-2xl overflow-hidden shadow-md;
   }
 
   /* Forms */
   .form-label {
-    @apply block mb-2 font-medium;
+    @apply block mb-2 font-medium text-fg;
   }
 
   .form-control {
-    @apply w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 focus:outline-none focus:ring-2 focus:ring-purple-500;
+    @apply w-full rounded-xl border border-border bg-surface text-fg p-4 placeholder:text-fg-muted focus:outline-none focus:ring-0 focus:shadow-none;
   }
 }
-

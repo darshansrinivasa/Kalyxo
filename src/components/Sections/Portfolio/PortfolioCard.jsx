@@ -29,7 +29,7 @@ function PortfolioCard({
         {/* Hover Overlay */}
         <div className={overlayContentClassName}>
           
-          <h3 className="text-white text-2xl font-bold mb-4">
+          <h3 className="text-white text-xl md:text-2xl font-bold mb-4">
             {title}
           </h3>
 

@@ -1,81 +1,27 @@
 import ContactForm from "./ContactForm";
 import Heading from "@/components/Global/Text/Heading";
 import SubHeading from "@/components/Global/Text/SubHeading";
-import SocialList from "@/components/Global/Social/SocialList";
 
 function ContactSection({
   outerClassName = "",
   containerClassName = "",
-  leftClassName = "",
-  rightClassName = "",
 }) {
-    const socials = {
-        instagram: "https://instagram.com/",
-        twitter: "https://twitter.com/",
-        linkedin: "https://linkedin.com/company/",
-        facebook: "https://facebook.com/",
-      };
   return (
-    <section id="contact-section" className={`scroll-mt-28 ${outerClassName}`}>
-      <div
-        className={`${containerClassName} flex flex-col lg:flex-row gap-10 md:gap-16`}
-      >
-        {/* LEFT SIDE */}
-        <div className={leftClassName}>
-          <Heading
-            tag="h1"
-            className="text-4xl font-bold"
-          >
-            Before You Fill the Form
+    <section id="contact" className={`scroll-mt-28 ${outerClassName}`}>
+      <div className={containerClassName}>
+        <div className="mx-auto max-w-2xl text-center">
+          <Heading tag="h2" className="section-heading-center-cap">
+            Let's Look At Your Store
           </Heading>
-
           <SubHeading
             tag="p"
-            className="mt-4 md:mt-6 text-lg text-slate-600 dark:text-slate-200"
+            className="section-subheading-center mt-4 max-w-xl mx-auto px-2"
           >
-            Not sure what to write? Just tell me:
-            <ul className="contact-form-description-list">
-              <li>What your store is about</li>
-              <li>What's not working or what you want to build</li>
-              <li>When you're looking to get started</li>
-            </ul>
-            That's enough for me to come back 
-            with something useful.
+            Whether you know exactly what you need or just know something isn't working — I'll figure it out with you.
           </SubHeading>
-
-          {/* Business Hours */}
-          {/* <div className="mt-6 md:mt-12 bg-slate-100 dark:bg-slate-900 rounded-2xl p-8">
-            <h4 className="font-semibold text-lg mb-6">
-              Business Hours
-            </h4>
-
-            <div className="space-y-3 text-slate-600 dark:text-slate-300">
-              <div className="flex justify-between">
-                <span>Monday – Friday</span>
-                <span>12:00 AM – 6:00 PM</span>
-              </div>
-
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>12:00 AM – 8:00 PM</span>
-              </div>
-
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span>Closed</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* Social Icons */}
-          <div className="mt-4 md:mt-10">
-            <p className="font-medium mb-3 md:mb-6">Follow Us</p>
-              <SocialList className="social-icons" socials={socials}/>
-          </div>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className={rightClassName}>
+        <div className="mt-10 mx-auto w-full max-w-xl">
           <ContactForm />
         </div>
       </div>
