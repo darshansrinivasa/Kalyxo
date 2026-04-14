@@ -1,6 +1,14 @@
 import Icon from "@/components/Sections/Hero/Icon";
 import { Link } from "react-router-dom";
 
+function isInternalHashHref(href) {
+  return (
+    typeof href === "string" &&
+    !/^https?:\/\//i.test(href) &&
+    href.includes("#")
+  );
+}
+
 function Button({
   className = "",
   content = "Book free call",
@@ -10,8 +18,13 @@ function Button({
   href,
   type = "button",
 }) {
-  const Component = href ? Link : "button";
-  const linkProps = href ? { to: href } : { type };
+  const useNativeAnchor = href && isInternalHashHref(href);
+  const Component = href ? (useNativeAnchor ? "a" : Link) : "button";
+  const linkProps = href
+    ? useNativeAnchor
+      ? { href }
+      : { to: href }
+    : { type };
   const mergedClassName = [
     "cursor-pointer focus:outline-none focus:ring-0 focus:shadow-none",
     className,
