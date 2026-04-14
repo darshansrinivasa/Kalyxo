@@ -20,7 +20,7 @@ function Footer() {
       <div className="container py-8 md:py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
-            <Logo is_footer="true" />
+            <Logo is_footer />
             <SubHeading className="mt-2 text-footer-fg max-w-xl">
               {logoSubheadingText}
             </SubHeading>
