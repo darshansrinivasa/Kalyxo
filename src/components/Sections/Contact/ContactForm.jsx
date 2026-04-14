@@ -39,7 +39,7 @@ function ContactFeedbackPopup({ open, variant, message, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-feedback-title"
-        className={`relative w-full max-w-md rounded-2xl border border-border bg-surface p-6 shadow-card dark:shadow-card-dark md:p-8 ${
+        className={`depth-surface relative w-full max-w-md rounded-2xl border border-border p-6 shadow-card dark:shadow-card-dark md:p-8 ${
           isSuccess
             ? "border-emerald-200 dark:border-emerald-900/40"
             : "border-rose-200 dark:border-rose-900/40"

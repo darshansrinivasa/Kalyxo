@@ -55,12 +55,10 @@ function FeaturedProjectSection() {
           </SubHeading>
         </div>
 
-        <div className="mt-4 md:mt-8 rounded-2xl border border-border bg-surface p-8 shadow-card dark:shadow-card-dark">
+        <div className="featured-project-shell mt-4 md:mt-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
             <div className="order-2 flex flex-col items-start md:order-1 md:max-w-3xl">
-              <span className="inline-flex w-fit items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700 dark:bg-primary-950/50 dark:text-primary-200">
-                {PROJECT.serviceTag}
-              </span>
+              <span className="tag-soft text-xs">{PROJECT.serviceTag}</span>
               <h3 className="mt-4 text-xl md:text-2xl font-semibold text-fg">
                 {PROJECT.title}
               </h3>
@@ -87,16 +85,16 @@ function FeaturedProjectSection() {
                   <img
                     src={PROJECT.previewImageSrc}
                     alt="Solara Shopify store preview"
-                    className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+                    className="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
                 <div
-                  className="pointer-events-none absolute inset-0 flex items-center justify-center bg-fg/0 transition-colors duration-300 group-hover:bg-fg/45"
+                  className="pointer-events-none absolute inset-0 flex items-center justify-center bg-fg/0 transition-colors duration-200 group-hover:bg-fg/45"
                   aria-hidden="true"
                 >
-                  <span className="translate-y-1 text-sm font-medium text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <span className="translate-y-1 text-sm font-medium text-white opacity-0 transition-all duration-200 ease-out group-hover:translate-y-0 group-hover:opacity-100">
                     View Live Store →
                   </span>
                 </div>
@@ -116,9 +114,7 @@ function FeaturedProjectSection() {
               >
                 {PROJECT.title}
               </h3>
-              <span className="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700 dark:bg-primary-950/50 dark:text-primary-200">
-                {PROJECT.serviceTag}
-              </span>
+              <span className="tag-soft text-xs">{PROJECT.serviceTag}</span>
             </div>
           </div>
           <button

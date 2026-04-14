@@ -27,7 +27,7 @@ function HomePage() {
           headingProps={{
             tag: "h1",
             className:
-              "text-center text-4xl md:text-5xl font-bold gradient-heading",
+              "hero-heading-glow relative text-center text-4xl md:text-5xl font-bold gradient-heading",
             children: (
               <>
                 Your Store Looks Good.
@@ -75,9 +75,9 @@ function HomePage() {
         gridClassName="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
         cardProps={{
           wrapperClassName:
-            "relative bg-surface p-6 rounded-2xl border border-border shadow-card dark:shadow-card-dark highlighted",
+            "depth-surface relative p-6 rounded-2xl border border-border shadow-card dark:shadow-card-dark highlighted",
           iconWrapperClassName:
-            "icon-img mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-secondary-600 text-white highlighted",
+            "icon-chip icon-img mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/95 to-secondary-500/95 text-white highlighted",
           titleClassName:
             "mb-3 text-lg md:text-xl font-semibold text-fg",
           descriptionClassName:
@@ -116,7 +116,7 @@ function HomePage() {
           gridClassName="grid gap-6 md:grid-cols-4"
           itemProps={{
             circleClassName:
-              "relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary-600 to-secondary-600 text-white font-bold text-lg shadow-sm",
+              "relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary-500/95 to-secondary-500/95 text-white font-bold text-lg shadow-sm",
             titleClassName:
               "text-lg md:text-xl font-semibold mb-3 text-fg",
             descriptionClassName:

@@ -60,7 +60,7 @@ function Modal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className={`relative w-full ${maxWidthClassName} max-h-[85vh] overflow-auto rounded-2xl border border-border bg-surface p-6 shadow-card transition-all duration-200 dark:shadow-card-dark md:p-8 ${
+        className={`depth-surface relative w-full ${maxWidthClassName} max-h-[85vh] overflow-auto rounded-2xl border border-border p-6 shadow-card transition-all duration-200 dark:shadow-card-dark md:p-8 ${
           visible ? "translate-y-0 scale-100" : "translate-y-2 scale-[0.99]"
         }`}
       >

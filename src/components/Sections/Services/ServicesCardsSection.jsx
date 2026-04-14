@@ -145,12 +145,9 @@ function ServicesCardsSection() {
           <p className="section-group-label text-center">Core Services</p>
           <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.slice(0, 3).map((service) => (
-              <div
-                key={service.key}
-                className="group rounded-2xl border border-border bg-surface p-6 shadow-card transition h-full hover:shadow-md hover:-translate-y-0.5 dark:shadow-card-dark"
-              >
+              <div key={service.key} className="premium-card h-full">
                 <div className="flex h-full flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-secondary-600 text-white shadow-sm">
+                  <div className="icon-chip flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/95 to-secondary-500/95 text-white shadow-sm">
                     <Icon iconName={service.iconName} size={22} />
                   </div>
 
@@ -165,7 +162,7 @@ function ServicesCardsSection() {
                     <Button
                       type="button"
                       content="View Details →"
-                      className="button icon-right text-base text-primary-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
+                      className="button link-subtle icon-right text-base p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
                       onClick={() => setActiveKey(service.key)}
                     />
                   </div>
@@ -179,12 +176,9 @@ function ServicesCardsSection() {
           </p>
           <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.slice(3, 6).map((service) => (
-              <div
-                key={service.key}
-                className="group rounded-2xl border border-border bg-surface p-6 shadow-card transition h-full hover:shadow-md hover:-translate-y-0.5 dark:shadow-card-dark"
-              >
+              <div key={service.key} className="premium-card h-full">
                 <div className="flex h-full flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-secondary-600 text-white shadow-sm">
+                  <div className="icon-chip flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/95 to-secondary-500/95 text-white shadow-sm">
                     <Icon iconName={service.iconName} size={22} />
                   </div>
 
@@ -199,7 +193,7 @@ function ServicesCardsSection() {
                     <Button
                       type="button"
                       content="View Details →"
-                      className="button icon-right text-base text-primary-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
+                      className="button link-subtle icon-right text-base p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
                       onClick={() => setActiveKey(service.key)}
                     />
                   </div>

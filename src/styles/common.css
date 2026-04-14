@@ -18,11 +18,11 @@
   }
 
   .section-eyebrow {
-    @apply text-sm font-medium text-primary-600 uppercase tracking-wide;
+    @apply text-sm font-medium text-primary-500 uppercase tracking-wide;
   }
 
   .section-group-label {
-    @apply text-xs font-medium text-primary-600 uppercase tracking-wide;
+    @apply text-xs font-medium text-primary-500 uppercase tracking-wide;
   }
 
   .tag-text-muted {
@@ -52,7 +52,7 @@
   }
 
   .portfolio-card {
-    @apply rounded-2xl overflow-hidden border border-border bg-surface shadow-card transition-shadow duration-300 dark:shadow-card-dark hover:shadow-md;
+    @apply rounded-2xl overflow-hidden border border-border bg-surface shadow-card transition-all duration-200 ease-out dark:shadow-card-dark hover:-translate-y-1 hover:border-primary-300/25 hover:shadow-md dark:hover:border-primary-600/25;
   }
 
   /* Media */

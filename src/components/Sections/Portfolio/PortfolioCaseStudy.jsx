@@ -30,9 +30,7 @@ function PortfolioCaseStudy({
         {/* LEFT CONTENT */}
         <div className={`md:w-1/2 ${contentClassName}`}>
           
-          <span className="px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full w-fit dark:bg-primary-950/50 dark:text-primary-200">
-            {category}
-          </span>
+          <span className="tag-soft text-sm">{category}</span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-6 text-fg">
             {title}
