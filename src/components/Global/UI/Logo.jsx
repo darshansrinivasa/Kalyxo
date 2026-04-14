@@ -3,16 +3,29 @@ import logoLight from "@/assets/images/logo-light.png";
 import logoDark from "@/assets/images/logo-dark.png";
 
 function Logo({ is_footer = false }) {
-  const logoSrc = is_footer ? logoDark : logoDark;
-  const altText = is_footer ? "Footer Logo" : "Header Logo";
+  const altText = is_footer ? "Kalyxo" : "Kalyxo — home";
 
   return (
     <Link to="/" className="h-auto w-fit block">
-      <img
-        src={logoSrc}
-        alt={altText}
-        className="h-10"
-      />
+      {is_footer ? (
+        <img
+          src={logoDark}
+          alt={altText}
+          className="h-10"
+        />
+      ) : (
+        <picture>
+          <source
+            srcSet={logoDark}
+            media="(prefers-color-scheme: dark)"
+          />
+          <img
+            src={logoLight}
+            alt={altText}
+            className="h-10"
+          />
+        </picture>
+      )}
     </Link>
   );
 }
