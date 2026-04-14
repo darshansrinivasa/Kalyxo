@@ -27,7 +27,7 @@ const SERVICES = [
   {
     key: "custom-theme-development",
     name: "Custom Theme Development",
-    iconName: "services",
+    iconName: "servicesWhite",
     short:
       "Custom-built Shopify themes tailored to your brand and performance needs.",
     paragraph:
@@ -147,17 +147,17 @@ function ServicesCardsSection() {
             {SERVICES.slice(0, 3).map((service) => (
               <div
                 key={service.key}
-                className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition h-full"
+                className="group rounded-2xl border border-border bg-surface p-6 shadow-card transition h-full hover:shadow-md hover:-translate-y-0.5 dark:shadow-card-dark"
               >
                 <div className="flex h-full flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-secondary-600 text-white shadow-sm">
                     <Icon iconName={service.iconName} size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-slate-900 dark:text-slate-100">
+                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-fg">
                     {service.name}
                   </h3>
-                  <p className="mt-3 text-sm md:text-base leading-6 text-slate-600 dark:text-slate-400">
+                  <p className="mt-3 text-sm md:text-base leading-6 text-fg-secondary">
                     {service.short}
                   </p>
 
@@ -165,7 +165,7 @@ function ServicesCardsSection() {
                     <Button
                       type="button"
                       content="View Details →"
-                      className="button icon-right text-base text-purple-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
+                      className="button icon-right text-base text-primary-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
                       onClick={() => setActiveKey(service.key)}
                     />
                   </div>
@@ -181,17 +181,17 @@ function ServicesCardsSection() {
             {SERVICES.slice(3, 6).map((service) => (
               <div
                 key={service.key}
-                className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition h-full"
+                className="group rounded-2xl border border-border bg-surface p-6 shadow-card transition h-full hover:shadow-md hover:-translate-y-0.5 dark:shadow-card-dark"
               >
                 <div className="flex h-full flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-secondary-600 text-white shadow-sm">
                     <Icon iconName={service.iconName} size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-slate-900 dark:text-slate-100">
+                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-fg">
                     {service.name}
                   </h3>
-                  <p className="mt-3 text-sm md:text-base leading-6 text-slate-600 dark:text-slate-400">
+                  <p className="mt-3 text-sm md:text-base leading-6 text-fg-secondary">
                     {service.short}
                   </p>
 
@@ -199,7 +199,7 @@ function ServicesCardsSection() {
                     <Button
                       type="button"
                       content="View Details →"
-                      className="button icon-right text-base text-purple-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
+                      className="button icon-right text-base text-primary-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
                       onClick={() => setActiveKey(service.key)}
                     />
                   </div>
@@ -222,15 +222,15 @@ function ServicesCardsSection() {
               <div>
                 <h3
                   id="service-modal-title"
-                  className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100"
+                  className="text-xl md:text-2xl font-semibold text-fg"
                 >
                   {activeService.name}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                <p className="mt-3 text-base leading-relaxed text-fg-secondary">
                   {activeService.paragraph}
                 </p>
                 {activeService.bestFor && (
-                  <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">
+                  <p className="mt-4 text-sm text-fg-muted">
                     {activeService.bestFor}
                   </p>
                 )}
@@ -239,7 +239,7 @@ function ServicesCardsSection() {
                 type="button"
                 aria-label="Close"
                 onClick={() => setActiveKey(null)}
-                className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 border-purple-600 bg-transparent text-purple-600 transition hover:bg-purple-50 dark:hover:bg-slate-800 focus:outline-none focus:ring-0 focus:shadow-none"
+                className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 border-primary-600 bg-transparent text-primary-600 transition hover:bg-primary-50 dark:hover:bg-primary-950/40 focus:outline-none focus:ring-0 focus:shadow-none"
               >
                 <svg
                   viewBox="0 0 16 16"
@@ -259,18 +259,18 @@ function ServicesCardsSection() {
             </div>
 
             <div className="mt-6">
-              <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <h4 className="text-base md:text-lg font-semibold text-fg">
                 What’s included
               </h4>
-              <ul className="mt-3 space-y-2 text-sm md:text-base text-slate-600 dark:text-slate-300 list-disc pl-6">
+              <ul className="mt-3 space-y-2 text-sm md:text-base text-fg-secondary list-disc pl-6">
                 {activeService.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
               </ul>
             </div>
 
-            <div className="mt-4 border-t border-slate-200 pt-4 dark:border-slate-800">
-              <p className="text-sm md:text-base font-medium text-slate-900 dark:text-slate-100">
+            <div className="mt-4 border-t border-border pt-4">
+              <p className="text-sm md:text-base font-medium text-fg">
                 Want something like this for your store?
               </p>
               <div className="mt-4">

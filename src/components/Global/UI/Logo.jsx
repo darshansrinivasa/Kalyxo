@@ -3,7 +3,7 @@ import logoLight from "@/assets/images/logo-light.png";
 import logoDark from "@/assets/images/logo-dark.png";
 
 function Logo({ is_footer = false }) {
-  const logoSrc = is_footer ? logoDark : logoLight;
+  const logoSrc = is_footer ? logoDark : logoDark;
   const altText = is_footer ? "Footer Logo" : "Header Logo";
 
   return (

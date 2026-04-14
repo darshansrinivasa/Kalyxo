@@ -32,14 +32,14 @@ function ContactFeedbackPopup({ open, variant, message, onClose }) {
       <button
         type="button"
         aria-label="Close"
-        className="absolute inset-0 bg-slate-900/50 dark:bg-black/60"
+        className="absolute inset-0 bg-fg/40 dark:bg-black/55"
         onClick={onClose}
       />
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-feedback-title"
-        className={`relative w-full max-w-md rounded-2xl border bg-white p-6 shadow-xl dark:bg-slate-800 md:p-8 ${
+        className={`relative w-full max-w-md rounded-2xl border border-border bg-surface p-6 shadow-card dark:shadow-card-dark md:p-8 ${
           isSuccess
             ? "border-emerald-200 dark:border-emerald-900/40"
             : "border-rose-200 dark:border-rose-900/40"
@@ -55,7 +55,7 @@ function ContactFeedbackPopup({ open, variant, message, onClose }) {
         >
           {isSuccess ? "Message sent" : "Could not send"}
         </h2>
-        <p className="mt-3 text-slate-600 dark:text-slate-300">{message}</p>
+        <p className="mt-3 text-fg-secondary">{message}</p>
         <div className="mt-6">
           <Button
             type="button"
@@ -195,7 +195,7 @@ function ContactForm() {
     />
     <form
       onSubmit={handleSubmit}
-      className="bg-slate-100 dark:bg-slate-900 p-6 md:p-10 rounded-2xl space-y-6"
+      className="bg-muted border border-border p-6 md:p-10 rounded-2xl space-y-6 shadow-sm"
     >
       <div className="grid md:grid-cols-2 gap-6">
         <InputField

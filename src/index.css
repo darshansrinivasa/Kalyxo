@@ -1,13 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
-@import "./styles/common.css";
 
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Semantic (light/dark via CSS variables) */
+  --color-background: var(--semantic-background);
+  --color-surface: var(--semantic-surface);
+  --color-muted: var(--semantic-muted);
+  --color-border: var(--semantic-border);
+  --color-fg: var(--semantic-fg);
+  --color-fg-secondary: var(--semantic-fg-secondary);
+  --color-fg-muted: var(--semantic-fg-muted);
+
+  /* Primary — refined purple */
+  --color-primary-50: #faf8ff;
+  --color-primary-100: #f2edfd;
+  --color-primary-200: #e6dbf9;
+  --color-primary-300: #d3bff4;
+  --color-primary-400: #b894ec;
+  --color-primary-500: #9a6ae3;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4a1d90;
+  --color-primary-950: #2e1065;
+
+  /* Secondary — deep indigo */
+  --color-secondary-50: #eef2ff;
+  --color-secondary-100: #e0e7ff;
+  --color-secondary-200: #c7d2fe;
+  --color-secondary-300: #a5b4fc;
+  --color-secondary-400: #818cf8;
+  --color-secondary-500: #6366f1;
+  --color-secondary-600: #4f46e5;
+  --color-secondary-700: #4338ca;
+  --color-secondary-800: #3730a3;
+  --color-secondary-900: #312e81;
+  --color-secondary-950: #1e1b4b;
+
+  /* Footer (always dark strip) */
+  --color-footer-bg: #0a0c14;
+  --color-footer-fg: #a8b0c4;
+  --color-footer-border: #1e2536;
+
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04),
+    0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-card-dark: 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
+@import "./styles/common.css";
+
 :root {
+  --semantic-background: #f8fafc;
+  --semantic-surface: #ffffff;
+  --semantic-muted: #f1f5f9;
+  --semantic-border: #e2e8f0;
+  --semantic-fg: #0f172a;
+  --semantic-fg-secondary: #475569;
+  --semantic-fg-muted: #64748b;
+  --hero-gradient-from: rgb(237 233 254 / 0.55);
   --text-xs--line-height: 1.4;
   --text-sm--line-height: 1.4;
   --text-base--line-height: 1.5;
@@ -19,6 +73,19 @@
   --text-5xl--line-height: 1.2;
   --text-6xl--line-height: 1.2;
   --text-7xl--line-height: 1.2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --semantic-background: #0f172a;
+    --semantic-surface: #111827;
+    --semantic-muted: #1f2937;
+    --semantic-border: #374151;
+    --semantic-fg: #f1f5f9;
+    --semantic-fg-secondary: #cbd5e1;
+    --semantic-fg-muted: #94a3b8;
+    --hero-gradient-from: rgb(30 27 75 / 0.35);
+  }
 }
 
 html {
@@ -46,16 +113,24 @@ html {
     @apply max-w-320 mx-auto px-5 md:px-6
   }
 
+  .background-theme-1 {
+    @apply bg-muted text-fg;
+  }
+
   .background-theme-2 {
-    @apply bg-purple-600 text-slate-100
+    @apply bg-gradient-to-br from-primary-800 via-primary-700 to-secondary-900 text-white;
   }
 
   .background-theme-3 {
-    @apply bg-gray-50  dark:bg-gray-700 text-slate-900 dark:text-slate-50
+    @apply bg-muted text-fg;
   }
 
   .hero-background {
-    background-image: linear-gradient(to bottom, rgb(250 245 255 / .5), #fff);
+    background-image: linear-gradient(
+      to bottom,
+      var(--hero-gradient-from),
+      var(--semantic-background)
+    );
   }
 
   .Banner-media-container {
@@ -72,53 +147,53 @@ html {
   }
 
   .primary-button  {
-    @apply bg-white text-purple-600 text-base font-medium;
+    @apply bg-surface text-primary-600 text-base font-medium border border-border;
   }
   
   .primary-button.purple {
-    @apply bg-purple-600 text-white text-base font-medium;
+    @apply border-0 bg-gradient-to-r from-primary-600 to-secondary-500 text-white text-base font-medium shadow-sm;
   }
   
   .primary-button:hover {
-    transform: translateY(-0.125rem);
-    box-shadow: 0 0 #0000, 0 0 #0000,0 0 #0000, 0 20px 25px -5px rgb(147 51 234 / .3), 0 8px 10px -6px rgb(147 51 234 / .3);
+    transform: translateY(-0.0625rem);
+    @apply shadow-card dark:shadow-card-dark;
   }
 
   .primary-button.purple:hover {
-    transform: translateY(-0.125rem);
-    box-shadow: 0 0 #0000, 0 0 #0000,0 0 #0000, 0 20px 25px -5px rgb(147 51 234 / .3), 0 8px 10px -6px rgb(147 51 234 / .3);
+    transform: translateY(-0.0625rem);
+    @apply bg-gradient-to-r from-primary-700 to-secondary-600 shadow-md;
   }
 
   .secondary-button {
-    @apply border-2 border-purple-600 text-purple-600 bg-transparent
+    @apply border-2 border-primary-600 text-primary-600 bg-transparent;
   }
 
   .secondary-button.white {
-    @apply border-white text-white
+    @apply border-white text-white;
   }
 
   .secondary-button:hover {
-    @apply bg-purple-50
+    @apply bg-primary-50 dark:bg-primary-950/30;
   }
 
   .secondary-button.white:hover {
-    @apply bg-slate-50 text-purple-600
+    @apply bg-white/10 text-white;
   }
 
   .tag-button.button {
     @apply inline-flex items-center gap-2 
             w-fit
             px-5 py-2.5
-            border border-gray-200 dark:border-slate-700
+            border border-border
             rounded-full
-            bg-white dark:bg-slate-800
-            shadow-sm
+            bg-surface
+            shadow-sm;
   }
 
   /* Text */
   .gradient-heading span {
     color: transparent;
-    background-image: linear-gradient(to right,#9333ea, #7e22ce, #2563eb);
+    background-image: linear-gradient(to right, #7c3aed, #6d28d9, #6366f1);
     -webkit-background-clip: text;
     background-clip: text;
   }
@@ -133,7 +208,7 @@ html {
   
   /* Feature Card */
   .feature-card.highlighted {
-    @apply hover:border-purple-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer
+    @apply hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md hover:-translate-y-1 cursor-pointer;
   }
 
   .feature-card.highlighted:hover .highlighted.icon-img {

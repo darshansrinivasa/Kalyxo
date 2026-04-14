@@ -1,5 +1,6 @@
 import shopify from "@/assets/icons/Shopify-specialist.png";
 import services from "@/assets/icons/Services.png";
+import servicesWhite from "@/assets/icons/services_white.png";
 import portfolio from "@/assets/icons/Portfolio.png";
 import mail from "@/assets/icons/Mail.png";
 import about from "@/assets/icons/About.png";
@@ -32,7 +33,8 @@ const ICON_MAP = {
   speed,
   growth,
   scale,
-  tick
+  tick,
+  servicesWhite
 };
 
 function Icon({ iconName, alt = "", size = 18 }) {

@@ -53,14 +53,14 @@ function Modal({
       <button
         type="button"
         aria-label="Close"
-        className="absolute inset-0 bg-slate-900/50 dark:bg-black/60"
+        className="absolute inset-0 bg-fg/40 dark:bg-black/55"
         onClick={onClose}
       />
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className={`relative w-full ${maxWidthClassName} max-h-[85vh] overflow-auto rounded-2xl border border-slate-200 bg-white p-6 shadow-xl transition-all duration-200 dark:border-slate-800 dark:bg-slate-900 md:p-8 ${
+        className={`relative w-full ${maxWidthClassName} max-h-[85vh] overflow-auto rounded-2xl border border-border bg-surface p-6 shadow-card transition-all duration-200 dark:shadow-card-dark md:p-8 ${
           visible ? "translate-y-0 scale-100" : "translate-y-2 scale-[0.99]"
         }`}
       >

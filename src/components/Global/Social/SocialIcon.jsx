@@ -5,7 +5,7 @@ const isExternalLink = (href) =>
 
 const linkClassName = `
   inline-flex items-center justify-center gap-0 h-10 w-10
-  bg-gray-700 hover:bg-purple-600 
+  bg-secondary-800 hover:bg-primary-600
   transition-colors duration-300
   rounded-lg
 `;

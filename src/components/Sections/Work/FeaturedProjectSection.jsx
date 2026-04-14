@@ -55,16 +55,16 @@ function FeaturedProjectSection() {
           </SubHeading>
         </div>
 
-        <div className="mt-4 md:mt-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-lg">
+        <div className="mt-4 md:mt-8 rounded-2xl border border-border bg-surface p-8 shadow-card dark:shadow-card-dark">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
             <div className="order-2 flex flex-col items-start md:order-1 md:max-w-3xl">
-              <span className="inline-flex w-fit items-center rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-900/30 dark:text-purple-200">
+              <span className="inline-flex w-fit items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700 dark:bg-primary-950/50 dark:text-primary-200">
                 {PROJECT.serviceTag}
               </span>
-              <h3 className="mt-4 text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="mt-4 text-xl md:text-2xl font-semibold text-fg">
                 {PROJECT.title}
               </h3>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-fg-secondary">
                 {PROJECT.summary}
               </p>
               <Button
@@ -81,7 +81,7 @@ function FeaturedProjectSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open Solara live store in a new tab"
-                className="group relative block cursor-pointer overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
+                className="group relative block cursor-pointer overflow-hidden rounded-2xl border border-border focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
               >
                 <div className="aspect-[16/10] w-full">
                   <img
@@ -93,7 +93,7 @@ function FeaturedProjectSection() {
                   />
                 </div>
                 <div
-                  className="pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/45"
+                  className="pointer-events-none absolute inset-0 flex items-center justify-center bg-fg/0 transition-colors duration-300 group-hover:bg-fg/45"
                   aria-hidden="true"
                 >
                   <span className="translate-y-1 text-sm font-medium text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
@@ -112,11 +112,11 @@ function FeaturedProjectSection() {
             <div className="flex flex-wrap items-center gap-3">
               <h3
                 id="case-study-title"
-                className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100"
+                className="text-xl md:text-2xl font-semibold text-fg"
               >
                 {PROJECT.title}
               </h3>
-              <span className="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-900/30 dark:text-purple-200">
+              <span className="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700 dark:bg-primary-950/50 dark:text-primary-200">
                 {PROJECT.serviceTag}
               </span>
             </div>
@@ -125,7 +125,7 @@ function FeaturedProjectSection() {
             type="button"
             aria-label="Close"
             onClick={() => setOpen(false)}
-            className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 border-purple-600 bg-transparent text-purple-600 transition hover:bg-purple-50 dark:hover:bg-slate-800 focus:outline-none focus:ring-0 focus:shadow-none"
+            className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 border-primary-600 bg-transparent text-primary-600 transition hover:bg-primary-50 dark:hover:bg-primary-950/40 focus:outline-none focus:ring-0 focus:shadow-none"
           >
             <svg
               viewBox="0 0 16 16"
@@ -146,37 +146,37 @@ function FeaturedProjectSection() {
 
         <div className="mt-8 grid gap-8">
           <section>
-            <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <h4 className="text-base md:text-lg font-semibold text-fg">
               Problem
             </h4>
-            <p className="mt-3 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            <p className="mt-3 text-sm md:text-base leading-relaxed text-fg-secondary">
               {PROJECT.challenge}
             </p>
           </section>
 
           <section>
-            <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <h4 className="text-base md:text-lg font-semibold text-fg">
               Solution
             </h4>
             <div
-              className="mt-3 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300"
+              className="mt-3 text-sm md:text-base leading-relaxed text-fg-secondary"
               dangerouslySetInnerHTML={{ __html: PROJECT.solution }}
             />
           </section>
 
           <section>
-            <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <h4 className="text-base md:text-lg font-semibold text-fg">
               Results & Analytics
             </h4>
             <div
-              className="mt-3 space-y-2 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300 list-disc"
+              className="mt-3 space-y-2 text-sm md:text-base leading-relaxed text-fg-secondary list-disc"
               dangerouslySetInnerHTML={{ __html: PROJECT.results }}
             />
           </section>
 
           <section>
             <div
-              className="mt-3 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300"
+              className="mt-3 text-sm md:text-base leading-relaxed text-fg-secondary"
               dangerouslySetInnerHTML={{ __html: PROJECT.beforeAfter }}
             />
           </section>

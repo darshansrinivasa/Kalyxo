@@ -39,7 +39,7 @@ function SocialList({ className = "", socials = {} }) {
             href={href}
             icon={config.icon}
             key={key}
-            className="border-bg-gray-50"
+            className="border border-footer-border"
           />
         );
       })}

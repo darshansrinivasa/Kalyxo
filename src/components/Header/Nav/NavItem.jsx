@@ -1,26 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavItem({ label, to, liClassName = "", onClick }) {
   return (
     <li className={liClassName}>
-      <NavLink
+      <Link
         to={to}
         onClick={onClick}
-        className={({ isActive }) =>
-          `
-          text-base
-          font-medium
-          transition
-          ${
-            isActive
-              ? "text-purple-600"
-              : "text-slate-700 hover:text-purple-600"
-          }
-        `
-        }
+        className="text-base font-medium transition text-fg-secondary hover:text-primary-600"
       >
         {label}
-      </NavLink>
+      </Link>
     </li>
   );
 }

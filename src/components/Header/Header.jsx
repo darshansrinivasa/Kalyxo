@@ -23,10 +23,10 @@ export default function Header() {
     <header 
       className={`
         sticky top-0 z-50
-        bg-white
+        bg-surface
         w-full
         transition-shadow duration-300
-      ${isScrolled ? "shadow-md dark:shadow-black/30" : "shadow-none"}
+      ${isScrolled ? "shadow-sm dark:shadow-card-dark" : "shadow-none"}
       `}
     >
       <div className="flex items-center justify-between py-4 container">
@@ -45,7 +45,7 @@ export default function Header() {
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-800"
+          className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-fg"
         >
           <HamburgerIcon isOpen={isOpen} /> 
         </button>

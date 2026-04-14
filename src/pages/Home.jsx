@@ -12,7 +12,7 @@ import { PROCESS_STEPS } from "@/constants/Process";
 function HomePage() {
   return (
     <>
-      <section id="home" className="section-anchor">
+      <section id="home" className="section-anchor hero-background">
         <Hero
           className="container py-8 md:py-12 flex flex-col md:flex-row gap-12 items-center"
           contentClassName="flex flex-col items-center justify-center gap-6 w-full"
@@ -39,7 +39,7 @@ function HomePage() {
           subheadingProps={{
             tag: "p",
             className:
-              "text-center md:text-left text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed",
+              "text-center md:text-left text-lg md:text-xl text-fg-secondary leading-relaxed",
             children:
               "I'm a Shopify specialist helping D2C brands turn slow, leaky stores into high-converting storefronts.",
           }}
@@ -52,7 +52,7 @@ function HomePage() {
       </section>
 
       <RichText
-        outerClassName="background-theme-1"
+        outerClassName="pt-3 md:pt-6"
         className="container"
         contentClassName="flex flex-col gap-2 w-full"
         tagProps={{
@@ -75,14 +75,14 @@ function HomePage() {
         gridClassName="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
         cardProps={{
           wrapperClassName:
-          "relative bg-white dark:bg-slate-900 p-6 rounded-2xl border border-gray-200 dark:border-slate-800 highlighted",
+            "relative bg-surface p-6 rounded-2xl border border-border shadow-card dark:shadow-card-dark highlighted",
           iconWrapperClassName:
-            "icon-img mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-purple-600 text-white highlighted",
+            "icon-img mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-secondary-600 text-white highlighted",
           titleClassName:
-            "mb-3 text-lg md:text-xl font-semibold text-slate-900 dark:text-slate-100",
+            "mb-3 text-lg md:text-xl font-semibold text-fg",
           descriptionClassName:
-            "text-sm md:text-base leading-6 text-slate-600 dark:text-slate-400",
-          accentClassName: "bg-purple-400",
+            "text-sm md:text-base leading-6 text-fg-secondary",
+          accentClassName: "bg-primary-400",
         }}
       />
 
@@ -112,16 +112,16 @@ function HomePage() {
           items={PROCESS_STEPS}
           outerClassName="background-theme-3 pt-0 pb-6 md:pb-16"
           containerClassName="container relative"
-          lineClassName="hidden md:block absolute top-14 left-15 right-15 h-[2px] bg-purple-300"
+          lineClassName="hidden md:block absolute top-14 left-15 right-15 h-px bg-primary-200 dark:bg-primary-900/80"
           gridClassName="grid gap-6 md:grid-cols-4"
           itemProps={{
             circleClassName:
-              "relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg",
+              "relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary-600 to-secondary-600 text-white font-bold text-lg shadow-sm",
             titleClassName:
-              "text-lg md:text-xl font-semibold mb-3 text-slate-900 dark:text-slate-100",
+              "text-lg md:text-xl font-semibold mb-3 text-fg",
             descriptionClassName:
-              "text-sm md:text-base text-slate-600 dark:text-slate-400 leading-6",
-            iconClassName: "mt-8 text-purple-300",
+              "text-sm md:text-base text-fg-secondary leading-6",
+            iconClassName: "mt-8 text-primary-400 dark:text-primary-500",
           }}
         />
       </section>
