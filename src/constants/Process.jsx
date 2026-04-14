@@ -1,26 +1,26 @@
 export const PROCESS_STEPS = [
     {
       step: "01",
-      title: "Understand",
+      title: "Discovery",
       description:
-        "I look at your store, ask the right questions, and figure out exactly what needs to change and why.",
+        "I review your store, ask the right questions, and pinpoint what’s holding you back (and what will move the needle).",
     },
     {
       step: "02",
-      title: "Plan",
+      title: "Audit & Plan",
       description:
-        "Clear scope, fixed price, defined timeline. You know what you're getting before any work starts.",
+        "I turn the plan into a clear scope, timeline, and priorities so you know exactly what I’m building before I start.",
     },
     {
       step: "03",
-      title: "Execute",
+      title: "Build",
       description:
-        "I build in a staging environment and share progress at every milestone. No radio silence, no surprises.",
+        "I build in a staging environment and share progress at key milestones—no radio silence and no surprises.",
     },
     {
       step: "04",
-      title: "Support",
+      title: "Launch & Support",
       description:
-        "Thorough QA across devices before anything goes live. Then we launch — and I'm still around after.",
+        "I QA across devices, launch confidently, and stick around for fixes, tweaks, and ongoing improvements.",
     },
   ];

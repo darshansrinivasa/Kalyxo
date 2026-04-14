@@ -2,9 +2,9 @@
 export const WHY_CHOOSE_US = [
     {
       icon: "shopifyBold",
-      title: "Shopify Specialists",
+      title: "Shopify Specialist",
       description:
-        "I work exclusively in Shopify. No context-switching, no generalist gaps — just deep platform knowledge on every project.",
+        "I work exclusively in Shopify. No context switching. Deep Shopify focus on every project.",
     },
     {
       icon: "speed",
@@ -20,8 +20,8 @@ export const WHY_CHOOSE_US = [
     },
     {
       icon: "scale",
-      title: "Launch is Just the Start",
+      title: "Built to Scale",
       description:
-        "Got a bug after launch? Need a quick change? I stay involved as long as you need — no hunting for a new developer every time.",
+        "Need updates after launch? I stay involved as long as you need. — no hunting for a new developer every time.",
     },
 ];

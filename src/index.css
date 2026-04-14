@@ -22,6 +22,10 @@
   --text-7xl--line-height: 1.2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* | Tailwind class | Font size | Line height |
 | -------------- | --------- | ----------- |
 | `text-xs`      | 12px      | 16px        |
@@ -163,14 +167,14 @@ li {
 }
 
 /* Default list look inside contact section (global reset removes bullets elsewhere) */
-#contact-section ul.contact-form-description-list {
+#contact ul.contact-form-description-list {
   list-style-type: disc;
   list-style-position: outside;
   padding-left: 2rem;
   margin: 0.6em 0;
 }
 
-#contact-section ul.contact-form-description-list > li {
+#contact ul.contact-form-description-list > li {
   list-style-type: disc;
   display: list-item;
 }
@@ -183,5 +187,19 @@ li {
 
 textarea {
   resize: none;
+}
+
+/* Remove focus styles globally (per design request) */
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure pointer cursor for interactive elements */
+button:not(:disabled),
+[role="button"],
+a {
+  cursor: pointer;
 }
 

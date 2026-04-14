@@ -12,7 +12,13 @@ function Button({
 }) {
   const Component = href ? Link : "button";
   const linkProps = href ? { to: href } : { type };
-  const commonProps = { className, onClick };
+  const mergedClassName = [
+    "cursor-pointer focus:outline-none focus:ring-0 focus:shadow-none",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const commonProps = { className: mergedClassName, onClick };
 
   return (
     <Component

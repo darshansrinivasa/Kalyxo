@@ -48,6 +48,8 @@ export default function Header() {
           <Button  
             className="button primary-button purple"
             iconName="bookCalenderWhite"
+            content="Free Audit"
+            href="/#contact"
           />
         </div>
 

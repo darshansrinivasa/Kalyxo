@@ -117,8 +117,8 @@ function SelectField({
         <option value="" disabled={required}>
           {placeholder}
         </option>
-        {options.map((option, index) => (
-          <option key={index} value={option}>
+        {options.map((option) => (
+          <option key={option} value={option}>
             {option}
           </option>
         ))}
@@ -132,10 +132,8 @@ const SERVICE_OPTIONS = [
   "Custom Theme Development",
   "Store Redesign",
   "Performance Optimization",
-  "Shopify 2.0 Migration",
-  "Checkout UX",
-  "App Integration",
-  "Maintenance & Support",
+  "Conversion Optimization",
+  "App Integration & Cleanup",
   "Not Sure Yet",
 ];
 
@@ -175,7 +173,7 @@ function ContactForm() {
       if (response.ok) {
         setFeedback({
           variant: "success",
-          message: "Thanks for reaching out. We'll get back to you shortly.",
+          message: "Thanks for reaching out. I’ll get back to you shortly.",
         });
         setFormData({
           name: "",
@@ -252,16 +250,14 @@ function ContactForm() {
       />
 
       <div>
-        <label className="form-label">Tell me about your project *</label>
+        <label className="form-label">Message *</label>
         <textarea
           name="message"
           rows={6}
           value={formData.message}
           onChange={handleChange}
           className="form-control"
-          placeholder={
-            "What's not working,\nwhat do you want to build,\nor what do you need help with?"
-          }
+          placeholder={"What’s not working in your store right now?"}
           required={true}
         />
       </div>
@@ -277,7 +273,7 @@ function ContactForm() {
         />
       </div>
       <Button
-        content="Submit"
+        content="Send Details"
         className="button primary-button purple w-full py-4"
         type="submit"
       />
