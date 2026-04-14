@@ -156,14 +156,35 @@ html {
   transition-timing-function: ease;
 }
 
-ul, ol {
+ul:not(.list-disc),
+ol:not(.list-disc) {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li {
+ul:not(.list-disc) li,
+ol:not(.list-disc) li {
   list-style-type: none;
+}
+
+/* Let Tailwind list-disc work (global reset above no longer applies) */
+ul.list-disc,
+ol.list-disc {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+ul.list-disc > li,
+ol.list-disc > li {
+  list-style-type: disc;
+  display: list-item;
+}
+
+/* Phrases/metrics in spans: keep on one line; when narrow, the whole span moves down */
+ul.list-disc li span,
+ol.list-disc li span {
+  white-space: nowrap;
 }
 
 /* Default list look inside contact section (global reset removes bullets elsewhere) */

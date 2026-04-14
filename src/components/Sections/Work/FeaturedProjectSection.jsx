@@ -5,22 +5,33 @@ import Button from "@/components/Global/Button/Button";
 import Modal from "@/components/Global/UI/Modal";
 
 const PROJECT = {
-  title: "Featured Project — Aurora Skincare",
-  serviceTag: "Store Rebuild",
+  title: "Solara",
+  serviceTag: "Store Revamp",
   summary:
-    "A Shopify rebuild focused on speed, cleaner UX, and a stronger product page structure to improve add-to-cart and checkout conversion.",
+    "Improved homepage structure, clarified pre-order experience, optimized product and collection pages, and fixed cart issues caused by third-party scripts — resulting in a smoother buying flow and stronger conversion across the store.",
   challenge:
-    "The existing theme was slow, hard to edit, and inconsistent across templates. Key PDP elements weren’t supporting purchase decisions, and mobile performance was dragging down conversions.",
+    "The store had multiple friction points affecting conversions — an unclear homepage structure, inconsistent product and collection page experience, and cart issues caused by third-party scripts. Pre-order communication was also unclear, making it difficult for users to confidently move toward checkout.",
   solution:
-    "I rebuilt the storefront structure, streamlined the theme code, and tightened the product and collection UX. I also cleaned up app impact and ensured the store stayed easy to manage in the Theme Editor.",
-  results: [
-    { label: "Homepage load time", value: "3.8s → 1.9s (placeholder)" },
-    { label: "Core Web Vitals", value: "Improved (placeholder)" },
-    { label: "Conversion rate", value: "+12% (placeholder)" },
-    { label: "Revenue impact", value: "+8% over 30 days (placeholder)" },
-  ],
+    `<ul class="list-disc pl-6">
+      <li>Restructured the homepage to improve content flow, hierarchy, and first-time user understanding</li>
+      <li>Built modular, reusable sections for scalability and easier future updates</li>
+      <li>Improved product and collection page structure for faster decision-making</li>
+      <li>Created a clearer pre-order experience with defined delivery timelines</li>
+      <li>Fixed cart issues caused by third-party scripts (duplicate add-to-cart events)</li>
+      <li>Optimized overall store performance and reduced unnecessary app impact</li>
+    </ul>`,
+  results: 
+  `<ul class="list-disc pl-6">
+    <li>Reached checkout increased from <span>~6.3K → 16.4K (~2.5x growth)</span></li>
+    <li>Improved Homepage performance score from <span>42 → 77</span></li>
+    <li>Reduced Largest Contentful Paint from <span>6.7s → 2.6s</span></li>
+    <li>Reduced layout shift (CLS) from <span>1.14 → 0.01</span>, improving visual stability</li>
+  </ul>`,
   beforeAfter:
-    "Before: cluttered PDP and slow mobile pages. After: faster storefront, clearer hierarchy, and a more focused PDP layout (placeholder).",
+    `<strong>Before:</strong> Cluttered product pages, unclear pre-order communication, and inconsistent layouts made it difficult for users to understand delivery timelines or move confidently toward checkout.
+    <br />
+    <br />
+    <strong>After:</strong> A faster, structured storefront with clearer product information, defined pre-order messaging, and a streamlined path from product pages to checkout.`,
 };
 
 function FeaturedProjectSection() {
@@ -102,39 +113,27 @@ function FeaturedProjectSection() {
         <div className="mt-8 grid gap-8">
           <section>
             <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-              Problem / Challenge
+              Problem
             </h4>
             <p className="mt-3 text-slate-600 dark:text-slate-300">{PROJECT.challenge}</p>
           </section>
 
           <section>
             <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-              What I built / Solution
+              Solution
             </h4>
-            <p className="mt-3 text-slate-600 dark:text-slate-300">{PROJECT.solution}</p>
+            <div className="mt-3 text-slate-600 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: PROJECT.solution }} />
           </section>
 
           <section>
             <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
               Results & Analytics
             </h4>
-            <ul className="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc pl-6">
-              {PROJECT.results.map((r) => (
-                <li key={r.label}>
-                  <span className="font-medium text-slate-800 dark:text-slate-200">
-                    {r.label}:
-                  </span>{" "}
-                  {r.value}
-                </li>
-              ))}
-            </ul>
+            <div className="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc" dangerouslySetInnerHTML={{ __html: PROJECT.results }} />
           </section>
 
           <section>
-            <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-              Before / After
-            </h4>
-            <p className="mt-3 text-slate-600 dark:text-slate-300">{PROJECT.beforeAfter}</p>
+            <div className="mt-3 text-slate-600 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: PROJECT.beforeAfter }} />
           </section>
         </div>
       </Modal>
