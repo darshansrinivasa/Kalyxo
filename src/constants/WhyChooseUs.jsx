@@ -22,6 +22,6 @@ export const WHY_CHOOSE_US = [
       icon: "scale",
       title: "Built to Scale",
       description:
-        "Need updates after launch? I stay involved as long as you need. — no hunting for a new developer every time.",
+        "Need updates after launch? I stay involved as long as you need. No hunting for a new developer every time.",
     },
 ];

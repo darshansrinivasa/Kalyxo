@@ -127,22 +127,11 @@ function SelectField({
   );
 }
 
-const SERVICE_OPTIONS = [
-  "Store Setup",
-  "Custom Theme Development",
-  "Store Redesign",
-  "Performance Optimization",
-  "Conversion Optimization",
-  "App Integration & Cleanup",
-  "Not Sure Yet",
-];
-
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     storeUrl: "",
-    service: "",
     message: "",
     website: "",
   });
@@ -179,7 +168,6 @@ function ContactForm() {
           name: "",
           email: "",
           storeUrl: "",
-          service: "",
           message: "",
           website: "",
         });
@@ -211,7 +199,7 @@ function ContactForm() {
     >
       <div className="grid md:grid-cols-2 gap-6">
         <InputField
-          label="Your Name *"
+          label="Your Name"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -219,7 +207,7 @@ function ContactForm() {
           required={true}
         />
         <InputField
-          label="Your Email *"
+          label="Your Email"
           name="email"
           type="email"
           value={formData.email}
@@ -230,34 +218,26 @@ function ContactForm() {
       </div>
 
       <InputField
-        label="Store URL *"
+        label="Store URL (optional)"
         name="storeUrl"
         type="text"
         value={formData.storeUrl}
         onChange={handleChange}
-        placeholder="https://yourstore.com or yourstore.myshopify.com"
-        required={true}
-      />
-
-      <SelectField
-        label="Service Interested In *"
-        name="service"
-        value={formData.service}
-        onChange={handleChange}
-        options={SERVICE_OPTIONS}
-        placeholder="Select a service"
-        required={true}
+        placeholder="yourstore.com — if you have one"
+        required={false}
       />
 
       <div>
-        <label className="form-label">Message *</label>
+        <label className="form-label">Message</label>
         <textarea
           name="message"
           rows={6}
           value={formData.message}
           onChange={handleChange}
           className="form-control"
-          placeholder={"What’s not working in your store right now?"}
+          placeholder={
+            "Tell me where you're at — a quick brief, a problem you're facing, or just what you're trying to build."
+          }
           required={true}
         />
       </div>
@@ -273,7 +253,7 @@ function ContactForm() {
         />
       </div>
       <Button
-        content="Send Details"
+        content="Send It Over"
         className="button primary-button purple w-full py-4"
         type="submit"
       />

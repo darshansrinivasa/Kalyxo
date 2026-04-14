@@ -34,11 +34,11 @@ function PortfolioCaseStudy({
             {category}
           </span>
 
-          <h2 className="text-4xl font-bold mt-6">
+          <h2 className="text-3xl md:text-4xl font-bold mt-6 text-slate-900 dark:text-slate-100">
             {title}
           </h2>
 
-          <p className="text-slate-600 dark:text-slate-200 mt-4 text-lg">
+          <p className="mt-4 text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-200">
             {description}
           </p>
 
@@ -79,21 +79,21 @@ function PortfolioCaseStudy({
             >
               <div className="grid grid-cols-3 gap-6">
                 <div>
-                    <p className="text-purple-600 text-2xl font-bold">
+                    <p className="text-purple-600 text-xl md:text-2xl font-bold">
                     {metrics.conversion}
                     </p>
                     <p className="text-xs text-slate-500">Conversion</p>
                 </div>
 
                 <div>
-                    <p className="text-purple-600 text-2xl font-bold">
+                    <p className="text-purple-600 text-xl md:text-2xl font-bold">
                     {metrics.revenue}
                     </p>
                     <p className="text-xs text-slate-500">Revenue</p>
                 </div>
 
                 <div>
-                    <p className="text-purple-600 text-2xl font-bold">
+                    <p className="text-purple-600 text-xl md:text-2xl font-bold">
                     {metrics.loadTime}
                     </p>
                     <p className="text-xs text-slate-500">Load Time</p>

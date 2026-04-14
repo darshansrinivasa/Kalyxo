@@ -15,7 +15,7 @@ function HomePage() {
       <section id="home" className="section-anchor">
         <Hero
           className="container py-8 md:py-12 flex flex-col md:flex-row gap-12 items-center"
-          contentClassName="flex flex-col items-center justify-center gap-8 w-full"
+          contentClassName="flex flex-col items-center justify-center gap-6 w-full"
           buttonContainerClassName="flex flex-col md:flex-row gap-4"
           tagProps={{
             text: "Shopify Specialist",
@@ -27,21 +27,24 @@ function HomePage() {
           headingProps={{
             tag: "h1",
             className:
-              "text-center text-5xl md:text-7xl font-bold gradient-heading capitalize",
+              "text-center text-4xl md:text-5xl font-bold gradient-heading",
             children: (
               <>
-                <span>Shopify stores built to sell</span>
+                Your Store Looks Good.
+                <br />
+                <span>Is It Selling?</span>
               </>
             ),
           }}
           subheadingProps={{
             tag: "p",
-            className: "text-center md:text-left text-xl",
+            className:
+              "text-center md:text-left text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed",
             children:
-              "I build Shopify stores that load fast and convert better.",
+              "I'm a Shopify specialist helping D2C brands turn slow, leaky stores into high-converting storefronts.",
           }}
           primaryBtnProps={{
-            content: "Book a Free Store Audit",
+            content: "Let's Look At Your Store",
             className: "button primary-button purple icon-right px-8 py-4",
             href: "/#contact",
           }}
@@ -51,15 +54,16 @@ function HomePage() {
       <RichText
         outerClassName="background-theme-1"
         className="container"
-        contentClassName="flex flex-col gap-1 w-full"
+        contentClassName="flex flex-col gap-2 w-full"
         tagProps={{
           text: "Why Work With Me?",
           className: "mx-auto md:mx-0 text-center ",
-          textClassName: "text-sm max-w-220 mx-auto text-purple-600 uppercase"
+          textClassName:
+            "section-eyebrow max-w-220 mx-auto text-center tracking-wide",
         }}
         headingProps={{
           tag: "h2",
-          className: "text-center text-4xl md:text-5xl font-bold",
+          className: "section-heading-center mt-2",
           children: "What I bring to every project",
         }}
       />
@@ -75,9 +79,9 @@ function HomePage() {
           iconWrapperClassName:
             "icon-img mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-purple-600 text-white highlighted",
           titleClassName:
-            "mb-3 text-xl font-semibold text-slate-900 dark:text-slate-100",
+            "mb-3 text-lg md:text-xl font-semibold text-slate-900 dark:text-slate-100",
           descriptionClassName:
-            "text-base leading-6 text-slate-600 dark:text-slate-400",
+            "text-sm md:text-base leading-6 text-slate-600 dark:text-slate-400",
           accentClassName: "bg-purple-400",
         }}
       />
@@ -90,11 +94,12 @@ function HomePage() {
         <RichText
           outerClassName="background-theme-3"
           className="container pt-6 pb-8 md:py-12"
-          contentClassName="flex flex-col gap-4 w-full"s
+          contentClassName="flex flex-col gap-4 w-full"
           tagProps={{
             text: "How I Work",
             className: "mx-auto md:mx-0 text-center ",
-            textClassName: "text-sm max-w-220 mx-auto text-purple-600 uppercase",
+            textClassName:
+              "section-eyebrow max-w-220 mx-auto text-center tracking-wide",
           }}
           headingProps={{
             tag: "h2",
@@ -112,9 +117,10 @@ function HomePage() {
           itemProps={{
             circleClassName:
               "relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg",
-            titleClassName: "text-xl font-semibold mb-3",
+            titleClassName:
+              "text-lg md:text-xl font-semibold mb-3 text-slate-900 dark:text-slate-100",
             descriptionClassName:
-              "text-slate-600 dark:text-slate-400 text-base leading-6",
+              "text-sm md:text-base text-slate-600 dark:text-slate-400 leading-6",
             iconClassName: "mt-8 text-purple-300",
           }}
         />

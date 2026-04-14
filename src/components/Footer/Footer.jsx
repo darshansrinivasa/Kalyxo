@@ -4,7 +4,7 @@ import SocialList from "../Global/Social/SocialList";
 
 function Footer() {
   const logoSubheadingText =
-    "Shopify development, theme customization, and performance optimization.";
+    "Shopify development focused on performance, UX, and conversion.";
 
   const rightsText = "@ 2026 Kalyxo. All rights reserved";
 

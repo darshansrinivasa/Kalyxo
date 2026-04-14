@@ -35,7 +35,7 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
             transition
           " 
           iconName="bookCalenderWhite"
-          content="Free Audit"
+          content="Work With Me"
           href="/#contact"
           onClick={onClose}
         />

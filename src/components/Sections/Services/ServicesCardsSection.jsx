@@ -8,7 +8,7 @@ import Modal from "@/components/Global/UI/Modal";
 const SERVICES = [
   {
     key: "store-setup",
-    name: "Store Setup",
+    name: "Store Development",
     iconName: "shopifyBold",
     short:
       "Launch-ready Shopify store built clean, fast, and scalable from day one.",
@@ -132,47 +132,81 @@ function ServicesCardsSection() {
     <section id="services" className="background-theme-3 section-anchor">
       <div className="container pt-6 pb-8 md:py-16">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-medium text-purple-600 uppercase">What I Do</p>
-          <Heading tag="h2" className="section-heading-center-cap mt-4">
+          <p className="section-eyebrow text-center">What I Do</p>
+          <Heading tag="h2" className="section-heading-center-cap mt-3 md:mt-4">
             Shopify services focused on performance
           </Heading>
-          <SubHeading tag="p" className="section-subheading-center mt-4">
+          <SubHeading tag="p" className="section-subheading-center mt-3 max-w-2xl mx-auto">
             Focused Shopify services built around performance, conversion, and scalability.
           </SubHeading>
-          <p className="text-slate-400 dark:text-slate-400">
-            Built for real store problems — not templates.
-          </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service) => (
-            <div
-              key={service.key}
-              className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition h-full"
-            >
-              <div className="flex h-full flex-col">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white">
-                  <Icon iconName={service.iconName} size={22} />
-                </div>
+        <div className="mt-10">
+          <p className="section-group-label text-center">Core Services</p>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.slice(0, 3).map((service) => (
+              <div
+                key={service.key}
+                className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition h-full"
+              >
+                <div className="flex h-full flex-col">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white">
+                    <Icon iconName={service.iconName} size={22} />
+                  </div>
 
-                <h3 className="mt-5 text-xl font-semibold text-slate-900 dark:text-slate-100">
-                  {service.name}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-slate-600 dark:text-slate-400">
-                  {service.short}
-                </p>
+                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-slate-900 dark:text-slate-100">
+                    {service.name}
+                  </h3>
+                  <p className="mt-3 text-sm md:text-base leading-6 text-slate-600 dark:text-slate-400">
+                    {service.short}
+                  </p>
 
-                <div className="mt-2">
-                  <Button
-                    type="button"
-                    content="View Details →"
-                    className="button icon-right text-base text-purple-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
-                    onClick={() => setActiveKey(service.key)}
-                  />
+                  <div className="mt-2">
+                    <Button
+                      type="button"
+                      content="View Details →"
+                      className="button icon-right text-base text-purple-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
+                      onClick={() => setActiveKey(service.key)}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <p className="mt-10 section-group-label text-center">
+            Specialist Services
+          </p>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.slice(3, 6).map((service) => (
+              <div
+                key={service.key}
+                className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition h-full"
+              >
+                <div className="flex h-full flex-col">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white">
+                    <Icon iconName={service.iconName} size={22} />
+                  </div>
+
+                  <h3 className="mt-5 text-lg md:text-xl font-semibold text-slate-900 dark:text-slate-100">
+                    {service.name}
+                  </h3>
+                  <p className="mt-3 text-sm md:text-base leading-6 text-slate-600 dark:text-slate-400">
+                    {service.short}
+                  </p>
+
+                  <div className="mt-2">
+                    <Button
+                      type="button"
+                      content="View Details →"
+                      className="button icon-right text-base text-purple-600 p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
+                      onClick={() => setActiveKey(service.key)}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -188,11 +222,11 @@ function ServicesCardsSection() {
               <div>
                 <h3
                   id="service-modal-title"
-                  className="text-2xl font-semibold text-slate-900 dark:text-slate-100"
+                  className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100"
                 >
                   {activeService.name}
                 </h3>
-                <p className="mt-3 text-slate-600 dark:text-slate-300">
+                <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-300">
                   {activeService.paragraph}
                 </p>
                 {activeService.bestFor && (
@@ -225,10 +259,10 @@ function ServicesCardsSection() {
             </div>
 
             <div className="mt-6">
-              <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
                 What’s included
               </h4>
-              <ul className="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc pl-6">
+              <ul className="mt-3 space-y-2 text-sm md:text-base text-slate-600 dark:text-slate-300 list-disc pl-6">
                 {activeService.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -236,7 +270,7 @@ function ServicesCardsSection() {
             </div>
 
             <div className="mt-4 border-t border-slate-200 pt-4 dark:border-slate-800">
-              <p className="text-base font-medium text-slate-900 dark:text-slate-100">
+              <p className="text-sm md:text-base font-medium text-slate-900 dark:text-slate-100">
                 Want something like this for your store?
               </p>
               <div className="mt-4">

@@ -4,17 +4,25 @@
     @apply min-h-screen font-sans bg-white text-slate-800 dark:bg-slate-800 dark:text-slate-100 transition-colors duration-300;
   }
 
-  /* Typography */
+  /* Typography — hierarchy: page H1 (hero) > section H2 > lead > card / modal titles > body */
   .section-heading-center {
-    @apply text-center text-4xl md:text-5xl font-bold;
+    @apply text-center text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100;
   }
 
   .section-heading-center-cap {
-    @apply text-center text-4xl md:text-5xl font-bold capitalize;
+    @apply text-center text-3xl md:text-4xl font-bold capitalize text-slate-900 dark:text-slate-100;
   }
 
   .section-subheading-center {
-    @apply text-center text-xl;
+    @apply text-center text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 leading-relaxed;
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-medium text-purple-600 uppercase tracking-wide;
+  }
+
+  .section-group-label {
+    @apply text-xs font-medium text-purple-600 uppercase tracking-wide;
   }
 
   .tag-text-muted {

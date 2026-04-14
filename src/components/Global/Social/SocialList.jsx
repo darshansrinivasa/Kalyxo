@@ -27,7 +27,7 @@ const SOCIAL_CONFIG = {
 
 function SocialList({ className = "", socials = {} }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <ul className={`flex items-center gap-3 ${className}`}>
       {Object.entries(socials).map(([key, href]) => {
         const config = SOCIAL_CONFIG[key];
 
@@ -43,7 +43,7 @@ function SocialList({ className = "", socials = {} }) {
           />
         );
       })}
-    </div>
+    </ul>
   );
 }
 

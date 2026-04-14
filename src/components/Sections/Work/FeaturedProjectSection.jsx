@@ -44,7 +44,10 @@ function FeaturedProjectSection() {
           <Heading tag="h2" className="section-heading-center-cap">
             Featured project
           </Heading>
-          <SubHeading tag="p" className="section-subheading-center max-w-180 mx-auto">
+          <SubHeading
+            tag="p"
+            className="section-subheading-center max-w-180 mx-auto px-2"
+          >
             A snapshot of the kind of Shopify work I deliver.
           </SubHeading>
         </div>
@@ -55,10 +58,10 @@ function FeaturedProjectSection() {
               <span className="inline-flex w-fit items-center rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-900/30 dark:text-purple-200">
                 {PROJECT.serviceTag}
               </span>
-              <h3 className="mt-4 text-2xl md:text-3xl font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="mt-4 text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100">
                 {PROJECT.title}
               </h3>
-              <p className="mt-4 text-slate-600 dark:text-slate-300">
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                 {PROJECT.summary}
               </p>
             </div>
@@ -79,7 +82,10 @@ function FeaturedProjectSection() {
         <div className="flex items-start justify-between gap-6">
           <div>
             <div className="flex flex-wrap items-center gap-3">
-              <h3 id="case-study-title" className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+              <h3
+                id="case-study-title"
+                className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100"
+              >
                 {PROJECT.title}
               </h3>
               <span className="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-900/30 dark:text-purple-200">
@@ -112,28 +118,39 @@ function FeaturedProjectSection() {
 
         <div className="mt-8 grid gap-8">
           <section>
-            <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
               Problem
             </h4>
-            <p className="mt-3 text-slate-600 dark:text-slate-300">{PROJECT.challenge}</p>
+            <p className="mt-3 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300">
+              {PROJECT.challenge}
+            </p>
           </section>
 
           <section>
-            <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
               Solution
             </h4>
-            <div className="mt-3 text-slate-600 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: PROJECT.solution }} />
+            <div
+              className="mt-3 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300"
+              dangerouslySetInnerHTML={{ __html: PROJECT.solution }}
+            />
           </section>
 
           <section>
-            <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
               Results & Analytics
             </h4>
-            <div className="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc" dangerouslySetInnerHTML={{ __html: PROJECT.results }} />
+            <div
+              className="mt-3 space-y-2 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300 list-disc"
+              dangerouslySetInnerHTML={{ __html: PROJECT.results }}
+            />
           </section>
 
           <section>
-            <div className="mt-3 text-slate-600 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: PROJECT.beforeAfter }} />
+            <div
+              className="mt-3 text-sm md:text-base leading-relaxed text-slate-600 dark:text-slate-300"
+              dangerouslySetInnerHTML={{ __html: PROJECT.beforeAfter }}
+            />
           </section>
         </div>
       </Modal>
