@@ -3,10 +3,13 @@ import Heading from "@/components/Global/Text/Heading";
 import SubHeading from "@/components/Global/Text/SubHeading";
 import Button from "@/components/Global/Button/Button";
 import Modal from "@/components/Global/UI/Modal";
+import SolaraPreview from "@/assets/images/solara-preview.png";
 
 const PROJECT = {
   title: "Solara",
   serviceTag: "Store Revamp",
+  liveStoreUrl: "https://www.solara.in/",
+  previewImageSrc: SolaraPreview,
   summary:
     "Improved homepage structure, clarified pre-order experience, optimized product and collection pages, and fixed cart issues caused by third-party scripts — resulting in a smoother buying flow and stronger conversion across the store.",
   challenge:
@@ -53,8 +56,8 @@ function FeaturedProjectSection() {
         </div>
 
         <div className="mt-4 md:mt-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-lg">
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-            <div className="max-w-3xl">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
+            <div className="order-2 flex flex-col items-start md:order-1 md:max-w-3xl">
               <span className="inline-flex w-fit items-center rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-900/30 dark:text-purple-200">
                 {PROJECT.serviceTag}
               </span>
@@ -64,15 +67,40 @@ function FeaturedProjectSection() {
               <p className="mt-4 text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                 {PROJECT.summary}
               </p>
-            </div>
-
-            <div className="shrink-0">
               <Button
                 type="button"
                 content="View Case Study →"
-                className="button primary-button purple icon-right px-8 py-4"
+                className="button primary-button purple icon-right mt-6 px-8 py-4"
                 onClick={() => setOpen(true)}
               />
+            </div>
+
+            <div className="order-1 md:order-2">
+              <a
+                href={PROJECT.liveStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Solara live store in a new tab"
+                className="group relative block cursor-pointer overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
+              >
+                <div className="aspect-[16/10] w-full">
+                  <img
+                    src={PROJECT.previewImageSrc}
+                    alt="Solara Shopify store preview"
+                    className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div
+                  className="pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/45"
+                  aria-hidden="true"
+                >
+                  <span className="translate-y-1 text-sm font-medium text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    View Live Store →
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

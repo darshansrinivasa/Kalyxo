@@ -1,20 +1,13 @@
 import Logo from "../Global/UI/Logo";
 import NavList from "./Nav/NavList";
 import Button from "../Global/Button/Button";
-import ThemeToggle from "./ThemeToggleButton";
-import { useTheme } from "@/context/ThemeContext";
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/constants/HeaderNavigationLink";
 import MobileMenu from "./MobileMenu";
 import HamburgerIcon from "./Nav/Hamburger";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);  
-  const { theme, setTheme } = useTheme();
-  const handleToggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-  };
-
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,11 +33,6 @@ export default function Header() {
         <Logo />
         <NavList className="hidden md:block" NAV_LINKS={NAV_LINKS} ulClassName="flex gap-8 items-center" />
         <div className="hidden md:flex items-center gap-4">
-          <ThemeToggle
-            theme={theme}
-            onToggle={handleToggleTheme}
-            className="inline-flex"
-          />
           <Button  
             className="button primary-button purple"
             iconName="bookCalenderWhite"
