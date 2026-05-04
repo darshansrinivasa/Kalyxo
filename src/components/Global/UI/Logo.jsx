@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logoLight from "@/assets/images/logo-light.png";
-import logoDark from "@/assets/images/logo-dark.png";
+import logoLight from "@/assets/images/logo-light.webp";
+import logoDark from "@/assets/images/logo-dark.webp";
 
 function Logo({ is_footer = false }) {
   const loading = is_footer ? "lazy" : "eager";

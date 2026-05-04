@@ -1,4 +1,4 @@
-import iconPng from "@/assets/icons/Instagram.png";
+import iconPng from "@/assets/icons/Instagram.webp";
 
 function Instagram({ className = "" }) {
   return (

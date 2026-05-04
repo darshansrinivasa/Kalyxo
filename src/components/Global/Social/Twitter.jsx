@@ -1,4 +1,4 @@
-import iconPng from "@/assets/icons/Twitter.png";
+import iconPng from "@/assets/icons/Twitter.webp";
 
 function Twitter({ className = "" }) {
   return (
