@@ -34,7 +34,7 @@ function Hero({
           }
         </div>
 
-        {imageProps && <BannerImage {...imageProps} /> }
+        {imageProps && <BannerImage {...imageProps} priority />}
       </div>
     </section>
   );

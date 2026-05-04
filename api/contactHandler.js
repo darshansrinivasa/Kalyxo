@@ -182,8 +182,7 @@ export async function handleContactRequest(body) {
     });
 
     return { status: 200, json: { success: true } };
-  } catch (error) {
-    console.error(error);
+  } catch {
     return { status: 500, json: { error: "Something went wrong" } };
   }
 }

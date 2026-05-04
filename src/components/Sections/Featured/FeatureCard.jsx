@@ -23,7 +23,7 @@ function FeatureCard({
 
       { icon && (
           <div className={iconWrapperClassName}>
-            <Icon iconName={icon} size={34} />
+            <Icon iconName={icon} size={34} alt="" loading="lazy" />
           </div>
         )
       }
@@ -35,9 +35,9 @@ function FeatureCard({
       )}
       
       { title && (
-        <h4 className={titleClassName}>
+        <h3 className={titleClassName}>
           {title}
-        </h4>
+        </h3>
       )}
 
       {description && (
