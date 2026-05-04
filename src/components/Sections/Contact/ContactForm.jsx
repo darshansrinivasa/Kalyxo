@@ -189,6 +189,7 @@ function ContactForm() {
   
       if (response.ok) {
         analytics.formSuccess();
+        formStartedRef.current = false;
         setFeedback({
           variant: "success",
           message: "Thanks for reaching out. I’ll get back to you shortly.",

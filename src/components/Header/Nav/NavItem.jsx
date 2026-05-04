@@ -13,10 +13,7 @@ function NavItem({ label, to, liClassName = "", onClick }) {
   const useNativeAnchor = isInternalHashHref(to);
 
   const handleClick = (e) => {
-    if (
-      typeof to === "string" &&
-      (to.includes("#contact") || to.endsWith("/#contact"))
-    ) {
+    if (typeof to === "string" && to.includes("#contact")) {
       analytics.scrollToContact("navbar");
     }
     onClick?.(e);
