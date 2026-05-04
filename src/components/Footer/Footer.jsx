@@ -6,7 +6,7 @@ function Footer() {
   const logoSubheadingText =
     "Shopify development focused on performance, UX, and conversion.";
 
-  const rightsText = "@ 2026 Kalyxo. All rights reserved";
+  const rightsText = "@ 2026 Darshan. All rights reserved";
 
   const socials = {
     linkedin: "https://www.linkedin.com/in/darshan-srinivasa/",

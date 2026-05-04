@@ -67,7 +67,7 @@ function buildContactEmailHtml({
           <tr>
             <td style="background-color:#6d28d9;border-radius:12px 12px 0 0;padding:26px 28px 24px 28px;">
               <p style="margin:0;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;color:#ffffff;">New contact inquiry</p>
-              <p style="margin:8px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#e9d5ff;">From your Kalyxo website form</p>
+              <p style="margin:8px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:1.45;color:#e9d5ff;">From your portfolio contact form</p>
             </td>
           </tr>
           <tr>
@@ -105,7 +105,7 @@ function buildContactEmailHtml({
           <tr>
             <td align="center" style="padding:20px 12px 0 12px;">
               <p style="margin:0;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#94a3b8;">Reply to this lead using the email address above.</p>
-              <p style="margin:6px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#cbd5e1;">Kalyxo</p>
+              <p style="margin:6px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#cbd5e1;">Darshan</p>
             </td>
           </tr>
         </table>

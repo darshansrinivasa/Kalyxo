@@ -85,8 +85,6 @@ function FeaturedProjectSection() {
                   <img
                     src={PROJECT.previewImageSrc}
                     alt="Solara Shopify store preview"
-                    width={1600}
-                    height={1088}
                     className="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"
