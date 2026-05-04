@@ -1,4 +1,4 @@
-import iconPng from "@/assets/icons/LinkedIn.png";
+import iconPng from "@/assets/icons/LinkedIn.webp";
 
 function LinkedIn({ className = "" }) {
   return (

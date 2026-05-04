@@ -1,4 +1,4 @@
-import iconPng from "@/assets/icons/Facebook.png";
+import iconPng from "@/assets/icons/Facebook.webp";
 
 function Facebook({ className = "" }) {
   return (

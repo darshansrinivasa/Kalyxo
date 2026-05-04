@@ -3,7 +3,7 @@ import Heading from "@/components/Global/Text/Heading";
 import SubHeading from "@/components/Global/Text/SubHeading";
 import Button from "@/components/Global/Button/Button";
 import Modal from "@/components/Global/UI/Modal";
-import SolaraPreview from "@/assets/images/solara-preview.png";
+import SolaraPreview from "@/assets/images/solara-preview.webp";
 
 const PROJECT = {
   title: "Solara",
