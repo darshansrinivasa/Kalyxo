@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import Button from "@/components/Global/Button/Button";
+import { analytics } from "@/utils/analytics";
 import Heading from "@/components/Global/Text/Heading";
 import SubHeading from "@/components/Global/Text/SubHeading";
 import Icon from "@/components/Sections/Hero/Icon";
@@ -113,13 +114,31 @@ const SERVICES = [
 
 function ServicesCardsSection() {
   const [activeKey, setActiveKey] = useState(null);
+  const modalOpenTrackedKeyRef = useRef(null);
 
   const activeService = useMemo(
     () => SERVICES.find((s) => s.key === activeKey) ?? null,
     [activeKey]
   );
 
+  useEffect(() => {
+    if (!activeKey) {
+      modalOpenTrackedKeyRef.current = null;
+      return;
+    }
+    if (modalOpenTrackedKeyRef.current === activeKey) return;
+    modalOpenTrackedKeyRef.current = activeKey;
+    const svc = SERVICES.find((s) => s.key === activeKey);
+    if (svc) analytics.modalOpen("service", svc.name);
+  }, [activeKey]);
+
   const handleBookAudit = () => {
+    const name = activeService?.name;
+    if (name) {
+      analytics.ctaClick("Book a Free Audit", "service_modal");
+      analytics.modalCTA("service_modal", name);
+      analytics.scrollToContact("modal");
+    }
     setActiveKey(null);
     // Let the modal close animation finish before scrolling.
     window.setTimeout(() => {
@@ -163,7 +182,10 @@ function ServicesCardsSection() {
                       type="button"
                       content="View Details →"
                       className="button link-subtle icon-right text-base p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
-                      onClick={() => setActiveKey(service.key)}
+                      onClick={() => {
+                        analytics.ctaClick("View Details →", "services");
+                        setActiveKey(service.key);
+                      }}
                     />
                   </div>
                 </div>
@@ -194,7 +216,10 @@ function ServicesCardsSection() {
                       type="button"
                       content="View Details →"
                       className="button link-subtle icon-right text-base p-0 justify-start focus:outline-none focus:ring-0 focus:shadow-none"
-                      onClick={() => setActiveKey(service.key)}
+                      onClick={() => {
+                        analytics.ctaClick("View Details →", "services");
+                        setActiveKey(service.key);
+                      }}
                     />
                   </div>
                 </div>

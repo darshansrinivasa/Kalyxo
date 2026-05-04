@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { analytics } from "@/utils/analytics";
 
 const isExternalLink = (href) =>
   href?.startsWith("http://") || href?.startsWith("https://");
@@ -10,8 +11,9 @@ const linkClassName = `
   rounded-lg
 `;
 
-function SocialIcon({ label, href, icon: Icon, className = "" }) {
+function SocialIcon({ label, href, icon: Icon, className = "", trackLabel }) {
   const combinedClassName = `${linkClassName} ${className}`.trim();
+  const linkTrackId = trackLabel ?? label?.toLowerCase?.() ?? "link";
 
   if (isExternalLink(href)) {
     return (
@@ -22,6 +24,7 @@ function SocialIcon({ label, href, icon: Icon, className = "" }) {
           rel="noopener noreferrer"
           className={combinedClassName}
           aria-label={label}
+          onClick={() => analytics.linkClick(linkTrackId, href)}
         >
           {Icon && <Icon className="h-4.5 w-4.5" />}
           <span className="hidden">{label}</span>

@@ -39,6 +39,7 @@ function SocialList({ className = "", socials = {} }) {
             href={href}
             icon={config.icon}
             key={key}
+            trackLabel={key}
             className="border border-footer-border"
           />
         );

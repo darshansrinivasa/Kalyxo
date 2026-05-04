@@ -5,6 +5,7 @@ import ProcessSection from "@/components/Sections/Process/ProcessSection";
 import ServicesCardsSection from "@/components/Sections/Services/ServicesCardsSection";
 import FeaturedProjectSection from "@/components/Sections/Work/FeaturedProjectSection";
 import ContactFormSection from "@/components/Sections/Contact/ContactFormSection";
+import { analytics } from "@/utils/analytics";
 
 import { WHY_CHOOSE_US } from "@/constants/WhyChooseUs";
 import { PROCESS_STEPS } from "@/constants/Process";
@@ -47,6 +48,10 @@ function HomePage() {
             content: "Let's Look At Your Store",
             className: "button primary-button purple icon-right px-8 py-4",
             href: "/#contact",
+            onClick: () => {
+              analytics.ctaClick("Let's Look At Your Store", "hero");
+              analytics.scrollToContact("hero");
+            },
           }}
         />
       </section>

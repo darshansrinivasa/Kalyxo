@@ -1,5 +1,6 @@
 import NavList from "./Nav/NavList";
 import Button from "../Global/Button/Button";
+import { analytics } from "@/utils/analytics";
 
 export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
   if (!isOpen) return null;
@@ -35,7 +36,11 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
           iconName="bookCalenderWhite"
           content="Work With Me"
           href="#contact"
-          onClick={onClose}
+          onClick={() => {
+            analytics.ctaClick("Work With Me", "navbar");
+            analytics.scrollToContact("navbar");
+            onClose();
+          }}
         />
       </div>
     </div>

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Heading from "@/components/Global/Text/Heading";
+import { analytics } from "@/utils/analytics";
 import SubHeading from "@/components/Global/Text/SubHeading";
 import Button from "@/components/Global/Button/Button";
 import Modal from "@/components/Global/UI/Modal";
@@ -39,6 +40,17 @@ const PROJECT = {
 
 function FeaturedProjectSection() {
   const [open, setOpen] = useState(false);
+  const portfolioModalOpenedRef = useRef(false);
+
+  useEffect(() => {
+    if (!open) {
+      portfolioModalOpenedRef.current = false;
+      return;
+    }
+    if (portfolioModalOpenedRef.current) return;
+    portfolioModalOpenedRef.current = true;
+    analytics.modalOpen("portfolio", PROJECT.title);
+  }, [open]);
 
   return (
     <section id="work" className="background-theme-1 section-anchor">
@@ -69,7 +81,10 @@ function FeaturedProjectSection() {
                 type="button"
                 content="View Case Study →"
                 className="button primary-button purple icon-right mt-6 px-8 py-4"
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                  analytics.ctaClick("View Case Study →", "work");
+                  setOpen(true);
+                }}
               />
             </div>
 
@@ -80,6 +95,9 @@ function FeaturedProjectSection() {
                 rel="noopener noreferrer"
                 aria-label="Open Solara live store in a new tab"
                 className="group relative block cursor-pointer overflow-hidden rounded-2xl border border-border focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+                onClick={() =>
+                  analytics.linkClick("solara_store", PROJECT.liveStoreUrl)
+                }
               >
                 <div className="aspect-[16/10] w-full">
                   <img

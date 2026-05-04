@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { analytics } from "@/utils/analytics";
 
 function isInternalHashHref(href) {
   return (
@@ -11,12 +12,22 @@ function isInternalHashHref(href) {
 function NavItem({ label, to, liClassName = "", onClick }) {
   const useNativeAnchor = isInternalHashHref(to);
 
+  const handleClick = (e) => {
+    if (
+      typeof to === "string" &&
+      (to.includes("#contact") || to.endsWith("/#contact"))
+    ) {
+      analytics.scrollToContact("navbar");
+    }
+    onClick?.(e);
+  };
+
   return (
     <li className={liClassName}>
       {useNativeAnchor ? (
         <a
           href={to}
-          onClick={onClick}
+          onClick={handleClick}
           className="text-base font-medium transition text-fg-secondary hover:text-primary-600"
         >
           {label}
@@ -24,7 +35,7 @@ function NavItem({ label, to, liClassName = "", onClick }) {
       ) : (
         <Link
           to={to}
-          onClick={onClick}
+          onClick={handleClick}
           className="text-base font-medium transition text-fg-secondary hover:text-primary-600"
         >
           {label}

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/constants/HeaderNavigationLink";
 import MobileMenu from "./MobileMenu";
 import HamburgerIcon from "./Nav/Hamburger";
+import { analytics } from "@/utils/analytics";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +39,10 @@ export default function Header() {
             iconName="bookCalenderWhite"
             content="Work With Me"
             href="#contact"
+            onClick={() => {
+              analytics.ctaClick("Work With Me", "navbar");
+              analytics.scrollToContact("navbar");
+            }}
           />
         </div>
 

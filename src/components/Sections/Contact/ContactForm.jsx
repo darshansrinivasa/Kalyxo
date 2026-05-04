@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import Button from "@/components/Global/Button/Button";
+import { analytics } from "@/utils/analytics";
 
 function ContactFeedbackPopup({ open, variant, message, onClose }) {
   const onCloseRef = useRef(onClose);
@@ -143,8 +144,28 @@ function ContactForm() {
   });
 
   const [feedback, setFeedback] = useState(null);
+  const formStartedRef = useRef(false);
+
+  const markFormStart = () => {
+    if (formStartedRef.current) return;
+    formStartedRef.current = true;
+    analytics.formStart();
+  };
+
+  const handleFormFocusIn = (e) => {
+    const t = e.target;
+    if (
+      t instanceof HTMLElement &&
+      (t.tagName === "INPUT" ||
+        t.tagName === "TEXTAREA" ||
+        t.tagName === "SELECT")
+    ) {
+      markFormStart();
+    }
+  };
 
   const handleChange = (e) => {
+    markFormStart();
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -153,7 +174,8 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    analytics.formSubmit();
+
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
@@ -166,6 +188,7 @@ function ContactForm() {
       const data = await response.json();
   
       if (response.ok) {
+        analytics.formSuccess();
         setFeedback({
           variant: "success",
           message: "Thanks for reaching out. I’ll get back to you shortly.",
@@ -178,12 +201,14 @@ function ContactForm() {
           website: "",
         });
       } else {
+        analytics.formError("submission_failed");
         setFeedback({
           variant: "error",
           message: data.error || "Something went wrong. Please try again.",
         });
       }
     } catch {
+      analytics.formError("network_error");
       setFeedback({
         variant: "error",
         message: "Server error. Try again later.",
@@ -201,6 +226,7 @@ function ContactForm() {
     />
     <form
       onSubmit={handleSubmit}
+      onFocusCapture={handleFormFocusIn}
       className="bg-muted border border-border p-6 md:p-10 rounded-2xl space-y-6 shadow-sm"
     >
       <div className="grid md:grid-cols-2 gap-6">
