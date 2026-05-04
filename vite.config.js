@@ -68,6 +68,9 @@ export default defineConfig(({ mode }) => {
   Object.assign(process.env, env);
 
   return {
+    build: {
+      outDir: "dist",
+    },
     plugins: [react(), tailwindcss(), contactApiDevPlugin()],
     resolve: {
       alias: {

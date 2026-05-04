@@ -37,7 +37,7 @@ export default function Header() {
             className="button primary-button purple"
             iconName="bookCalenderWhite"
             content="Work With Me"
-            href="/#contact"
+            href="#contact"
           />
         </div>
 

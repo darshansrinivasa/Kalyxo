@@ -1,13 +1,16 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "@/components/Layout";
 import ScrollToHash from "@/components/ScrollToHash";
-import HomePage from "@/pages/Home";
+
+const HomePage = lazy(() => import("@/pages/Home"));
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToHash />
+      <Suspense fallback={null}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
@@ -17,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

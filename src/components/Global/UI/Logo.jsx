@@ -3,15 +3,17 @@ import logoLight from "@/assets/images/logo-light.png";
 import logoDark from "@/assets/images/logo-dark.png";
 
 function Logo({ is_footer = false }) {
-  const altText = is_footer ? "Kalyxo" : "Kalyxo — home";
+  const loading = is_footer ? "lazy" : "eager";
 
   return (
     <Link to="/" className="h-auto w-fit block">
       {is_footer ? (
         <img
           src={logoDark}
-          alt={altText}
-          className="h-10"
+          alt="Darshan logo"
+          className="h-10 w-auto"
+          loading={loading}
+          decoding="async"
         />
       ) : (
         <picture>
@@ -21,8 +23,10 @@ function Logo({ is_footer = false }) {
           />
           <img
             src={logoLight}
-            alt={altText}
-            className="h-10"
+            alt="Darshan logo"
+            className="h-10 w-auto"
+            loading={loading}
+            decoding="async"
           />
         </picture>
       )}

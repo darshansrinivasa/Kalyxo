@@ -148,7 +148,7 @@ function ServicesCardsSection() {
               <div key={service.key} className="premium-card h-full">
                 <div className="flex h-full flex-col">
                   <div className="icon-chip flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/95 to-secondary-500/95 text-white shadow-sm">
-                    <Icon iconName={service.iconName} size={22} />
+                    <Icon iconName={service.iconName} size={22} alt="" loading="lazy" />
                   </div>
 
                   <h3 className="mt-5 text-lg md:text-xl font-semibold text-fg">
@@ -179,7 +179,7 @@ function ServicesCardsSection() {
               <div key={service.key} className="premium-card h-full">
                 <div className="flex h-full flex-col">
                   <div className="icon-chip flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/95 to-secondary-500/95 text-white shadow-sm">
-                    <Icon iconName={service.iconName} size={22} />
+                    <Icon iconName={service.iconName} size={22} alt="" loading="lazy" />
                   </div>
 
                   <h3 className="mt-5 text-lg md:text-xl font-semibold text-fg">

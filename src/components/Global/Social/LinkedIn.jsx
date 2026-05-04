@@ -5,7 +5,11 @@ function LinkedIn({ className = "" }) {
     <img
       src={iconPng}
       alt="LinkedIn"
+      width={340}
+      height={340}
       className={className}
+      loading="lazy"
+      decoding="async"
     />
   );
 }

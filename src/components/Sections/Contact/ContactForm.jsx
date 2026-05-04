@@ -81,7 +81,10 @@ function InputField({
 }) {
   return (
     <div>
-      <label className="form-label">{label}</label>
+      <label className="form-label">
+        {label}
+        {required ? " *" : ""}
+      </label>
       <input
         type={type}
         name={name}
@@ -106,7 +109,10 @@ function SelectField({
 }) {
   return (
     <div>
-      <label className="form-label">{label}</label>
+      <label className="form-label">
+        {label}
+        {required ? " *" : ""}
+      </label>
       <select
         name={name}
         value={value}
@@ -177,7 +183,7 @@ function ContactForm() {
           message: data.error || "Something went wrong. Please try again.",
         });
       }
-    } catch (error) {
+    } catch {
       setFeedback({
         variant: "error",
         message: "Server error. Try again later.",
@@ -218,7 +224,7 @@ function ContactForm() {
       </div>
 
       <InputField
-        label="Store URL (optional)"
+        label="Store URL"
         name="storeUrl"
         type="text"
         value={formData.storeUrl}
@@ -228,7 +234,7 @@ function ContactForm() {
       />
 
       <div>
-        <label className="form-label">Message</label>
+        <label className="form-label">Message *</label>
         <textarea
           name="message"
           rows={6}

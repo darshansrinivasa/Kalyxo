@@ -34,7 +34,7 @@ export default function MobileMenu({ isOpen, onClose, NAV_LINKS }) {
           " 
           iconName="bookCalenderWhite"
           content="Work With Me"
-          href="/#contact"
+          href="#contact"
           onClick={onClose}
         />
       </div>

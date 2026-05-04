@@ -41,8 +41,9 @@ function Button({
       {iconName && (
         <Icon
           iconName={iconName}
-          size={iconSize}
-          alt={iconName}
+          size={Number(iconSize) || 20}
+          alt=""
+          loading="lazy"
         />
       )}
       <span>{content}</span>

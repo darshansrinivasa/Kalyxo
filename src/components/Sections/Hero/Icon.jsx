@@ -14,7 +14,6 @@ import growth from "@/assets/icons/growth.png";
 import scale from "@/assets/icons/scale.png";
 import tick from "@/assets/icons/tick.png";
 
-
 /**
  * Central icon registry
  * key → image source
@@ -34,23 +33,37 @@ const ICON_MAP = {
   growth,
   scale,
   tick,
-  servicesWhite
+  servicesWhite,
 };
 
-function Icon({ iconName, alt = "", size = 18 }) {
+function Icon({
+  iconName,
+  alt = "",
+  size = 18,
+  className = "",
+  loading = "lazy",
+  decoding = "async",
+}) {
   const iconSrc = ICON_MAP[iconName];
 
   if (!iconSrc) {
-    console.warn(`Icon "${iconName}" not found in ICON_MAP`);
     return null;
   }
+
+  const dim = Number(size);
+  const w = Number.isFinite(dim) && dim > 0 ? dim : 18;
+  const h = w;
 
   return (
     <img
       src={iconSrc}
-      alt={alt || iconName}
-      width={size}
-      height={size}
+      alt={alt}
+      width={w}
+      height={h}
+      className={className}
+      loading={loading}
+      decoding={decoding}
+      {...(alt === "" ? { "aria-hidden": true } : {})}
     />
   );
 }
