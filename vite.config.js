@@ -24,10 +24,12 @@ function readJsonBody(req) {
   });
 }
 
+const CONTACT_API_PATHS = new Set(["/api/contact", "/api/send-email"]);
+
 function attachContactApiMiddleware(server) {
   server.middlewares.use(async (req, res, next) => {
     const pathOnly = req.url?.split("?")[0] ?? "";
-    if (pathOnly !== "/api/contact") {
+    if (!CONTACT_API_PATHS.has(pathOnly)) {
       return next();
     }
     if (req.method !== "POST") {
@@ -50,7 +52,7 @@ function attachContactApiMiddleware(server) {
   });
 }
 
-/** Serves POST /api/contact during `vite` and `vite preview` (Vercel runs api/contact.js in production). */
+/** Serves POST /api/send-email (and /api/contact) during `vite` / `vite preview`; production uses api/*.js on Vercel. */
 function contactApiDevPlugin() {
   return {
     name: "contact-api-dev",
